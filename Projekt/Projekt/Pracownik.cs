@@ -8,10 +8,17 @@ namespace Projekt
 {
     class Pracownik : CzlonekFirmy
     {
-        Grafik grafik;
+        public Grafik grafik;
 
+
+        public Pracownik() {
+            grafik = new Grafik();
+
+        }
         public Pracownik(int id, string imie, string nazwisko, string pesel, int telefon, DateTime dataUrodzenia, Magazyn magazyn, BazaDanych bd)
-            : base(id, imie, nazwisko, pesel, telefon, dataUrodzenia, magazyn, bd) { }
+            : base(magazyn, bd, id, imie, nazwisko,pesel, telefon, dataUrodzenia) {
+            grafik = new Grafik();
+        }
         public void UsunTowarZPolki(int id, int sektor, int rzad, int polka)
         {
 

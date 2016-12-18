@@ -15,6 +15,10 @@ namespace Projekt
         public Form1()
         {
             InitializeComponent();
+
+            BazaDanych db = new BazaDanych(@"DESKTOP-FE8VDHN\SQLEXPRESS", "hurtownia");
+            Magazyn magazyn = db.pobierzMagazyn();
+
         }
 
         private void button_Zaloguj_Click(object sender, EventArgs e)

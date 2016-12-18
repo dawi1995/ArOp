@@ -8,12 +8,14 @@ namespace Projekt
 {
     class Osoba
     {
-        int id;
-        string imie;
-        string nazwisko;
-        string pesel;
-        int telefon;
-        DateTime dataUrodzenia;
+        public int id;
+        public string imie;
+        public string nazwisko;
+        public string pesel;
+        public int telefon;
+        public DateTime dataUrodzenia;
+
+        public Osoba() { }
         public Osoba(int id, string imie, string nazwisko, string pesel, int telefon, DateTime dataUrodzenia)
         {
             this.id = id;

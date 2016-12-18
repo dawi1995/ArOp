@@ -8,8 +8,9 @@ namespace Projekt
 {
     class Menadzer : CzlonekFirmy
     {
+        public Menadzer() { }
         public Menadzer(int id, string imie, string nazwisko, string pesel, int telefon, DateTime dataUrodzenia, Magazyn magazyn, BazaDanych bd)
-            : base(id, imie, nazwisko, pesel, telefon, dataUrodzenia, magazyn, bd) { }
+            : base(magazyn, bd, id, imie, nazwisko, pesel, telefon, dataUrodzenia) { }
         public void DodajPracownika(string imie, string nazwisko, string pesel, int telefon, DateTime rokUrodzenia, Magazyn magazyn, BazaDanych bd) //do uzupełnienia
         {
 
@@ -31,7 +32,7 @@ namespace Projekt
         }
         public List<Zlecenie> SprawdzListeZlecen()
         {
-
+            throw new Exception();
         }
 
 

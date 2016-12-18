@@ -8,12 +8,13 @@ namespace Projekt
 {
     class Zlecenie
     {
-        Pracownik pracownik;
-        DateTime data;
-        Towar towar;
-        bool czyPrzyjeto;
-        string przewoznik;
+        public Pracownik pracownik;
+        public DateTime data;
+        public Towar towar;
+        public bool czyPrzyjeto;
+        public string przewoznik;
 
+        public Zlecenie() { }
         public Zlecenie(Pracownik pracownik, DateTime data, Towar towar, bool czyPrzyjeto, string przewoznik)
         {
             this.pracownik = pracownik;

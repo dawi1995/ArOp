@@ -11,7 +11,7 @@ namespace Projekt
     {
         public List<Towar> towary { get; set; } 
         public List<Pracownik> pracownicy { get; set; }
-        public Menadzer menadzer { get; set; }
+        public List<Menadzer> menadzerowie { get; set; }
         public List<Zlecenie> zlecenia { get; set; }
         public BazaDanych db { get; set; }
 
@@ -20,6 +20,7 @@ namespace Projekt
             towary = new List<Towar>();
             pracownicy = new List<Pracownik>();
             zlecenia = new List<Zlecenie>();
+            menadzerowie = new List<Menadzer>();
             
         }
 
