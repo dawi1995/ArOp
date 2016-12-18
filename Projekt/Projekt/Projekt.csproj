@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Grafik.cs" />
+    <Compile Include="Menadzer.cs" />
     <Compile Include="Pulpit-Logowanie.cs">
       <SubType>Form</SubType>
     </Compile>
