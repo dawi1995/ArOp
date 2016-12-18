@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Grafik.cs" />
+    <Compile Include="Pracownik.cs" />
     <Compile Include="Pulpit-DodajEdytujPracownika.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +89,7 @@
     <Compile Include="Pulpit-UsunPracownika.Designer.cs">
       <DependentUpon>Pulpit-UsunPracownika.cs</DependentUpon>
     </Compile>
+    <Compile Include="Zlecenie.cs" />
     <EmbeddedResource Include="Pulpit-DodajEdytujPracownika.resx">
       <DependentUpon>Pulpit-DodajEdytujPracownika.cs</DependentUpon>
     </EmbeddedResource>
