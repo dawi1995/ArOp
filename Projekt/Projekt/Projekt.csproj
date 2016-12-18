@@ -47,6 +47,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Grafik.cs" />
+    <Compile Include="Pulpit-DodajEdytujPracownika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pulpit-DodajEdytujPracownika.Designer.cs">
+      <DependentUpon>Pulpit-DodajEdytujPracownika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pulpit-DodajTowarcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pulpit-DodajTowarcs.Designer.cs">
+      <DependentUpon>Pulpit-DodajTowarcs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pulpit-Logowanie.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +81,18 @@
     <Compile Include="Pulpit-Pracownik.Designer.cs">
       <DependentUpon>Pulpit-Pracownik.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pulpit-UsunPracownika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pulpit-UsunPracownika.Designer.cs">
+      <DependentUpon>Pulpit-UsunPracownika.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Pulpit-DodajEdytujPracownika.resx">
+      <DependentUpon>Pulpit-DodajEdytujPracownika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pulpit-DodajTowarcs.resx">
+      <DependentUpon>Pulpit-DodajTowarcs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pulpit-Logowanie.resx">
       <DependentUpon>Pulpit-Logowanie.cs</DependentUpon>
     </EmbeddedResource>
@@ -86,6 +110,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pulpit-Pracownik.resx">
       <DependentUpon>Pulpit-Pracownik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pulpit-UsunPracownika.resx">
+      <DependentUpon>Pulpit-UsunPracownika.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">

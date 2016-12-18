@@ -42,9 +42,9 @@
             // dataGridView_PodglądPracownik
             // 
             this.dataGridView_PodglądPracownik.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_PodglądPracownik.Location = new System.Drawing.Point(47, 52);
+            this.dataGridView_PodglądPracownik.Location = new System.Drawing.Point(33, 27);
             this.dataGridView_PodglądPracownik.Name = "dataGridView_PodglądPracownik";
-            this.dataGridView_PodglądPracownik.Size = new System.Drawing.Size(734, 534);
+            this.dataGridView_PodglądPracownik.Size = new System.Drawing.Size(720, 527);
             this.dataGridView_PodglądPracownik.TabIndex = 0;
             // 
             // button_DodajTowar
@@ -115,7 +115,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1272, 665);
+            this.ClientSize = new System.Drawing.Size(1281, 582);
             this.Controls.Add(this.button_Wyloguj);
             this.Controls.Add(this.button_SprawdzGrafik);
             this.Controls.Add(this.button_SprawdzZlecenia);
