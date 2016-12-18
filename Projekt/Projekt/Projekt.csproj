@@ -49,7 +49,9 @@
   <ItemGroup>
     <Compile Include="BazaDanych.cs" />
     <Compile Include="Grafik.cs" />
+    <Compile Include="Magazyn.cs" />
     <Compile Include="Pracownik.cs" />
+    <Compile Include="Lokalizacja.cs" />
     <Compile Include="Pulpit-DodajEdytujPracownika.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +94,7 @@
       <DependentUpon>Pulpit-UsunPracownika.cs</DependentUpon>
     </Compile>
     <Compile Include="Zlecenie.cs" />
+    <Compile Include="Towar.cs" />
     <EmbeddedResource Include="Pulpit-DodajEdytujPracownika.resx">
       <DependentUpon>Pulpit-DodajEdytujPracownika.cs</DependentUpon>
     </EmbeddedResource>
@@ -119,7 +122,6 @@
     <EmbeddedResource Include="Pulpit-UsunPracownika.resx">
       <DependentUpon>Pulpit-UsunPracownika.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
