@@ -10,7 +10,7 @@ namespace Projekt
     {
         Grafik grafik;
 
-        public Pracownik(int id, string imie, string nazwisko, string pesel, int telefon, DateTime dataUrodzenia, Magazyn magazyn, BazaDanycch bd)
+        public Pracownik(int id, string imie, string nazwisko, string pesel, int telefon, DateTime dataUrodzenia, Magazyn magazyn, BazaDanych bd)
             : base(id, imie, nazwisko, pesel, telefon, dataUrodzenia, magazyn, bd) { }
         public void UsunTowarZPolki(int id, int sektor, int rzad, int polka)
         {
