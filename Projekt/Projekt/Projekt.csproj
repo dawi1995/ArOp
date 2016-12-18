@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BazaDanych.cs" />
     <Compile Include="Grafik.cs" />
     <Compile Include="Pracownik.cs" />
     <Compile Include="Pulpit-DodajEdytujPracownika.cs">
