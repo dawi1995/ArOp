@@ -14,22 +14,5 @@ namespace Projekt
         {
             grafik = new Dictionary<DateTime, int>();
         }
-
-        public void DodajDoGrafiku(DateTime data, int czasPracy)
-        {
-            grafik.Add(data, czasPracy);
-        }
-
-        public void EdytujGrafik(DateTime dataDoEdycji, DateTime nowaData, int nowyCzasPracy)
-        {
-            for (int i = 0; i < grafik.Count; i++)
-            {
-                if (grafik.ElementAt(i).Key.CompareTo(dataDoEdycji) == 0)
-                {
-                    grafik.ElementAt(i);
-
-                }
-            }
-        }
     }
 }

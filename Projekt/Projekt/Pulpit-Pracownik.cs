@@ -16,5 +16,10 @@ namespace Projekt
         {
             InitializeComponent();
         }
+
+        private void button_Wyloguj_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
