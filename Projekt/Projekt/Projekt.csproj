@@ -48,9 +48,9 @@
   <ItemGroup>
     <Compile Include="BazaDanych.cs" />
     <Compile Include="Grafik.cs" />
+    <Compile Include="Magazyn.cs" />
     <Compile Include="Pracownik.cs" />
     <Compile Include="Lokalizacja.cs" />
-    <Compile Include="Pracownik.cs" />
     <Compile Include="Pulpit-DodajEdytujPracownika.cs">
       <SubType>Form</SubType>
     </Compile>
