@@ -48,6 +48,8 @@
   <ItemGroup>
     <Compile Include="Grafik.cs" />
     <Compile Include="Pulpit-Logowanie.cs">
+    <Compile Include="CzlonekFirmy.cs" />
+    <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Pulpit-Logowanie.Designer.cs">
