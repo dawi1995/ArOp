@@ -9,9 +9,9 @@ namespace Projekt
     class Menadzer : CzlonekFirmy
     {
         public Menadzer() { }
-        public Menadzer(int id, string imie, string nazwisko, string pesel, int telefon, DateTime dataUrodzenia, Magazyn magazyn, BazaDanych bd)
-            : base(magazyn, bd, id, imie, nazwisko, pesel, telefon, dataUrodzenia) { }
-        public void DodajPracownika(string imie, string nazwisko, string pesel, int telefon, DateTime rokUrodzenia, Magazyn magazyn, BazaDanych bd) //do uzupełnienia
+        public Menadzer(int id, string imie, string nazwisko, string pesel, int telefon, DateTime dataUrodzenia, Magazyn magazyn, BazaDanych bd, string login, string haslo)
+            : base(magazyn, bd, id, imie, nazwisko, pesel, telefon, dataUrodzenia, login, haslo) { }
+        public void DodajPracownika(string imie, string nazwisko, string pesel, int telefon, DateTime rokUrodzenia, Magazyn magazyn, BazaDanych bd, string login, string haslo) //do uzupełnienia
         {
 
         }

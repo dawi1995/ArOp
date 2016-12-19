@@ -257,7 +257,7 @@ namespace Projekt
             }
             return magazyn;
         }
-        public void AktualizujMagazyn()
+        public void AktualizujBaze()
         {
 
         }

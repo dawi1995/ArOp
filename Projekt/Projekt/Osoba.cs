@@ -14,9 +14,11 @@ namespace Projekt
         public string pesel;
         public int telefon;
         public DateTime dataUrodzenia;
+        string login;
+        string haslo;
 
         public Osoba() { }
-        public Osoba(int id, string imie, string nazwisko, string pesel, int telefon, DateTime dataUrodzenia)
+        public Osoba(int id, string imie, string nazwisko, string pesel, int telefon, DateTime dataUrodzenia, string login, string haslo)
         {
             this.id = id;
             this.imie = imie;
@@ -24,6 +26,8 @@ namespace Projekt
             this.pesel = pesel;
             this.telefon = telefon;
             this.dataUrodzenia = dataUrodzenia;
+            this.login = login;
+            this.haslo = haslo;
         }
     }
 }

@@ -12,8 +12,8 @@ namespace Projekt
         BazaDanych bd;
 
         public CzlonekFirmy() { }
-        public CzlonekFirmy(Magazyn magazyn, BazaDanych bd, int id, string imie, string nazwisko, string pesel, int telefon, DateTime dataUrodzenia)
-            : base(id, imie, nazwisko, pesel, telefon, dataUrodzenia)
+        public CzlonekFirmy(Magazyn magazyn, BazaDanych bd, int id, string imie, string nazwisko, string pesel, int telefon, DateTime dataUrodzenia, string login, string haslo)
+            : base(id, imie, nazwisko, pesel, telefon, dataUrodzenia, login, haslo)
         { 
             this.magazyn = magazyn;
             this.bd = bd;

@@ -25,18 +25,20 @@ namespace Projekt
         {
             if (textBox1.Text == "admin")
             {
-
-                this.Hide();
+                
+                //this.Hide();
                 Pulpit_Menadżer MenedzerForm = new Pulpit_Menadżer();
-                MenedzerForm.ShowDialog();
-
+                MenedzerForm.Show();
+                
+                this.Close();
 
             }
             else
             {
-                this.Hide();
+                //this.Hide();
                 Pulpit_Pracownik PracownikForm = new Pulpit_Pracownik();
-                PracownikForm.ShowDialog();
+                PracownikForm.Show();
+                this.Close();
             }
 
         }
