@@ -25,7 +25,7 @@ namespace Projekt
         {
             if (textBox1.Text == "admin")
             {
-
+                //this.Close();
                 this.Hide();
                 Pulpit_Menadżer MenedzerForm = new Pulpit_Menadżer();
                 MenedzerForm.ShowDialog();
@@ -34,6 +34,7 @@ namespace Projekt
             }
             else
             {
+                //this.Close();
                 this.Hide();
                 Pulpit_Pracownik PracownikForm = new Pulpit_Pracownik();
                 PracownikForm.ShowDialog();
