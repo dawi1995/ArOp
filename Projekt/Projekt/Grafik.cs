@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace Projekt
 {
-    class Grafik
+   public class Grafik
     {
         public Dictionary<DateTime, int> grafik;
 

@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace Projekt
 {
-    class BazaDanych
+    public class BazaDanych
     {
         string adres;
         string nazwa;
@@ -77,7 +77,7 @@ namespace Projekt
 
             using (SqlConnection con = new SqlConnection(connCO.ConnectionString))
             {
-                using (da.SelectCommand = new SqlCommand("SELECT * FROM pracownicy1", con))
+                using (da.SelectCommand = new SqlCommand("SELECT * FROM pracownicy2", con))
                 {
                     try
                     {
@@ -105,6 +105,8 @@ namespace Projekt
                             pracownik.pesel = (string)row.ItemArray[3];
                             pracownik.telefon = (int)row.ItemArray[4];
                             pracownik.dataUrodzenia = (DateTime)row.ItemArray[5];
+                            pracownik.login = (string)row.ItemArray[6];
+                            pracownik.haslo = (string)row.ItemArray[7];
                             magazyn.pracownicy.Add(pracownik);
                         }
 
@@ -153,7 +155,7 @@ namespace Projekt
 
             using (SqlConnection con = new SqlConnection(connCO.ConnectionString))
             {
-                using (da.SelectCommand = new SqlCommand("SELECT * FROM menadzerowie", con))
+                using (da.SelectCommand = new SqlCommand("SELECT * FROM menadzerowie1", con))
                 {
                     try
                     {
@@ -181,6 +183,8 @@ namespace Projekt
                             menadzer.pesel = (string)row.ItemArray[3];
                             menadzer.telefon = (int)row.ItemArray[4];
                             menadzer.dataUrodzenia = (DateTime)row.ItemArray[5];
+                            menadzer.login = (string)row.ItemArray[6];
+                            menadzer.haslo = (string)row.ItemArray[7];
                             magazyn.menadzerowie.Add(menadzer);
                         }
 
@@ -261,13 +265,6 @@ namespace Projekt
         {
 
         }
-        public void Rozlacz()
-        {
-        }
-        public bool Zaloguj(string login, string haslo)
-        {
-            throw new Exception();
-        }
         public Pracownik ZwrocPracownika(string login, string haslo)
         {
             throw new Exception();
@@ -275,6 +272,10 @@ namespace Projekt
         public Menadzer ZwrocMenadzera(string login, string haslo)
         {
             throw new Exception();
+        }
+        public static BazaDanych UtworzBaze()
+        {
+            return new BazaDanych(@"DESKTOP-FE8VDHN\SQLEXPRESS", "hurtownia");
         }
 
     }

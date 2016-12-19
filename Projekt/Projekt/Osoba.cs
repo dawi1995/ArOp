@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projekt
 {
-    class Osoba
+    public class Osoba
     {
         public int id;
         public string imie;
@@ -14,8 +14,8 @@ namespace Projekt
         public string pesel;
         public int telefon;
         public DateTime dataUrodzenia;
-        string login;
-        string haslo;
+        public string login;
+        public string haslo;
 
         public Osoba() { }
         public Osoba(int id, string imie, string nazwisko, string pesel, int telefon, DateTime dataUrodzenia, string login, string haslo)

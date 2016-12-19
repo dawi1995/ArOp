@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projekt
 {
-    class CzlonekFirmy : Osoba
+    public class CzlonekFirmy : Osoba
     {
         Magazyn magazyn;
         BazaDanych bd;

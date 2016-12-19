@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projekt
 {
-    class Pracownik : CzlonekFirmy
+   public class Pracownik : CzlonekFirmy
     {
         public Grafik grafik;
 

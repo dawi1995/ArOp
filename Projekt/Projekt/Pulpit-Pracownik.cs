@@ -12,6 +12,7 @@ namespace Projekt
 {
     public partial class Pulpit_Pracownik : Form
     {
+        public Pracownik pracownik;
         public Pulpit_Pracownik()
         {
             InitializeComponent();

@@ -12,6 +12,8 @@ namespace Projekt
 {
     public partial class Pulpit_Menadżer : Form
     {
+        public Menadzer menadzer;
+        
         public Pulpit_Menadżer()
         {
             InitializeComponent();
