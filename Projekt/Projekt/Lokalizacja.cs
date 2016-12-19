@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projekt
 {
-    class Lokalizacja
+   public class Lokalizacja
     {
         public int sektor { get; set; }
         public int rzad { get; set; }

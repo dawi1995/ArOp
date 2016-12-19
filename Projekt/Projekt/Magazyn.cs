@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace Projekt
 {
-    class Magazyn
+    public class Magazyn
     {
         public List<Towar> towary { get; set; } 
         public List<Pracownik> pracownicy { get; set; }

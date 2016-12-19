@@ -7,39 +7,60 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Projekt
 {
     public partial class Form1 : Form
     {
+        Magazyn magazyn;
         public Form1()
         {
             InitializeComponent();
 
-            BazaDanych db = new BazaDanych(@"DESKTOP-FE8VDHN\SQLEXPRESS", "hurtownia");
-            Magazyn magazyn = db.pobierzMagazyn();
+            BazaDanych db = BazaDanych.UtworzBaze();
+            magazyn = db.pobierzMagazyn();
 
         }
 
         private void button_Zaloguj_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "admin")
+            //bool czyMenadzer = false;
+            
+            for (int i = 0; i < magazyn.menadzerowie.Count; i++)
             {
-                //this.Close();
-                this.Hide();
-                Pulpit_Menadżer MenedzerForm = new Pulpit_Menadżer();
-                MenedzerForm.ShowDialog();
+                if (magazyn.menadzerowie[i].login == textBox1.Text)
+                {
+                    if (magazyn.menadzerowie[i].haslo == textBox2.Text)
+                    {
+                        Pulpit_Menadżer pulpitM = new Pulpit_Menadżer();
+                        pulpitM.menadzer = magazyn.menadzerowie[i];
+                        pulpitM.ShowDialog();
+                        this.Hide();
+                        this.Close();
+                        return;
+                    }
 
+                }
+            }
+
+            for (int i = 0; i < magazyn.pracownicy.Count; i++)
+            {
+                if (magazyn.pracownicy[i].login==textBox1.Text)
+                {
+                    if (magazyn.pracownicy[i].haslo==textBox2.Text)
+                    {
+                        Pulpit_Pracownik pulpitP = new Pulpit_Pracownik();
+                        pulpitP.pracownik = magazyn.pracownicy[i];
+                        pulpitP.ShowDialog();
+                        this.Hide();
+                        this.Close();
+                        return;
+                        
+                    }
+                }
 
             }
-            else
-            {
-                //this.Close();
-                this.Hide();
-                Pulpit_Pracownik PracownikForm = new Pulpit_Pracownik();
-                PracownikForm.ShowDialog();
-            }
-
         }
     }
 }

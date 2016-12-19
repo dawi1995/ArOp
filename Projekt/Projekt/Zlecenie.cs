@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projekt
 {
-    class Zlecenie
+    public class Zlecenie
     {
         public Pracownik pracownik;
         public DateTime data;

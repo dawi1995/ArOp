@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace Projekt
 {
-    class Towar
+    public class Towar
     {
         public int id { get; set; }
         public string nazwa { get; set; }

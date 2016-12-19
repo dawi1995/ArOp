@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projekt
 {
-    class Pracownik : CzlonekFirmy
+   public class Pracownik : CzlonekFirmy
     {
         public Grafik grafik;
 
@@ -15,8 +15,8 @@ namespace Projekt
             grafik = new Grafik();
 
         }
-        public Pracownik(int id, string imie, string nazwisko, string pesel, int telefon, DateTime dataUrodzenia, Magazyn magazyn, BazaDanych bd)
-            : base(magazyn, bd, id, imie, nazwisko,pesel, telefon, dataUrodzenia) {
+        public Pracownik(int id, string imie, string nazwisko, string pesel, int telefon, DateTime dataUrodzenia, Magazyn magazyn, BazaDanych bd, string login, string haslo)
+            : base(magazyn, bd, id, imie, nazwisko,pesel, telefon, dataUrodzenia, login, haslo) {
             grafik = new Grafik();
         }
         public void UsunTowarZPolki(int id, int sektor, int rzad, int polka)
