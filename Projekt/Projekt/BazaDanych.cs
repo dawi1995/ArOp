@@ -9,14 +9,15 @@ using System.Windows.Forms;
 
 namespace Projekt
 {
+    
     public class BazaDanych
     {
         string adres;
         string nazwa;
         //string haslo;
-        SqlConnection connCO; // = new SqlConnection();
-        SqlDataAdapter da; // = new SqlDataAdapter();
-        DataSet ds; // = new DataSet();
+        public SqlConnection connCO; // = new SqlConnection();
+        public SqlDataAdapter da; // = new SqlDataAdapter();
+        public DataSet ds; // = new DataSet();
 
         public BazaDanych(string adres, string nazwa)
         {
@@ -33,20 +34,17 @@ namespace Projekt
 
         }
 
-        public Magazyn pobierzMagazyn()
+        
+        public void WykonajWBazie(string komendaSql) 
         {
-            Magazyn magazyn = new Magazyn();
-
-
-            SkonfigurujPolaczenie();
-
             using (SqlConnection con = new SqlConnection(connCO.ConnectionString))
             {
-                using (da.SelectCommand = new SqlCommand("SELECT * FROM towary", con))
+                using (da.SelectCommand = new SqlCommand(komendaSql, con))
                 {
                     try
                     {
                         connCO.Open();
+                        ds = new DataSet();
                         da.Fill(ds, "SRQs");
                         connCO.Close();
                     }
@@ -55,7 +53,18 @@ namespace Projekt
                         //TODO Error handeling
                         MessageBox.Show(ex.Message);
                     }
+                }
+            }
+        }
 
+        public Magazyn pobierzMagazyn()
+        {
+            Magazyn magazyn = new Magazyn();
+
+
+            SkonfigurujPolaczenie();
+            WykonajWBazie("SELECT * FROM towary");
+            
                     Towar towar;
 
                     foreach (DataTable tables in ds.Tables)
@@ -71,27 +80,8 @@ namespace Projekt
                         }
 
                     }
-
-                }
-            }
-
-            using (SqlConnection con = new SqlConnection(connCO.ConnectionString))
-            {
-                using (da.SelectCommand = new SqlCommand("SELECT * FROM pracownicy2", con))
-                {
-                    try
-                    {
-                        connCO.Open();
-                        ds = new DataSet();
-                        da.Fill(ds, "SRQs");
-                        connCO.Close();
-                    }
-                    catch (Exception ex)
-                    {
-                        //TODO Error handeling
-                        MessageBox.Show(ex.Message);
-                    }
-
+            WykonajWBazie("SELECT * FROM pracownicy2");
+            
                     Pracownik pracownik;
 
                     foreach (DataTable tables in ds.Tables)
@@ -111,26 +101,8 @@ namespace Projekt
                         }
 
                     }
-
-                }
-            }
-
-            using (SqlConnection con = new SqlConnection(connCO.ConnectionString))
-            {
-                using (da.SelectCommand = new SqlCommand("SELECT * FROM zlecenia", con))
-                {
-                    try
-                    {
-                        connCO.Open();
-                        ds = new DataSet();
-                        da.Fill(ds, "SRQs");
-                        connCO.Close();
-                    }
-                    catch (Exception ex)
-                    {
-                        //TODO Error handeling
-                        MessageBox.Show(ex.Message);
-                    }
+            WykonajWBazie("SELECT * FROM zlecenia");
+            
 
                     Zlecenie zlecenie;
 
@@ -149,27 +121,8 @@ namespace Projekt
 
                     }
 
-                }
-            }
-
-
-            using (SqlConnection con = new SqlConnection(connCO.ConnectionString))
-            {
-                using (da.SelectCommand = new SqlCommand("SELECT * FROM menadzerowie1", con))
-                {
-                    try
-                    {
-                        connCO.Open();
-                        ds = new DataSet();
-                        da.Fill(ds, "SRQs");
-                        connCO.Close();
-                    }
-                    catch (Exception ex)
-                    {
-                        //TODO Error handeling
-                        MessageBox.Show(ex.Message);
-                    }
-
+            WykonajWBazie("SELECT * FROM menadzerowie1");
+            
                     Menadzer menadzer;
 
                     foreach (DataTable tables in ds.Tables)
@@ -189,30 +142,9 @@ namespace Projekt
                         }
 
                     }
-
-                }
-            }
-
-            using (SqlConnection con = new SqlConnection(connCO.ConnectionString))
-            {
-                using (da.SelectCommand = new SqlCommand("SELECT * FROM grafik", con))
-                {
-                    try
-                    {
-                        connCO.Open();
-                        ds = new DataSet();
-                        da.Fill(ds, "SRQs");
-                        connCO.Close();
-                    }
-                    catch (Exception ex)
-                    {
-                        //TODO Error handeling
-                        MessageBox.Show(ex.Message);
-                    }
-
-                    Pracownik pracownik;
-
-
+            WykonajWBazie("SELECT * FROM grafik");
+            
+            
                     foreach (DataTable tables in ds.Tables)
                     {
                         foreach (DataRow row in tables.Rows)
@@ -223,28 +155,7 @@ namespace Projekt
                         }
 
                     }
-
-                }
-            }
-
-            using (SqlConnection con = new SqlConnection(connCO.ConnectionString))
-            {
-                using (da.SelectCommand = new SqlCommand("SELECT * FROM lokalizacje", con))
-                {
-                    try
-                    {
-                        connCO.Open();
-                        ds = new DataSet();
-                        da.Fill(ds, "SRQs");
-                        connCO.Close();
-                    }
-                    catch (Exception ex)
-                    {
-                        //TODO Error handeling
-                        MessageBox.Show(ex.Message);
-                    }
-
-                    Towar towar;
+            WykonajWBazie("SELECT * FROM lokalizacje");
 
                     foreach (DataTable tables in ds.Tables)
                     {
@@ -256,9 +167,6 @@ namespace Projekt
                         }
 
                     }
-
-                }
-            }
             return magazyn;
         }
         public void AktualizujBaze()
