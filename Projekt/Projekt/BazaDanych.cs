@@ -101,7 +101,7 @@ namespace Projekt
                         }
 
                     }
-            WykonajWBazie("SELECT * FROM zlecenia");
+            WykonajWBazie("SELECT * FROM zlecenia2");
             
 
                     Zlecenie zlecenie;
@@ -171,19 +171,33 @@ namespace Projekt
         }
         public void AktualizujBaze()
         {
+            WykonajWBazie("insert into menadzerowie1 values (2,'Dawid', 'Brzęczek',7894613,2222222,12-12-2016,'Jacek','Mariański')");
+        }
+        public Pracownik ZwrocPracownika(int id) //bez sensu zwracac po loginie i hasle, lepiej po ID
+        {
+            Magazyn magazyn = pobierzMagazyn();
+            Pracownik pracownik = null;
+            for (int i = 0; i < magazyn.pracownicy.Count; i++)
+            {
+                if (magazyn.pracownicy[i].id==id)
+                {
+                    pracownik = magazyn.pracownicy[i];
+                }
+                else
+                {
+                    MessageBox.Show("Nie ma pracownika o podanym id");
+                }
+            }
+            return pracownik;
 
         }
-        public Pracownik ZwrocPracownika(string login, string haslo)
-        {
-            throw new Exception();
-        }
-        public Menadzer ZwrocMenadzera(string login, string haslo)
+        public Menadzer ZwrocMenadzera(int id) //tu tez bez sensu
         {
             throw new Exception();
         }
         public static BazaDanych UtworzBaze()
         {
-            return new BazaDanych(@"DESKTOP-FE8VDHN\SQLEXPRESS", "hurtownia");
+            return new BazaDanych(@"DESKTOP-TO78UQT\PROJEKT", "hurtownia");
         }
 
     }

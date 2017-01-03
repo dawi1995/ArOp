@@ -35,6 +35,8 @@
             this.label_Nazwisko = new System.Windows.Forms.Label();
             this.label_Imie = new System.Windows.Forms.Label();
             this.button_UsunPracownika = new System.Windows.Forms.Button();
+            this.textbox_ID = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // textBox3
@@ -87,18 +89,37 @@
             // 
             // button_UsunPracownika
             // 
-            this.button_UsunPracownika.Location = new System.Drawing.Point(119, 195);
+            this.button_UsunPracownika.Location = new System.Drawing.Point(133, 219);
             this.button_UsunPracownika.Name = "button_UsunPracownika";
             this.button_UsunPracownika.Size = new System.Drawing.Size(244, 23);
             this.button_UsunPracownika.TabIndex = 14;
             this.button_UsunPracownika.Text = "Usuń pracownika";
             this.button_UsunPracownika.UseVisualStyleBackColor = true;
+            this.button_UsunPracownika.Click += new System.EventHandler(this.button_UsunPracownika_Click);
+            // 
+            // textbox_ID
+            // 
+            this.textbox_ID.AutoSize = true;
+            this.textbox_ID.Location = new System.Drawing.Point(77, 178);
+            this.textbox_ID.Name = "textbox_ID";
+            this.textbox_ID.Size = new System.Drawing.Size(24, 13);
+            this.textbox_ID.TabIndex = 15;
+            this.textbox_ID.Text = "ID :";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(170, 178);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(261, 20);
+            this.textBox4.TabIndex = 16;
             // 
             // Pulpit_UsunPracownika
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(492, 269);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textbox_ID);
             this.Controls.Add(this.button_UsunPracownika);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
@@ -122,5 +143,7 @@
         private System.Windows.Forms.Label label_Nazwisko;
         private System.Windows.Forms.Label label_Imie;
         private System.Windows.Forms.Button button_UsunPracownika;
+        private System.Windows.Forms.Label textbox_ID;
+        private System.Windows.Forms.TextBox textBox4;
     }
 }

@@ -33,14 +33,16 @@
             this.label_PESEL = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.textBox_imie = new System.Windows.Forms.TextBox();
+            this.textBox_nazwisko = new System.Windows.Forms.TextBox();
+            this.textBox_PESEL = new System.Windows.Forms.TextBox();
+            this.textBox_telefon = new System.Windows.Forms.TextBox();
             this.button_DodajPracownika = new System.Windows.Forms.Button();
             this.button_EdytujPracownika = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.label_ID = new System.Windows.Forms.Label();
+            this.textBox_ID = new System.Windows.Forms.TextBox();
+            this.textBox_date = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label_Imie
@@ -88,40 +90,33 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Telefon";
             // 
-            // textBox1
+            // textBox_imie
             // 
-            this.textBox1.Location = new System.Drawing.Point(293, 78);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(261, 20);
-            this.textBox1.TabIndex = 5;
+            this.textBox_imie.Location = new System.Drawing.Point(293, 78);
+            this.textBox_imie.Name = "textBox_imie";
+            this.textBox_imie.Size = new System.Drawing.Size(261, 20);
+            this.textBox_imie.TabIndex = 5;
             // 
-            // textBox2
+            // textBox_nazwisko
             // 
-            this.textBox2.Location = new System.Drawing.Point(293, 125);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(261, 20);
-            this.textBox2.TabIndex = 6;
+            this.textBox_nazwisko.Location = new System.Drawing.Point(293, 125);
+            this.textBox_nazwisko.Name = "textBox_nazwisko";
+            this.textBox_nazwisko.Size = new System.Drawing.Size(261, 20);
+            this.textBox_nazwisko.TabIndex = 6;
             // 
-            // textBox3
+            // textBox_PESEL
             // 
-            this.textBox3.Location = new System.Drawing.Point(293, 170);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(261, 20);
-            this.textBox3.TabIndex = 7;
+            this.textBox_PESEL.Location = new System.Drawing.Point(293, 170);
+            this.textBox_PESEL.Name = "textBox_PESEL";
+            this.textBox_PESEL.Size = new System.Drawing.Size(261, 20);
+            this.textBox_PESEL.TabIndex = 7;
             // 
-            // textBox5
+            // textBox_telefon
             // 
-            this.textBox5.Location = new System.Drawing.Point(293, 256);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(261, 20);
-            this.textBox5.TabIndex = 9;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(293, 214);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(261, 20);
-            this.dateTimePicker1.TabIndex = 10;
+            this.textBox_telefon.Location = new System.Drawing.Point(293, 256);
+            this.textBox_telefon.Name = "textBox_telefon";
+            this.textBox_telefon.Size = new System.Drawing.Size(261, 20);
+            this.textBox_telefon.TabIndex = 9;
             // 
             // button_DodajPracownika
             // 
@@ -131,6 +126,7 @@
             this.button_DodajPracownika.TabIndex = 11;
             this.button_DodajPracownika.Text = "Dodaj pracownika";
             this.button_DodajPracownika.UseVisualStyleBackColor = true;
+            this.button_DodajPracownika.Click += new System.EventHandler(this.button_DodajPracownika_Click);
             // 
             // button_EdytujPracownika
             // 
@@ -150,19 +146,44 @@
             this.label1.TabIndex = 13;
             this.label1.Text = "*puste pola pozostana bez zmian";
             // 
+            // label_ID
+            // 
+            this.label_ID.AutoSize = true;
+            this.label_ID.Location = new System.Drawing.Point(128, 40);
+            this.label_ID.Name = "label_ID";
+            this.label_ID.Size = new System.Drawing.Size(24, 13);
+            this.label_ID.TabIndex = 14;
+            this.label_ID.Text = "ID :";
+            // 
+            // textBox_ID
+            // 
+            this.textBox_ID.Location = new System.Drawing.Point(293, 37);
+            this.textBox_ID.Name = "textBox_ID";
+            this.textBox_ID.Size = new System.Drawing.Size(261, 20);
+            this.textBox_ID.TabIndex = 15;
+            // 
+            // textBox_date
+            // 
+            this.textBox_date.Location = new System.Drawing.Point(293, 212);
+            this.textBox_date.Name = "textBox_date";
+            this.textBox_date.Size = new System.Drawing.Size(261, 20);
+            this.textBox_date.TabIndex = 16;
+            // 
             // Pulpit_DodajEdytujPracownika
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(664, 442);
+            this.Controls.Add(this.textBox_date);
+            this.Controls.Add(this.textBox_ID);
+            this.Controls.Add(this.label_ID);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button_EdytujPracownika);
             this.Controls.Add(this.button_DodajPracownika);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBox_telefon);
+            this.Controls.Add(this.textBox_PESEL);
+            this.Controls.Add(this.textBox_nazwisko);
+            this.Controls.Add(this.textBox_imie);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label_PESEL);
@@ -182,13 +203,15 @@
         private System.Windows.Forms.Label label_PESEL;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox textBox_imie;
+        private System.Windows.Forms.TextBox textBox_nazwisko;
+        private System.Windows.Forms.TextBox textBox_PESEL;
+        private System.Windows.Forms.TextBox textBox_telefon;
         private System.Windows.Forms.Button button_DodajPracownika;
         private System.Windows.Forms.Button button_EdytujPracownika;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label_ID;
+        private System.Windows.Forms.TextBox textBox_ID;
+        private System.Windows.Forms.TextBox textBox_date;
     }
 }

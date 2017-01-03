@@ -20,18 +20,19 @@ namespace Projekt
 
             BazaDanych db = BazaDanych.UtworzBaze();
             magazyn = db.pobierzMagazyn();
-
+            
         }
 
         private void button_Zaloguj_Click(object sender, EventArgs e)
         {
-            //bool czyMenadzer = false;
+            
             
             for (int i = 0; i < magazyn.menadzerowie.Count; i++)
             {
-                if (magazyn.menadzerowie[i].login == textBox1.Text) // źle szuka hasło, powinno tylko na danym praconwiku 
+                if (magazyn.menadzerowie[i].login == textBox1.Text) 
                 {
-                    if (magazyn.menadzerowie[i].haslo == textBox2.Text)
+                    string haslo = magazyn.menadzerowie[i].haslo;
+                    if (textBox2.Text==haslo)
                     {
                         Pulpit_Menadżer pulpitM = new Pulpit_Menadżer();
                         pulpitM.menadzer = magazyn.menadzerowie[i];
@@ -48,7 +49,8 @@ namespace Projekt
             {
                 if (magazyn.pracownicy[i].login==textBox1.Text)
                 {
-                    if (magazyn.pracownicy[i].haslo==textBox2.Text) // źle szuka hasło powinno tylko na danym menadzerze
+                    string haslo = magazyn.pracownicy[i].haslo;
+                    if (textBox2.Text==haslo) 
                     {
                         Pulpit_Pracownik pulpitP = new Pulpit_Pracownik();
                         pulpitP.pracownik = magazyn.pracownicy[i];
@@ -61,6 +63,13 @@ namespace Projekt
                 }
 
             }
+
+            MessageBox.Show("Podano błedne dane logowania");
+            return;
+
+            
         }
+
+        
     }
 }

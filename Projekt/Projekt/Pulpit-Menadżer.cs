@@ -18,5 +18,17 @@ namespace Projekt
         {
             InitializeComponent();
         }
+
+        private void button_DodajEdytujPracownika_Click(object sender, EventArgs e)
+        {
+            Pulpit_DodajEdytujPracownika pulpitDEP = new Pulpit_DodajEdytujPracownika();
+            pulpitDEP.ShowDialog();
+        }
+
+        private void button_UsunPracownika_Click(object sender, EventArgs e)
+        {
+            Pulpit_UsunPracownika pulpitUP = new Pulpit_UsunPracownika();
+            pulpitUP.ShowDialog();
+        }
     }
 }

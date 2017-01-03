@@ -53,6 +53,7 @@
             this.button_DodajEdytujPracownika.TabIndex = 1;
             this.button_DodajEdytujPracownika.Text = "Dodaj/edytuj pracownika";
             this.button_DodajEdytujPracownika.UseVisualStyleBackColor = true;
+            this.button_DodajEdytujPracownika.Click += new System.EventHandler(this.button_DodajEdytujPracownika_Click);
             // 
             // button_UsunPracownika
             // 
@@ -62,6 +63,7 @@
             this.button_UsunPracownika.TabIndex = 2;
             this.button_UsunPracownika.Text = "Usuń pracownika";
             this.button_UsunPracownika.UseVisualStyleBackColor = true;
+            this.button_UsunPracownika.Click += new System.EventHandler(this.button_UsunPracownika_Click);
             // 
             // button_ZmieńGrafik
             // 

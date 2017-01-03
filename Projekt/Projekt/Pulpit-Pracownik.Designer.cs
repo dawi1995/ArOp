@@ -55,6 +55,7 @@
             this.button_DodajTowar.TabIndex = 1;
             this.button_DodajTowar.Text = "Dodaj nowy towar";
             this.button_DodajTowar.UseVisualStyleBackColor = true;
+            this.button_DodajTowar.Click += new System.EventHandler(this.button_DodajTowar_Click);
             // 
             // button_DodajIstTowar
             // 

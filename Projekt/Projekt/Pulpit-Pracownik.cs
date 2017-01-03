@@ -22,5 +22,11 @@ namespace Projekt
         {
 
         }
+
+        private void button_DodajTowar_Click(object sender, EventArgs e)
+        {
+            Pulpit_DodajTowarcs pulpitDT = new Pulpit_DodajTowarcs();
+            pulpitDT.ShowDialog();
+        }
     }
 }
