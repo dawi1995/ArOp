@@ -52,11 +52,23 @@
     <Compile Include="Magazyn.cs" />
     <Compile Include="Pracownik.cs" />
     <Compile Include="Lokalizacja.cs" />
+    <Compile Include="Pulpit-DodajEdytujGrafik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pulpit-DodajEdytujGrafik.Designer.cs">
+      <DependentUpon>Pulpit-DodajEdytujGrafik.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pulpit-DodajEdytujPracownika.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Pulpit-DodajEdytujPracownika.Designer.cs">
       <DependentUpon>Pulpit-DodajEdytujPracownika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pulpit-DodajIstniejacyTowar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pulpit-DodajIstniejacyTowar.Designer.cs">
+      <DependentUpon>Pulpit-DodajIstniejacyTowar.cs</DependentUpon>
     </Compile>
     <Compile Include="Pulpit-DodajTowarcs.cs">
       <SubType>Form</SubType>
@@ -87,16 +99,52 @@
     <Compile Include="Pulpit-Pracownik.Designer.cs">
       <DependentUpon>Pulpit-Pracownik.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pulpit-SprawdzZlecenia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pulpit-SprawdzZlecenia.Designer.cs">
+      <DependentUpon>Pulpit-SprawdzZlecenia.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pulpit-UsunPracownika.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Pulpit-UsunPracownika.Designer.cs">
       <DependentUpon>Pulpit-UsunPracownika.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pulpit-UsunTowar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pulpit-UsunTowar.Designer.cs">
+      <DependentUpon>Pulpit-UsunTowar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pulpit-UsunTowarZPolki.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pulpit-UsunTowarZPolki.Designer.cs">
+      <DependentUpon>Pulpit-UsunTowarZPolki.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pulpit-UsunZGrafiku.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pulpit-UsunZGrafiku.Designer.cs">
+      <DependentUpon>Pulpit-UsunZGrafiku.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pulpit-WyswietlGrafik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pulpit-WyswietlGrafik.Designer.cs">
+      <DependentUpon>Pulpit-WyswietlGrafik.cs</DependentUpon>
+    </Compile>
     <Compile Include="Zlecenie.cs" />
     <Compile Include="Towar.cs" />
+    <EmbeddedResource Include="Pulpit-DodajEdytujGrafik.resx">
+      <DependentUpon>Pulpit-DodajEdytujGrafik.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pulpit-DodajEdytujPracownika.resx">
       <DependentUpon>Pulpit-DodajEdytujPracownika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pulpit-DodajIstniejacyTowar.resx">
+      <DependentUpon>Pulpit-DodajIstniejacyTowar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pulpit-DodajTowarcs.resx">
       <DependentUpon>Pulpit-DodajTowarcs.cs</DependentUpon>
@@ -121,6 +169,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pulpit-UsunPracownika.resx">
       <DependentUpon>Pulpit-UsunPracownika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pulpit-UsunTowar.resx">
+      <DependentUpon>Pulpit-UsunTowar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pulpit-UsunTowarZPolki.resx">
+      <DependentUpon>Pulpit-UsunTowarZPolki.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pulpit-UsunZGrafiku.resx">
+      <DependentUpon>Pulpit-UsunZGrafiku.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pulpit-WyswietlGrafik.resx">
+      <DependentUpon>Pulpit-WyswietlGrafik.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
