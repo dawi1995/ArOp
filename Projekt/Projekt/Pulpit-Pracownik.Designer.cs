@@ -32,7 +32,6 @@
             this.button_DodajTowar = new System.Windows.Forms.Button();
             this.button_DodajIstTowar = new System.Windows.Forms.Button();
             this.button_UsuńTowar = new System.Windows.Forms.Button();
-            this.button_UsunZPolki = new System.Windows.Forms.Button();
             this.button_SprawdzZlecenia = new System.Windows.Forms.Button();
             this.button_SprawdzGrafik = new System.Windows.Forms.Button();
             this.button_Wyloguj = new System.Windows.Forms.Button();
@@ -65,6 +64,7 @@
             this.button_DodajIstTowar.TabIndex = 2;
             this.button_DodajIstTowar.Text = "Dodaj istniejący towar";
             this.button_DodajIstTowar.UseVisualStyleBackColor = true;
+            this.button_DodajIstTowar.Click += new System.EventHandler(this.button_DodajIstTowar_Click);
             // 
             // button_UsuńTowar
             // 
@@ -74,15 +74,7 @@
             this.button_UsuńTowar.TabIndex = 3;
             this.button_UsuńTowar.Text = "Usuń towar";
             this.button_UsuńTowar.UseVisualStyleBackColor = true;
-            // 
-            // button_UsunZPolki
-            // 
-            this.button_UsunZPolki.Location = new System.Drawing.Point(890, 283);
-            this.button_UsunZPolki.Name = "button_UsunZPolki";
-            this.button_UsunZPolki.Size = new System.Drawing.Size(327, 23);
-            this.button_UsunZPolki.TabIndex = 4;
-            this.button_UsunZPolki.Text = "Usuń z półki";
-            this.button_UsunZPolki.UseVisualStyleBackColor = true;
+            this.button_UsuńTowar.Click += new System.EventHandler(this.button_UsuńTowar_Click);
             // 
             // button_SprawdzZlecenia
             // 
@@ -120,7 +112,6 @@
             this.Controls.Add(this.button_Wyloguj);
             this.Controls.Add(this.button_SprawdzGrafik);
             this.Controls.Add(this.button_SprawdzZlecenia);
-            this.Controls.Add(this.button_UsunZPolki);
             this.Controls.Add(this.button_UsuńTowar);
             this.Controls.Add(this.button_DodajIstTowar);
             this.Controls.Add(this.button_DodajTowar);
@@ -138,7 +129,6 @@
         private System.Windows.Forms.Button button_DodajTowar;
         private System.Windows.Forms.Button button_DodajIstTowar;
         private System.Windows.Forms.Button button_UsuńTowar;
-        private System.Windows.Forms.Button button_UsunZPolki;
         private System.Windows.Forms.Button button_SprawdzZlecenia;
         private System.Windows.Forms.Button button_SprawdzGrafik;
         private System.Windows.Forms.Button button_Wyloguj;

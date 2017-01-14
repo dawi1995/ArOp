@@ -25,8 +25,21 @@ namespace Projekt
 
         private void button_DodajTowar_Click(object sender, EventArgs e)
         {
-            Pulpit_DodajTowarcs pulpitDT = new Pulpit_DodajTowarcs();
+            Pulpit_DodajTowarcs pulpitDT = new Pulpit_DodajTowarcs(pracownik);
             pulpitDT.ShowDialog();
+        }
+
+        private void button_DodajIstTowar_Click(object sender, EventArgs e)
+        {
+            Pulpit_DodajIstniejacyTowar pulpitDIT = new Pulpit_DodajIstniejacyTowar (pracownik);
+            pulpitDIT.ShowDialog();
+        }
+
+        private void button_UsuńTowar_Click(object sender, EventArgs e)
+        {
+            Pulpit_UsunTowar pulpitUT = new Pulpit_UsunTowar(pracownik);
+            pulpitUT.ShowDialog();
+
         }
     }
 }

@@ -72,7 +72,7 @@ namespace Projekt
 
 
             SkonfigurujPolaczenie();
-            WykonajWBazie("SELECT * FROM towary");
+            WykonajWBazie("SELECT * FROM towary3");
             
                     Towar towar;
 
@@ -83,7 +83,7 @@ namespace Projekt
                             towar = new Towar();
                             towar.id = (int)row.ItemArray[0];
                             towar.nazwa = (string)row.ItemArray[1];
-                            towar.ilosc = (int)row.ItemArray[2];
+                            //towar.ilosc = (int)row.ItemArray[2];
 
                             magazyn.towary.Add(towar);
                         }
@@ -164,7 +164,7 @@ namespace Projekt
                         }
 
                     }
-            WykonajWBazie("SELECT * FROM lokalizacje");
+            WykonajWBazie("SELECT * FROM lokalizacje2");
 
                     foreach (DataTable tables in ds.Tables)
                     {
