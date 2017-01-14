@@ -39,7 +39,6 @@ namespace Projekt
             ds = new DataSet();
             connCO.ConnectionString = @"Data Source=" + adres + ";Initial Catalog=" + nazwa + ";Integrated Security=SSPI";
         }
-
         
         public static void WykonajWBazie(string komendaSql) 
         {
@@ -53,7 +52,6 @@ namespace Projekt
                         ds = new DataSet();
                         da.Fill(ds, "SRQs");
                         connCO.Close();
-                        MessageBox.Show("Operacja zakończona powodzeniem.");
                     }
                     catch (Exception ex)
                     {
@@ -174,7 +172,7 @@ namespace Projekt
                         {
                             towar = magazyn.towary.Find(Towar => Towar.id == (int)row.ItemArray[0]);
 
-                            towar.lokalizacje.Add(new Lokalizacja((int)row.ItemArray[1], (int)row.ItemArray[2], (int)row.ItemArray[3]));
+                            towar.lokalizacje.Add(new Lokalizacja((int)row.ItemArray[1], (int)row.ItemArray[2], (int)row.ItemArray[3]), (int)row.ItemArray[4]);
                         }
 
                     }

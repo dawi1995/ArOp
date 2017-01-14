@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Projekt
 {
@@ -19,32 +20,55 @@ namespace Projekt
             : base(id, imie, nazwisko,pesel, telefon, dataUrodzenia, login, haslo) {
             grafik = new Grafik();
         }
-        public void UsunTowarZPolki(int id, int sektor, int rzad, int polka)
+        
+        public void UsunTowar(int id, int sektor, int rzad, int polka, int iloscDoUsuniecia)
         {
+            Towar doUsuniecia = BazaDanych.magazyn.towary.Find(Towar => Towar.id == id);
 
-        }
-        public void UsunTowar(int id)
-        {
-        }
-        public void DodajIstniejacyTowar(int id, int sektor, int rzad, int polka)
-        {
-            /*
-            if (BazaDanych.magazyn.towary.Contains(id) != null)
+            if (doUsuniecia == null)
             {
-                MessageBox.Show("Towar o takim ID już istnieje.");
-                return "";
+                Komunikaty.WyświetlKomunikat("W magazynie nie ma takiego towaru.");
+                return;
             }
 
-            string login = imie.ToLower();
-            string haslo = nazwisko.ToLower();
-            Pracownik p = new Pracownik(id, imie, nazwisko, pesel, telefon, rokUrodzenia, login, haslo);
-            BazaDanych.magazyn.pracownicy.Add(p);
-
-            return String.Format("INSERT INTO pracownicy2 (id, imie, nazwisko, pesel, telefon, dataurodzenia, login, haslo) VALUES ({0}, '{1}', '{2}', '{3}', {4}, '{5}{6}{7}', '{8}', '{9}');", id, imie, nazwisko, pesel, telefon, rokUrodzenia.Year, rokUrodzenia.Month, rokUrodzenia.Day, login, haslo);
-            */
+            doUsuniecia.UsuńTowar(sektor, rzad, polka, iloscDoUsuniecia);
         }
-        public void DodajNowyTowar(string nazwa, int id, int sektor, int rzad, int polka)
+
+        public void DodajIstniejacyTowar(int id, int sektor, int rzad, int polka, int iloscDoDodania)
         {
+            Towar doDodania = BazaDanych.magazyn.towary.Find(Towar => Towar.id == id);
+
+            if (doDodania == null)
+            {
+                Komunikaty.WyświetlKomunikat("W magazynie nie ma towaru o podanym ID.");
+                return; 
+            }
+
+                
+            DialogResult odpowiedź = MessageBox.Show("Czy na pewno chcesz dodać towar - " + doDodania.nazwa + "?", "Potwierdzenie", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if(odpowiedź == DialogResult.No)
+            {
+                return;
+            }
+
+            doDodania.DodajTowar(sektor, rzad, polka, iloscDoDodania);
+        }
+
+        public void DodajNowyTowar(string nazwa, int id, int sektor, int rzad, int polka, int ilosc)
+        {
+
+            Towar doDodania = BazaDanych.magazyn.towary.Find(Towar => Towar.id == id);
+
+            if (doDodania != null)
+            {
+                Komunikaty.WyświetlKomunikat("W magazynie istnieje już towar o podanym ID.");
+                return;
+            }
+
+            doDodania = new Towar();
+            doDodania.UtwórzTowar(id, nazwa, new Lokalizacja(sektor, rzad, polka), ilosc);
+            BazaDanych.magazyn.towary.Add(doDodania);
         }
     }
 }
