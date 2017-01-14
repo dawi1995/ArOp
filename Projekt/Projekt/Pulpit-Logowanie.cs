@@ -13,15 +13,11 @@ namespace Projekt
 {
     public partial class Form1 : Form
     {
-        BazaDanych db;
         public Form1()
         {
             InitializeComponent();
 
-            db = BazaDanych.UtworzBaze();
-            db.PobierzMagazyn();
-            //db.WykonajWBazie("INSERT INTO pracownicy2(id, imie, nazwisko, pesel, telefon, dataurodzenia, login, haslo) VALUES(122, 'Dawid', 'Brze', '12345678901', 111222333, '19921229', 'login', 'haslo');");
-
+            BazaDanych.UtworzBaze();
         }
 
         private void button_Zaloguj_Click(object sender, EventArgs e)

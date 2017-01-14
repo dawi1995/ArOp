@@ -12,22 +12,22 @@ namespace Projekt
     
     public class BazaDanych
     {
-        string adres;
-        string nazwa;
+        private static string adres;
+        private static string nazwa;
         //string haslo;
         private static SqlConnection connCO; // = new SqlConnection();
         private static SqlDataAdapter da; // = new SqlDataAdapter();
         private static DataSet ds; // = new DataSet();4
         public static Magazyn magazyn;
 
-        public BazaDanych(string adres, string nazwa)
-        {
-            this.adres = adres;
-            this.nazwa = nazwa;
-            //this.haslo = haslo;
-        }
+        //public BazaDanych(string adres, string nazwa)
+        //{
+        //    this.adres = adres;
+        //    this.nazwa = nazwa;
+        //    //this.haslo = haslo;
+        //}
 
-        public void PobierzMagazyn()
+        private static void PobierzMagazyn()
         {
             magazyn = pobierzMagazyn();
         }
@@ -66,7 +66,7 @@ namespace Projekt
             }
         }
 
-        private Magazyn pobierzMagazyn()
+        private static Magazyn pobierzMagazyn()
         {
             Magazyn magazyn = new Magazyn();
 
@@ -206,9 +206,11 @@ namespace Projekt
             return null;
         }
 
-        public static BazaDanych UtworzBaze()
+        public static void UtworzBaze()
         {
-            return new BazaDanych(@"DESKTOP-FE8VDHN\SQLEXPRESS", "hurtownia");
+            adres = @"DESKTOP-FE8VDHN\SQLEXPRESS";
+            nazwa = "hurtownia";
+            PobierzMagazyn();
         }
 
         public static void WyczyscID(int id)
