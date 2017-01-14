@@ -22,5 +22,24 @@ namespace Projekt
             return Int32.TryParse(textBox.Text, out value);
         }
 
+        public static bool CheckIfPesel(TextBox textBox)
+        {
+            if (textBox.Text.Length != 11)
+            {
+                return false;
+            }
+
+            bool czyLiczby = true;
+            foreach (var c in textBox.Text)
+            {
+                if (c < '0' || c > '9')
+                {
+                    czyLiczby = false;
+                }
+            }
+
+            return czyLiczby;
+        }
+
     }
 }

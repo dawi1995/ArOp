@@ -59,6 +59,10 @@ namespace Projekt
                         //@TODO Error handeling
                         MessageBox.Show(ex.Message);
                     }
+                    finally
+                    {
+                        connCO.Close();
+                    }
                 }
             }
         }
