@@ -119,6 +119,12 @@
       <DependentUpon>Pulpit-WyswietlGrafik.cs</DependentUpon>
     </Compile>
     <Compile Include="Narzędzia.cs" />
+    <Compile Include="Pulpit_EdytujGrafik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pulpit_EdytujGrafik.Designer.cs">
+      <DependentUpon>Pulpit_EdytujGrafik.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pulpit_UsunTowar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +172,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pulpit-WyswietlGrafik.resx">
       <DependentUpon>Pulpit-WyswietlGrafik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pulpit_EdytujGrafik.resx">
+      <DependentUpon>Pulpit_EdytujGrafik.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pulpit_UsunTowar.resx">
       <DependentUpon>Pulpit_UsunTowar.cs</DependentUpon>
