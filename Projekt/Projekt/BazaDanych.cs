@@ -210,7 +210,7 @@ namespace Projekt
 
         public static void WyczyscID(int id)
         {
-            string czyszcznie = String.Format("DELETE FROM grafik WHERE id={0}");
+            string czyszcznie = String.Format("DELETE FROM grafik WHERE id={0}", id);
             WykonajWBazie(czyszcznie);
         }
 
