@@ -17,7 +17,7 @@ namespace Projekt
         //string haslo;
         public SqlConnection connCO; // = new SqlConnection();
         public SqlDataAdapter da; // = new SqlDataAdapter();
-        public DataSet ds; // = new DataSet();
+        public DataSet ds; // = new DataSet();4
 
         public BazaDanych(string adres, string nazwa)
         {
@@ -31,7 +31,6 @@ namespace Projekt
             da = new SqlDataAdapter();
             ds = new DataSet();
             connCO.ConnectionString = @"Data Source=" + adres + ";Initial Catalog=" + nazwa + ";Integrated Security=SSPI";
-
         }
 
         
@@ -178,21 +177,17 @@ namespace Projekt
         public Pracownik ZwrocPracownika(int id) //bez sensu zwracac po loginie i hasle, lepiej po ID
         {
             Magazyn magazyn = pobierzMagazyn();
-            Pracownik pracownik = null;
             for (int i = 0; i < magazyn.pracownicy.Count; i++)
             {
                 if (magazyn.pracownicy[i].id==id)
-                {
-                    pracownik = magazyn.pracownicy[i];
-                }
-                else
-                {
-                    MessageBox.Show("Nie ma pracownika o podanym id");
-                }
+                    return magazyn.pracownicy[i];
             }
-            return pracownik;
+
+            MessageBox.Show("Nie ma pracownika o podanym id");
+            return null;
 
         }
+
         public Menadzer ZwrocMenadzera(int id) //tu tez bez sensu
         {
             Magazyn magazyn = pobierzMagazyn();
@@ -210,6 +205,7 @@ namespace Projekt
             }
             return menadzer;
         }
+
         public static BazaDanych UtworzBaze()
         {
             return new BazaDanych(@"DESKTOP-FE8VDHN\SQLEXPRESS", "hurtownia");

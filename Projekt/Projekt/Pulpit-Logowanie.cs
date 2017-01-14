@@ -66,10 +66,10 @@ namespace Projekt
 
             }
 
-            MessageBox.Show("Podano błedne dane logowania");
+            MessageBox.Show("Podano błedne dane logowania", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
             return;
 
-            
+         
         }
 
         

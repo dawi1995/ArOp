@@ -20,27 +20,33 @@ namespace Projekt
             //bd.AktualizujBaze();
         }
 
-        public void DodajDoGrafiku(int id, DateTime data, int liczbaGodzin) //+ do sprawdzenia
+        public string DodajDoGrafiku(int id, DateTime data, int liczbaGodzin) //+ do sprawdzenia
         {
-
             BazaDanych bd = BazaDanych.UtworzBaze();
             bd.SkonfigurujPolaczenie();
             Pracownik p = bd.ZwrocPracownika(id);
             p.grafik.DodajDoGrafiku(data, liczbaGodzin);
+
+            return "INSERT INTO grafik (id, dzien, czas) values (" + id + ", " + data.Year + data.Month + data.Day + " " + data.TimeOfDay + ", " + liczbaGodzin + ");"; 
         }
-        public void EdytujGrafik(int id, DateTime dataDoZmiany, DateTime nowaData, int liczbaGodzin) // + do sprawdzenia
+        public string  EdytujGrafik(int id, DateTime dataDoZmiany, DateTime nowaData, int liczbaGodzin) // + do sprawdzenia
         {
             BazaDanych bd = BazaDanych.UtworzBaze();
             bd.SkonfigurujPolaczenie();
             Pracownik p = bd.ZwrocPracownika(id);
             p.grafik.EdytujGrafik(dataDoZmiany,nowaData,liczbaGodzin);
+
+            return String.Format("UPDATE grafik SET dzien='{0}{1}{2} {3}', czas={4} WHERE (id={5} AND dzien='{6}{7}{8} {9}');", nowaData.Year,  nowaData.Month, nowaData.Day, nowaData.TimeOfDay, liczbaGodzin, id, dataDoZmiany.Year,  dataDoZmiany.Month, dataDoZmiany.Day, dataDoZmiany.TimeOfDay);
         }
-        public void UsunZGrafiku(int id, DateTime dataDoUsuniecia)
+        public string UsunZGrafiku(int id, DateTime dataDoUsuniecia)
         {
             BazaDanych bd = BazaDanych.UtworzBaze();
             bd.SkonfigurujPolaczenie();
             Pracownik p = bd.ZwrocPracownika(id);
             p.grafik.UsuńZGrafiku(dataDoUsuniecia);
+
+
+            return String.Format("DELETE FROM grafik WHERE (id = {0} AND dzien = '{1}{2}{3} {4}');", id, dataDoUsuniecia.Year, dataDoUsuniecia.Month, dataDoUsuniecia.Day, dataDoUsuniecia.TimeOfDay);
         }
         public string UsunPracownika(int id)
         {
