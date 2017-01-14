@@ -53,11 +53,12 @@ namespace Projekt
                         ds = new DataSet();
                         da.Fill(ds, "SRQs");
                         connCO.Close();
+                        MessageBox.Show("Operacja zakończona powodzeniem.");
                     }
                     catch (Exception ex)
                     {
                         //@TODO Error handeling
-                        MessageBox.Show(ex.Message);
+                        MessageBox.Show("Operacja nie powiodła się - problem z bazą danych - zamykam połączenie");
                     }
                     finally
                     {
