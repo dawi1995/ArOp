@@ -35,5 +35,11 @@ namespace Projekt
             Pulpit_UsunPracownika pulpitUP = new Pulpit_UsunPracownika(menadzer,magazyn,db);
             pulpitUP.ShowDialog();
         }
+
+        private void button_ZmieńGrafik_Click(object sender, EventArgs e)
+        {
+            Pulpit_DodajEdytujGrafik pulpitDG = new Pulpit_DodajEdytujGrafik(menadzer);
+            pulpitDG.ShowDialog();
+        }
     }
 }

@@ -71,8 +71,9 @@
             this.button_ZmieńGrafik.Name = "button_ZmieńGrafik";
             this.button_ZmieńGrafik.Size = new System.Drawing.Size(286, 23);
             this.button_ZmieńGrafik.TabIndex = 3;
-            this.button_ZmieńGrafik.Text = "Dodaj/edytuj grafik";
+            this.button_ZmieńGrafik.Text = "Dodaj grafik";
             this.button_ZmieńGrafik.UseVisualStyleBackColor = true;
+            this.button_ZmieńGrafik.Click += new System.EventHandler(this.button_ZmieńGrafik_Click);
             // 
             // button4
             // 

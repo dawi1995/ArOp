@@ -26,7 +26,7 @@ namespace Projekt
 
         private void button_UsunPracownika_Click(object sender, EventArgs e)
         {
-            BazaDanych.WykonajWBazie(menadzer.UsunPracownika(Convert.ToInt32(textbox_ID.Text)));
+            menadzer.UsunPracownika(Convert.ToInt32(textbox_ID.Text));
         }
     }
 }
