@@ -10,7 +10,7 @@ namespace Projekt
     {
         public static string PrzygotujDateDlaBazy(DateTime d)
         {
-            return d.Date.ToString("yyyyMMdd HH:mm");
+            return d.Date.ToString("yyyyMMdd ")+d.TimeOfDay;
         }
     }
 }
