@@ -51,5 +51,10 @@ namespace Projekt
             }
             MessageBox.Show("Nie odnaleziono szukanej daty.");
         }
+
+        public bool CzyDataJestWGrafiku(DateTime data)
+        {
+            return grafik.ContainsKey(data);
+        }
     }
 }

@@ -18,6 +18,7 @@ namespace Projekt
         public SqlConnection connCO; // = new SqlConnection();
         public SqlDataAdapter da; // = new SqlDataAdapter();
         public DataSet ds; // = new DataSet();4
+        public static Magazyn magazyn;
 
         public BazaDanych(string adres, string nazwa)
         {
@@ -25,6 +26,12 @@ namespace Projekt
             this.nazwa = nazwa;
             //this.haslo = haslo;
         }
+
+        public void PobierzMagazyn()
+        {
+            magazyn = pobierzMagazyn();
+        }
+
         public void SkonfigurujPolaczenie()
         {
             connCO = new SqlConnection();
@@ -34,7 +41,7 @@ namespace Projekt
         }
 
         
-        public void WykonajWBazie(string komendaSql) 
+        public static void WykonajWBazie(string komendaSql) 
         {
             using (SqlConnection con = new SqlConnection(connCO.ConnectionString))
             {
@@ -56,7 +63,7 @@ namespace Projekt
             }
         }
 
-        public Magazyn pobierzMagazyn()
+        private Magazyn pobierzMagazyn()
         {
             Magazyn magazyn = new Magazyn();
 
@@ -168,15 +175,16 @@ namespace Projekt
                     }
             return magazyn;
         }
+        
         /*
         public void AktualizujBaze()
         {
             WykonajWBazie("insert into menadzerowie1 values (2,'Dawid', 'Brzęczek',7894613,2222222,12-12-2016,'Jacek','Mariański')");
         }
         */
-        public Pracownik ZwrocPracownika(int id) //bez sensu zwracac po loginie i hasle, lepiej po ID
+
+        public static Pracownik ZwrocPracownika(int id)
         {
-            Magazyn magazyn = pobierzMagazyn();
             for (int i = 0; i < magazyn.pracownicy.Count; i++)
             {
                 if (magazyn.pracownicy[i].id==id)
@@ -185,30 +193,29 @@ namespace Projekt
 
             MessageBox.Show("Nie ma pracownika o podanym id");
             return null;
-
         }
 
-        public Menadzer ZwrocMenadzera(int id) //tu tez bez sensu
+        public static Menadzer ZwrocMenadzera(int id)
         {
-            Magazyn magazyn = pobierzMagazyn();
-            Menadzer menadzer = null;
             for (int i = 0; i < magazyn.menadzerowie.Count; i++)
             {
                 if (magazyn.menadzerowie[i].id == id)
-                {
-                    menadzer = magazyn.menadzerowie[i];
-                }
-                else
-                {
-                    MessageBox.Show("Nie ma menadzera o podanym id");
-                }
+                    return magazyn.menadzerowie[i];
             }
-            return menadzer;
+
+            MessageBox.Show("Nie ma menadzera o podanym id");
+            return null;
         }
 
         public static BazaDanych UtworzBaze()
         {
             return new BazaDanych(@"DESKTOP-FE8VDHN\SQLEXPRESS", "hurtownia");
+        }
+
+        public static void WyczyscID(int id)
+        {
+            string czyszcznie = String.Format("DELETE FROM grafik WHERE id={0}");
+            WykonajWBazie(czyszcznie);
         }
 
     }
