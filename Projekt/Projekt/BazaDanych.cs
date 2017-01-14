@@ -15,9 +15,9 @@ namespace Projekt
         string adres;
         string nazwa;
         //string haslo;
-        public SqlConnection connCO; // = new SqlConnection();
-        public SqlDataAdapter da; // = new SqlDataAdapter();
-        public DataSet ds; // = new DataSet();4
+        private static SqlConnection connCO; // = new SqlConnection();
+        private static SqlDataAdapter da; // = new SqlDataAdapter();
+        private static DataSet ds; // = new DataSet();4
         public static Magazyn magazyn;
 
         public BazaDanych(string adres, string nazwa)

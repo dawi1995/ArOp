@@ -28,7 +28,7 @@ namespace Projekt
         private void button_DodajPracownika_Click(object sender, EventArgs e)
         {
 
-            bd.WykonajWBazie(menadzer.DodajPracownika(Convert.ToInt32(textBox_ID.Text), textBox_imie.Text, textBox_nazwisko.Text, textBox_PESEL.Text, Convert.ToInt32(textBox_telefon.Text), Convert.ToDateTime(textBox_date.Text), magazyn, (BazaDanych)bd, textBox_imie.Text, textBox_nazwisko.Text));
+            BazaDanych.WykonajWBazie(menadzer.DodajPracownika(Convert.ToInt32(textBox_ID.Text), textBox_imie.Text, textBox_nazwisko.Text, textBox_PESEL.Text, Convert.ToInt32(textBox_telefon.Text), Convert.ToDateTime(textBox_date.Text)));
             //menadzer.DodajPracownika(Convert.ToInt32(textBox_ID.Text),textBox_imie.Text,textBox_nazwisko.Text,textBox_PESEL.Text,Convert.ToInt32(textBox_telefon.Text),Convert.ToDateTime(textBox_date.Text),magazyn,bd,"login","haslo");
           
         }

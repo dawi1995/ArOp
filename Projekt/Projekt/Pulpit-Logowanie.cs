@@ -35,7 +35,7 @@ namespace Projekt
                     string haslo = BazaDanych.magazyn.menadzerowie[i].haslo;
                     if (textBox2.Text==haslo)
                     {
-                        Pulpit_Menadżer pulpitM = new Pulpit_Menadżer(db.ZwrocMenadzera(BazaDanych.magazyn.menadzerowie[i].id), BazaDanych.magazyn,db);
+                        Pulpit_Menadżer pulpitM = new Pulpit_Menadżer(BazaDanych.ZwrocMenadzera(BazaDanych.magazyn.menadzerowie[i].id), BazaDanych.magazyn,db);
                         pulpitM.menadzer = BazaDanych.magazyn.menadzerowie[i];
                         pulpitM.ShowDialog();
                         this.Hide();
