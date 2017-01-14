@@ -14,16 +14,19 @@ namespace Projekt
     {
         public Menadzer menadzer;
         public BazaDanych bd;
-        public Pulpit_UsunPracownika()
+        public Magazyn magazyn;
+        public Pulpit_UsunPracownika(Menadzer m, Magazyn mag, BazaDanych bd)
         {
             InitializeComponent();
+            menadzer = m;
+            magazyn = mag;
+            this.bd = bd;
+
         }
 
         private void button_UsunPracownika_Click(object sender, EventArgs e)
         {
-            menadzer.UsunPracownika(Convert.ToInt32(textbox_ID.Text));
-            bd.AktualizujBaze();
-
+            bd.WykonajWBazie(menadzer.UsunPracownika(Convert.ToInt32(textbox_ID.Text)));
         }
     }
 }

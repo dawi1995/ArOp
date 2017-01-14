@@ -136,6 +136,7 @@
             this.button_EdytujPracownika.TabIndex = 12;
             this.button_EdytujPracownika.Text = "Edytuj pracownika";
             this.button_EdytujPracownika.UseVisualStyleBackColor = true;
+            this.button_EdytujPracownika.Click += new System.EventHandler(this.button_EdytujPracownika_Click);
             // 
             // label1
             // 

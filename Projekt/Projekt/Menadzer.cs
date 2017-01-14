@@ -11,11 +11,13 @@ namespace Projekt
         public Menadzer() { }
         public Menadzer(int id, string imie, string nazwisko, string pesel, int telefon, DateTime dataUrodzenia, Magazyn magazyn, BazaDanych bd, string login, string haslo)
             : base(magazyn, bd, id, imie, nazwisko, pesel, telefon, dataUrodzenia, login, haslo) { }
-        public void DodajPracownika(int id,string imie, string nazwisko, string pesel, int telefon, DateTime rokUrodzenia, Magazyn magazyn, BazaDanych bd, string login, string haslo) //do uzupełnienia
+        public string DodajPracownika(int id,string imie, string nazwisko, string pesel, int telefon, DateTime rokUrodzenia, Magazyn magazyn, BazaDanych bd, string login, string haslo) //do uzupełnienia
         {
             Pracownik p = new Pracownik(id, imie, nazwisko, pesel, telefon, rokUrodzenia, magazyn, bd, login, haslo);
             magazyn.pracownicy.Add(p);
-            bd.AktualizujBaze();
+            return ("INSERT INTO pracownicy2 (id, imie, nazwisko, pesel,telefon, dataurodzenia, login, haslo) VALUES (" + id + ", '" + imie + "', '" + nazwisko + "', '" + pesel + "', " + telefon + ", '" + rokUrodzenia.Year + rokUrodzenia.Month + rokUrodzenia.Day + "', '" + login + "', '" + haslo + "');");
+            
+            //bd.AktualizujBaze();
         }
 
         public void DodajDoGrafiku(int id, DateTime data, int liczbaGodzin) //+ do sprawdzenia
@@ -40,13 +42,14 @@ namespace Projekt
             Pracownik p = bd.ZwrocPracownika(id);
             p.grafik.UsuńZGrafiku(dataDoUsuniecia);
         }
-        public void UsunPracownika(int id)
+        public string UsunPracownika(int id)
         {
             BazaDanych bd = BazaDanych.UtworzBaze();
             bd.SkonfigurujPolaczenie();
             Magazyn magazyn = bd.pobierzMagazyn();
             Pracownik p = bd.ZwrocPracownika(id);
             magazyn.pracownicy.Remove(p);
+            return "DELETE FROM pracownicy2 WHERE id=" + id;
         }
         public List<Zlecenie> SprawdzListeZlecen()
         {

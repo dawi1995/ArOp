@@ -50,7 +50,7 @@ namespace Projekt
                     }
                     catch (Exception ex)
                     {
-                        //TODO Error handeling
+                        //@TODO Error handeling
                         MessageBox.Show(ex.Message);
                     }
                 }
@@ -101,7 +101,7 @@ namespace Projekt
                         }
 
                     }
-            WykonajWBazie("SELECT * FROM zlecenia2");
+            WykonajWBazie("SELECT * FROM zlecenia");
             
 
                     Zlecenie zlecenie;
@@ -169,10 +169,12 @@ namespace Projekt
                     }
             return magazyn;
         }
+        /*
         public void AktualizujBaze()
         {
             WykonajWBazie("insert into menadzerowie1 values (2,'Dawid', 'Brzęczek',7894613,2222222,12-12-2016,'Jacek','Mariański')");
         }
+        */
         public Pracownik ZwrocPracownika(int id) //bez sensu zwracac po loginie i hasle, lepiej po ID
         {
             Magazyn magazyn = pobierzMagazyn();
@@ -193,11 +195,24 @@ namespace Projekt
         }
         public Menadzer ZwrocMenadzera(int id) //tu tez bez sensu
         {
-            throw new Exception();
+            Magazyn magazyn = pobierzMagazyn();
+            Menadzer menadzer = null;
+            for (int i = 0; i < magazyn.menadzerowie.Count; i++)
+            {
+                if (magazyn.menadzerowie[i].id == id)
+                {
+                    menadzer = magazyn.menadzerowie[i];
+                }
+                else
+                {
+                    MessageBox.Show("Nie ma menadzera o podanym id");
+                }
+            }
+            return menadzer;
         }
         public static BazaDanych UtworzBaze()
         {
-            return new BazaDanych(@"DESKTOP-TO78UQT\PROJEKT", "hurtownia");
+            return new BazaDanych(@"DESKTOP-FE8VDHN\SQLEXPRESS", "hurtownia");
         }
 
     }
