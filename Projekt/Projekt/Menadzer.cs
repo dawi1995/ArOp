@@ -27,7 +27,7 @@ namespace Projekt
             Pracownik p = new Pracownik(id, imie, nazwisko, pesel, telefon, rokUrodzenia, login, haslo);
             BazaDanych.magazyn.pracownicy.Add(p);
 
-            return String.Format("INSERT INTO pracownicy2 (id, imie, nazwisko, pesel, telefon, dataurodzenia, login, haslo) VALUES ({0}, '{1}', '{2}', '{3}', {4}, '{5}{6}{7}', '{6}', '{7}');", id, imie, nazwisko, pesel, telefon, rokUrodzenia.Year, rokUrodzenia.Month, rokUrodzenia.Day, login, haslo );
+            return String.Format("INSERT INTO pracownicy2 (id, imie, nazwisko, pesel, telefon, dataurodzenia, login, haslo) VALUES ({0}, '{1}', '{2}', '{3}', {4}, '{5}{6}{7}', '{8}', '{9}');", id, imie, nazwisko, pesel, telefon, rokUrodzenia.Year, rokUrodzenia.Month, rokUrodzenia.Day, login, haslo );
         }
 
         public string DodajDoGrafiku(int id, DateTime data, int liczbaGodzin) //+ do sprawdzenia
