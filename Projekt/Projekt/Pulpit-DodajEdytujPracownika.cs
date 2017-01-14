@@ -14,7 +14,7 @@ namespace Projekt
     public partial class Pulpit_DodajEdytujPracownika : Form
     {
         public Menadzer menadzer;
-        public Pulpit_DodajEdytujPracownika(Menadzer m, Magazyn mag, BazaDanych bd)
+        public Pulpit_DodajEdytujPracownika(Menadzer m)
         {
             InitializeComponent();
             menadzer = m;            

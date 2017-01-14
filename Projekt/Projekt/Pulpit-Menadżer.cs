@@ -14,7 +14,7 @@ namespace Projekt
     {
         public Menadzer menadzer;
                
-        public Pulpit_Menadżer(Menadzer m, Magazyn mag, BazaDanych db)
+        public Pulpit_Menadżer(Menadzer m)
         {
             InitializeComponent();
             menadzer = m;

@@ -32,7 +32,7 @@ namespace Projekt
             magazyn = pobierzMagazyn();
         }
 
-        public void SkonfigurujPolaczenie()
+        public static void SkonfigurujPolaczenie()
         {
             connCO = new SqlConnection();
             da = new SqlDataAdapter();
