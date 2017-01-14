@@ -33,7 +33,7 @@ namespace Projekt
             lokalizacje = new Dictionary<Lokalizacja, int>();
             lokalizacje.Add(lokalizacja, ilosc);
 
-            BazaDanych.WykonajWBazie(String.Format("INSERT INTO towary2 (id, nazwa) VALUES ({0}, '{1}');", id, nazwa));
+            BazaDanych.WykonajWBazie(String.Format("INSERT INTO towary3 (id, nazwa) VALUES ({0}, '{1}');", id, nazwa));
             BazaDanych.WykonajWBazie(String.Format("INSERT INTO lokalizacje2 (idtowaru, sektor, rzad, polka, ilosc) VALUES ({0}, {1}, {2}, {3}, {4});", id, lokalizacja.sektor, lokalizacja.rzad, lokalizacja.polka, ilosc));
             Komunikaty.WyświetlKomunikat("Operacja zakończona powodzeniem.");
         }
@@ -61,7 +61,7 @@ namespace Projekt
             }
 
             lokalizacje[lokalizacja] += iloscDoDodania;
-            BazaDanych.WykonajWBazie(String.Format("UPDATE lokalizacje2 SET ilosc={0} WHERE (idtowaru={1}, sektor={2}, rzad={3}, polka={4});", ilosc+iloscDoDodania, sektor, rzad, polka));
+            BazaDanych.WykonajWBazie(String.Format("UPDATE lokalizacje2 SET ilosc={0} WHERE (idtowaru={1} AND sektor={2} AND rzad={3} AND polka={4});", ilosc+iloscDoDodania,id, sektor, rzad, polka));
         }
 
         public void UsuńTowar(int sektor, int rzad, int polka, int iloscDoUsuniecia)
@@ -93,12 +93,12 @@ namespace Projekt
             if (ilosc == iloscDoUsuniecia)
             {
                 lokalizacje.Remove(lokalizacja);
-                BazaDanych.WykonajWBazie(String.Format("DELETE FROM lokalizacje2 WHERE (id={0} AND sektor={1} AND rzad={2} AND polka={3});", id, sektor, rzad, polka));
+                BazaDanych.WykonajWBazie(String.Format("DELETE FROM lokalizacje2 WHERE (idtowaru={0} AND sektor={1} AND rzad={2} AND polka={3});", id, sektor, rzad, polka));
                 return;
             }
 
             lokalizacje[lokalizacja] -= ilosc;
-            BazaDanych.WykonajWBazie(String.Format("UPDATE lokalizacje2 SET ilosc={4} WHERE (id={0} AND sektor={1} AND rzad={2} AND polka={3});", id, sektor, rzad, polka, ilosc-iloscDoUsuniecia));
+            BazaDanych.WykonajWBazie(String.Format("UPDATE lokalizacje2 SET ilosc={4} WHERE (idtowaru={0} AND sektor={1} AND rzad={2} AND polka={3});", id, sektor, rzad, polka, ilosc-iloscDoUsuniecia));
         }
     }
 }
