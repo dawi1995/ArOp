@@ -13,9 +13,10 @@ namespace Projekt
     public partial class Pulpit_Pracownik : Form
     {
         public Pracownik pracownik;
-        public Pulpit_Pracownik()
+        public Pulpit_Pracownik(Pracownik p)
         {
             InitializeComponent();
+            pracownik = p;
         }
 
         private void button_Wyloguj_Click(object sender, EventArgs e)

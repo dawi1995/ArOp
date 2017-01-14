@@ -23,25 +23,5 @@ namespace Projekt
             this.czyPrzyjeto = czyPrzyjeto;
             this.przewoznik = przewoznik;
         }
-        public int PobierzPracownika()
-        {
-            throw new Exception();
-        }
-        public DateTime PobierzDate()
-        {
-            throw new Exception();
-        }
-        public int PobierzIdTowaru()
-        {
-            throw new Exception();
-        }
-        public string PobierzPrzewoźnika()
-        {
-            throw new Exception();
-        }
-        public string PobierzRodzajOperacji()
-        {
-            throw new Exception();
-        }
     }
 }
