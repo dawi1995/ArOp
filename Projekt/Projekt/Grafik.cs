@@ -16,40 +16,78 @@ namespace Projekt
             grafik = new Dictionary<DateTime, int>();
         }
 
-        public void DodajDoGrafiku(DateTime data, int czasPracy)
+        public void DodajDoGrafiku(int id, DateTime data, int czasPracy)
         {
+            bool czyZnaleziono = false;
+
+            foreach (var item in grafik)
+            {
+                if (item.Key.Date == data.Date)
+                {
+                    czyZnaleziono = true;
+                }
+            }
+
+            if (czyZnaleziono)
+            {
+                Komunikaty.WyświetlKomunikat("W grafiku istnieje już taka data.");
+                return;
+            }
+
             grafik.Add(data, czasPracy);
-            MessageBox.Show("Pomyślnie zaktualizowano grafik");
+            BazaDanych.WykonajWBazie(String.Format("INSERT INTO grafik (id, dzien, czas) values ({0}, '{1}', {2});", id, Narzędzia.PrzygotujDateDlaBazy(data), czasPracy));
+            Komunikaty.WyświetlKomunikat("Operacja zakończoa powodzeniem.");
         }
 
-        public void EdytujGrafik(DateTime dataDoEdycji, DateTime nowaData, int nowyCzasPracy)
+        public void EdytujGrafik(int id, DateTime dataDoEdycji, DateTime nowaData, int nowyCzasPracy)
         {
-            for (int i = 0; i < grafik.Count; i++)
+            bool czyZnaleziono = false;
+            DateTime doEdycji = new DateTime();
+
+            foreach (var item in grafik)
             {
-                if (grafik.ElementAt(i).Key.CompareTo(dataDoEdycji) == 0)
+                if (item.Key.Date == dataDoEdycji.Date)
                 {
-                    grafik.Remove(grafik.ElementAt(i).Key);
-                    grafik.Add(nowaData, nowyCzasPracy);
-                    MessageBox.Show("Pomyślnie zedytowno grafik");
-                    return;
+                    czyZnaleziono = true;
+                    doEdycji = item.Key;
                 }
             }
-            MessageBox.Show("Nie odnaleziono szukanej daty.");
+
+            if(!czyZnaleziono)
+            {
+                Komunikaty.WyświetlKomunikat("Nie znaleziono wskazanej daty do edycji.");
+                return;
+            }
+
+            grafik.Remove(doEdycji);
+            grafik.Add(nowaData, nowyCzasPracy);
+            BazaDanych.WykonajWBazie(String.Format("UPDATE grafik SET dzien='{0}', czas={1} WHERE (id={2} AND dzien='{3}');", Narzędzia.PrzygotujDateDlaBazy(nowaData), nowyCzasPracy, id, Narzędzia.PrzygotujDateDlaBazy(dataDoEdycji)));
+            Komunikaty.WyświetlKomunikat("Operacja zakończona powodzeniem.");
         }
 
-        public void UsuńZGrafiku(DateTime dataDoUsunięcia)
+        public void UsuńZGrafiku(int id, DateTime dataDoUsunięcia)
         {
+            bool czyZnaleziono = false;
+            DateTime doEdycji = new DateTime();
 
-            for (int i = 0; i < grafik.Count; i++)
+            foreach (var item in grafik)
             {
-                if (grafik.ElementAt(i).Key.CompareTo(dataDoUsunięcia) == 0)
+                if (item.Key.Date == dataDoUsunięcia.Date)
                 {
-                    grafik.Remove(grafik.ElementAt(i).Key);
-                    MessageBox.Show("Pomyślnie usunięto wpis z grafiku.");
-                    return;
+                    czyZnaleziono = true;
+                    doEdycji = item.Key;
                 }
             }
-            MessageBox.Show("Nie odnaleziono szukanej daty.");
+
+            if (!czyZnaleziono)
+            {
+                Komunikaty.WyświetlKomunikat("Nie znaleziono wskazanej daty do usunięcia.");
+                return;
+            }
+
+            grafik.Remove(doEdycji);
+            BazaDanych.WykonajWBazie(String.Format("DELETE FROM grafik WHERE (id = {0} AND dzien = '{1}');", id, Narzędzia.PrzygotujDateDlaBazy(dataDoUsunięcia)));
+            MessageBox.Show("Operacja zakończona powodzeniem.");
         }
 
         public bool CzyDataJestWGrafiku(DateTime data)

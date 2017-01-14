@@ -30,60 +30,59 @@ namespace Projekt
             return String.Format("INSERT INTO pracownicy2 (id, imie, nazwisko, pesel, telefon, dataurodzenia, login, haslo) VALUES ({0}, '{1}', '{2}', '{3}', {4}, '{5}', '{6}', '{7}');", id, imie, nazwisko, pesel, telefon, Narzędzia.PrzygotujDateDlaBazy(dataUrodzenia), login, haslo );
         }
 
-        public string DodajDoGrafiku(int id, DateTime data, int liczbaGodzin) //+ do sprawdzenia
+        public void DodajDoGrafiku(int id, DateTime data, int liczbaGodzin) //+ do sprawdzenia
         {
             Pracownik p = BazaDanych.ZwrocPracownika(id);
 
-            if (p != null && !p.grafik.CzyDataJestWGrafiku(data))
+            if (p == null)
             {
-                p.grafik.DodajDoGrafiku(data, liczbaGodzin);
-                return String.Format("INSERT INTO grafik (id, dzien, czas) values ({0}, '{1}{2}{3} {4}', {5});", id, data.Year, data.Month, data.Day, liczbaGodzin);
+                Komunikaty.WyświetlKomunikat("W bazie nie ma pracownika o podanym ID.");
+                return;
             }
 
-            MessageBox.Show("Praownik o podanym ID nie istnieje lub podana data jest już wpisana do grafiku.");
-            return "";
+            p.grafik.DodajDoGrafiku(id, data, liczbaGodzin);
         }
 
-        public string  EdytujGrafik(int id, DateTime dataDoZmiany, DateTime nowaData, int liczbaGodzin) // + do sprawdzenia
+        public void EdytujGrafik(int id, DateTime dataDoZmiany, DateTime nowaData, int liczbaGodzin) // + do sprawdzenia
         {
             Pracownik p = BazaDanych.ZwrocPracownika(id);
 
-            if (p!= null && p.grafik.CzyDataJestWGrafiku(dataDoZmiany))
+            if (p == null)
             {
-                p.grafik.EdytujGrafik(dataDoZmiany, nowaData, liczbaGodzin);
-                return String.Format("UPDATE grafik SET dzien='{0}{1}{2} {3}', czas={4} WHERE (id={5} AND dzien='{6}{7}{8} {9}');", nowaData.Year, nowaData.Month, nowaData.Day, nowaData.TimeOfDay, liczbaGodzin, id, dataDoZmiany.Year, dataDoZmiany.Month, dataDoZmiany.Day, dataDoZmiany.TimeOfDay);
+                Komunikaty.WyświetlKomunikat("W bazie nie ma pracownika o podanym ID.");
+                return;
             }
-            MessageBox.Show("Nie znaleziono pracownika lub podanej daty nie ma w grafiku.");
-            return "";
 
-        }
+            p.grafik.EdytujGrafik(id, dataDoZmiany, nowaData, liczbaGodzin);
 
-        public string UsunZGrafiku(int id, DateTime dataDoUsuniecia)
-        {
-
-            Pracownik p = BazaDanych.ZwrocPracownika(id);
-            if (p != null && p.grafik.CzyDataJestWGrafiku(dataDoUsuniecia))
-            {
-                p.grafik.UsuńZGrafiku(dataDoUsuniecia);
-                return String.Format("DELETE FROM grafik WHERE (id = {0} AND dzien = '{1}{2}{3} {4}');", id, dataDoUsuniecia.Year, dataDoUsuniecia.Month, dataDoUsuniecia.Day, dataDoUsuniecia.TimeOfDay);
-            }
-            MessageBox.Show("Nie znaleziono pracownika lub podanej daty nie ma w grafiku.");
-            return "";
 
         }
 
-        public string UsunPracownika(int id)
+        public void UsunZGrafiku(int id, DateTime dataDoUsuniecia)
         {
             Pracownik p = BazaDanych.ZwrocPracownika(id);
-            if (p != null)
+
+            if (p == null)
             {
-                BazaDanych.magazyn.pracownicy.Remove(p);
-                BazaDanych.WyczyscID(id);
-                return String.Format("DELETE FROM pracownicy2 WHERE id={0}", id);
+                Komunikaty.WyświetlKomunikat("W bazie nie ma pracownika o podanym ID.");
+                return;
             }
 
-            MessageBox.Show("Nie znaleziono pracownika o wskazanym ID");
-            return "";
+            p.grafik.UsuńZGrafiku(id, dataDoUsuniecia);
+        }
+
+        public void UsunPracownika(int id)
+        {
+            Pracownik p = BazaDanych.ZwrocPracownika(id);
+            if (p == null)
+            {
+                MessageBox.Show("Nie znaleziono pracownika o wskazanym ID");
+                return;
+            }
+
+            BazaDanych.magazyn.pracownicy.Remove(p);
+            BazaDanych.WyczyscID(id);
+            BazaDanych.WykonajWBazie(String.Format("DELETE FROM pracownicy2 WHERE id={0}", id));
         }
 
         public List<Zlecenie> SprawdzListeZlecen()
