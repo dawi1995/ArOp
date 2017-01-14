@@ -83,6 +83,7 @@ namespace Projekt
             BazaDanych.magazyn.pracownicy.Remove(p);
             BazaDanych.WyczyscID(id);
             BazaDanych.WykonajWBazie(String.Format("DELETE FROM pracownicy2 WHERE id={0}", id));
+            Komunikaty.WyświetlKomunikat("Operacja zakończona powodzeniem.");
         }
 
         public List<Zlecenie> SprawdzListeZlecen()
