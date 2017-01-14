@@ -28,22 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button_DodajEdytujPracownika = new System.Windows.Forms.Button();
             this.button_UsunPracownika = new System.Windows.Forms.Button();
             this.button_ZmieńGrafik = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button_Wyloguj = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(44, 24);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(621, 530);
-            this.dataGridView1.TabIndex = 0;
             // 
             // button_DodajEdytujPracownika
             // 
@@ -77,12 +68,13 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(874, 375);
+            this.button4.Location = new System.Drawing.Point(874, 361);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(286, 23);
             this.button4.TabIndex = 4;
             this.button4.Text = "Usuń z grafiku";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button_Wyloguj
             // 
@@ -93,31 +85,39 @@
             this.button_Wyloguj.Text = "Wyloguj";
             this.button_Wyloguj.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(874, 332);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(286, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Edytuj grafik";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Pulpit_Menadżer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1280, 582);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.button_Wyloguj);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button_ZmieńGrafik);
             this.Controls.Add(this.button_UsunPracownika);
             this.Controls.Add(this.button_DodajEdytujPracownika);
-            this.Controls.Add(this.dataGridView1);
             this.Name = "Pulpit_Menadżer";
             this.Text = "Pulpit_Menadżer";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button_DodajEdytujPracownika;
         private System.Windows.Forms.Button button_UsunPracownika;
         private System.Windows.Forms.Button button_ZmieńGrafik;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button_Wyloguj;
+        private System.Windows.Forms.Button button1;
     }
 }

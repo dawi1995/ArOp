@@ -37,5 +37,17 @@ namespace Projekt
             Pulpit_DodajEdytujGrafik pulpitDG = new Pulpit_DodajEdytujGrafik(menadzer);
             pulpitDG.ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Pulpit_EdytujGrafik pulpitEG = new Pulpit_EdytujGrafik(menadzer);
+            pulpitEG.ShowDialog();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Pulpit_UsunZGrafiku pulpitUZG = new Pulpit_UsunZGrafiku(menadzer);
+            pulpitUZG.ShowDialog();
+        }
     }
 }

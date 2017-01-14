@@ -10,18 +10,18 @@ using System.Windows.Forms;
 
 namespace Projekt
 {
-    public partial class Pulpit_UsunZGrafiku : Form
+    public partial class Pulpit_EdytujGrafik : Form
     {
         Menadzer menadzer;
-        public Pulpit_UsunZGrafiku(Menadzer m)
+        public Pulpit_EdytujGrafik(Menadzer m)
         {
             menadzer = m;
             InitializeComponent();
         }
 
-        private void button_UsunZGrafiku_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            menadzer.UsunZGrafiku(Convert.ToInt32(textBox_idracownika.Text), Convert.ToDateTime(textBox_dataDoUsuniecia.Text));
+            menadzer.EdytujGrafik(Convert.ToInt32(textBox_idpracownika.Text), Convert.ToDateTime(textBox_datadozmiany.Text), Convert.ToDateTime(textBox_nowadata.Text), Convert.ToInt32(textBox_czaspracy.Text));
         }
     }
 }
