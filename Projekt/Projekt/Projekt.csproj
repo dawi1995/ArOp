@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="BazaDanych.cs" />
     <Compile Include="Grafik.cs" />
+    <Compile Include="Komunikaty.cs" />
     <Compile Include="Magazyn.cs" />
     <Compile Include="Pracownik.cs" />
     <Compile Include="Lokalizacja.cs" />
