@@ -99,29 +99,11 @@
     <Compile Include="Pulpit-Pracownik.Designer.cs">
       <DependentUpon>Pulpit-Pracownik.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pulpit-SprawdzZlecenia.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Pulpit-SprawdzZlecenia.Designer.cs">
-      <DependentUpon>Pulpit-SprawdzZlecenia.cs</DependentUpon>
-    </Compile>
     <Compile Include="Pulpit-UsunPracownika.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Pulpit-UsunPracownika.Designer.cs">
       <DependentUpon>Pulpit-UsunPracownika.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Pulpit-UsunTowar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Pulpit-UsunTowar.Designer.cs">
-      <DependentUpon>Pulpit-UsunTowar.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Pulpit-UsunTowarZPolki.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Pulpit-UsunTowarZPolki.Designer.cs">
-      <DependentUpon>Pulpit-UsunTowarZPolki.cs</DependentUpon>
     </Compile>
     <Compile Include="Pulpit-UsunZGrafiku.cs">
       <SubType>Form</SubType>
@@ -169,12 +151,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pulpit-UsunPracownika.resx">
       <DependentUpon>Pulpit-UsunPracownika.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Pulpit-UsunTowar.resx">
-      <DependentUpon>Pulpit-UsunTowar.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Pulpit-UsunTowarZPolki.resx">
-      <DependentUpon>Pulpit-UsunTowarZPolki.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pulpit-UsunZGrafiku.resx">
       <DependentUpon>Pulpit-UsunZGrafiku.cs</DependentUpon>
