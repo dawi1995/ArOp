@@ -14,12 +14,12 @@ namespace Projekt
         public Menadzer(int id, string imie, string nazwisko, string pesel, int telefon, DateTime dataUrodzenia, Magazyn magazyn, string login, string haslo)
             : base(id, imie, nazwisko, pesel, telefon, dataUrodzenia, login, haslo) { }
 
-        public string DodajPracownika(int id, string imie, string nazwisko, string pesel, int telefon, DateTime rokUrodzenia) //do uzupełnienia
+        public void DodajPracownika(int id, string imie, string nazwisko, string pesel, int telefon, DateTime rokUrodzenia) //do uzupełnienia
         {
             if (BazaDanych.ZwrocPracownika(id) != null)
             {
                 MessageBox.Show("Pracownik o takim ID już istnieje.");
-                return "";
+                return;
             }
 
             string login = imie.ToLower();
@@ -27,7 +27,7 @@ namespace Projekt
             Pracownik p = new Pracownik(id, imie, nazwisko, pesel, telefon, rokUrodzenia, login, haslo);
             BazaDanych.magazyn.pracownicy.Add(p);
 
-            return String.Format("INSERT INTO pracownicy2 (id, imie, nazwisko, pesel, telefon, dataurodzenia, login, haslo) VALUES ({0}, '{1}', '{2}', '{3}', {4}, '{5}', '{6}', '{7}');", id, imie, nazwisko, pesel, telefon, Narzędzia.PrzygotujDateDlaBazy(dataUrodzenia), login, haslo );
+            BazaDanych.WykonajWBazie(String.Format("INSERT INTO pracownicy2 (id, imie, nazwisko, pesel, telefon, dataurodzenia, login, haslo) VALUES ({0}, '{1}', '{2}', '{3}', {4}, '{5}', '{6}', '{7}');", id, imie, nazwisko, pesel, telefon, Narzędzia.PrzygotujDateDlaBazy(dataUrodzenia), login, haslo ));
         }
 
         public void DodajDoGrafiku(int id, DateTime data, int liczbaGodzin) //+ do sprawdzenia

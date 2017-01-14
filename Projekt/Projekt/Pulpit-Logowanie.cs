@@ -31,7 +31,7 @@ namespace Projekt
                     string haslo = BazaDanych.magazyn.menadzerowie[i].haslo;
                     if (textBox2.Text==haslo)
                     {
-                        Pulpit_Menadżer pulpitM = new Pulpit_Menadżer(BazaDanych.ZwrocMenadzera(BazaDanych.magazyn.menadzerowie[i].id), BazaDanych.magazyn,db);
+                        Pulpit_Menadżer pulpitM = new Pulpit_Menadżer(BazaDanych.ZwrocMenadzera(BazaDanych.magazyn.menadzerowie[i].id));
                         pulpitM.menadzer = BazaDanych.magazyn.menadzerowie[i];
                         pulpitM.ShowDialog();
                         this.Hide();
@@ -49,7 +49,7 @@ namespace Projekt
                     string haslo = BazaDanych.magazyn.pracownicy[i].haslo;
                     if (textBox2.Text==haslo) 
                     {
-                        Pulpit_Pracownik pulpitP = new Pulpit_Pracownik();
+                        Pulpit_Pracownik pulpitP = new Pulpit_Pracownik(BazaDanych.ZwrocPracownika(BazaDanych.magazyn.pracownicy[i].id));
                         pulpitP.pracownik = BazaDanych.magazyn.pracownicy[i];
                         pulpitP.ShowDialog();
                         this.Hide();

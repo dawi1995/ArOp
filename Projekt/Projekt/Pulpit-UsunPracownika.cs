@@ -13,20 +13,15 @@ namespace Projekt
     public partial class Pulpit_UsunPracownika : Form
     {
         public Menadzer menadzer;
-        public BazaDanych bd;
-        public Magazyn magazyn;
-        public Pulpit_UsunPracownika(Menadzer m, Magazyn mag, BazaDanych bd)
+        public Pulpit_UsunPracownika(Menadzer m)
         {
             InitializeComponent();
             menadzer = m;
-            magazyn = mag;
-            this.bd = bd;
-
         }
 
         private void button_UsunPracownika_Click(object sender, EventArgs e)
         {
-            BazaDanych.WykonajWBazie(menadzer.UsunPracownika(Convert.ToInt32(textbox_ID.Text)));
+            menadzer.UsunPracownika(Convert.ToInt32(textbox_ID.Text));
         }
     }
 }
