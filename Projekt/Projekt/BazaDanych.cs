@@ -17,7 +17,7 @@ namespace Projekt
         //string haslo;
         public SqlConnection connCO; // = new SqlConnection();
         public SqlDataAdapter da; // = new SqlDataAdapter();
-        public DataSet ds; // = new DataSet();
+        public DataSet ds; // = new DataSet();4
 
         public BazaDanych(string adres, string nazwa)
         {
@@ -31,7 +31,6 @@ namespace Projekt
             da = new SqlDataAdapter();
             ds = new DataSet();
             connCO.ConnectionString = @"Data Source=" + adres + ";Initial Catalog=" + nazwa + ";Integrated Security=SSPI";
-
         }
 
         
@@ -169,32 +168,31 @@ namespace Projekt
                     }
             return magazyn;
         }
+
         public void AktualizujBaze()
         {
             WykonajWBazie("insert into menadzerowie1 values (2,'Dawid', 'Brzęczek',7894613,2222222,12-12-2016,'Jacek','Mariański')");
         }
+
         public Pracownik ZwrocPracownika(int id) //bez sensu zwracac po loginie i hasle, lepiej po ID
         {
             Magazyn magazyn = pobierzMagazyn();
-            Pracownik pracownik = null;
             for (int i = 0; i < magazyn.pracownicy.Count; i++)
             {
                 if (magazyn.pracownicy[i].id==id)
-                {
-                    pracownik = magazyn.pracownicy[i];
-                }
-                else
-                {
-                    MessageBox.Show("Nie ma pracownika o podanym id");
-                }
+                    return magazyn.pracownicy[i];
             }
-            return pracownik;
+
+            MessageBox.Show("Nie ma pracownika o podanym id");
+            return null;
 
         }
+
         public Menadzer ZwrocMenadzera(int id) //tu tez bez sensu
         {
             throw new Exception();
         }
+
         public static BazaDanych UtworzBaze()
         {
             return new BazaDanych(@"DESKTOP-TO78UQT\PROJEKT", "hurtownia");

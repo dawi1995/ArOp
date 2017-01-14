@@ -117,6 +117,7 @@
     <Compile Include="Pulpit-WyswietlGrafik.Designer.cs">
       <DependentUpon>Pulpit-WyswietlGrafik.cs</DependentUpon>
     </Compile>
+    <Compile Include="Validate.cs" />
     <Compile Include="Zlecenie.cs" />
     <Compile Include="Towar.cs" />
     <EmbeddedResource Include="Pulpit-DodajEdytujGrafik.resx">
