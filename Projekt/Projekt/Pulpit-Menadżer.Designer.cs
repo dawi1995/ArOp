@@ -186,6 +186,7 @@
             this.panelPracownicy.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelPracownicy.Controls.Add(this.panelZlecenia);
             this.panelPracownicy.Controls.Add(this.dataPracownicy);
             this.panelPracownicy.Controls.Add(this.button_pracownicyOdswiez);
             this.panelPracownicy.Location = new System.Drawing.Point(219, 12);
@@ -201,7 +202,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelZlecenia.Controls.Add(this.dataZlecenia);
             this.panelZlecenia.Controls.Add(this.buttonZleceniaOdswiez);
-            this.panelZlecenia.Location = new System.Drawing.Point(219, 12);
+            this.panelZlecenia.Location = new System.Drawing.Point(0, 0);
             this.panelZlecenia.Name = "panelZlecenia";
             this.panelZlecenia.Size = new System.Drawing.Size(640, 454);
             this.panelZlecenia.TabIndex = 9;
@@ -267,7 +268,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(199)))), ((int)(((byte)(199)))));
             this.ClientSize = new System.Drawing.Size(871, 478);
-            this.Controls.Add(this.panelZlecenia);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button_Wyloguj);
             this.Controls.Add(this.panelPracownicy);
