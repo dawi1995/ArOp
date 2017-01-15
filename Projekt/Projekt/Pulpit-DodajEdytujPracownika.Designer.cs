@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pulpit_DodajEdytujPracownika));
             this.label_Imie = new System.Windows.Forms.Label();
             this.label_Nazwisko = new System.Windows.Forms.Label();
             this.label_PESEL = new System.Windows.Forms.Label();
@@ -44,6 +45,8 @@
             this.textBox_date = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label_Imie
@@ -143,7 +146,7 @@
             this.button_DodajPracownika.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_DodajPracownika.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_DodajPracownika.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_DodajPracownika.Location = new System.Drawing.Point(105, 300);
+            this.button_DodajPracownika.Location = new System.Drawing.Point(192, 341);
             this.button_DodajPracownika.Name = "button_DodajPracownika";
             this.button_DodajPracownika.Size = new System.Drawing.Size(180, 40);
             this.button_DodajPracownika.TabIndex = 11;
@@ -213,12 +216,23 @@
             this.label3.TabIndex = 18;
             this.label3.Text = "Format: XXXXXXXXX";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(28, 300);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(121, 115);
+            this.pictureBox1.TabIndex = 19;
+            this.pictureBox1.TabStop = false;
+            // 
             // Pulpit_DodajEdytujPracownika
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.ClientSize = new System.Drawing.Size(384, 361);
+            this.ClientSize = new System.Drawing.Size(384, 436);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox_date);
@@ -238,6 +252,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Pulpit_DodajEdytujPracownika";
             this.Text = "Dodaj/edytuj pracownika";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -261,5 +276,6 @@
         private System.Windows.Forms.TextBox textBox_date;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

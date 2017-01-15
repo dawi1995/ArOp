@@ -18,6 +18,7 @@ namespace Projekt
             Application.SetCompatibleTextRenderingDefault(false);
             Form1 form = new Projekt.Form1();
             //form.Show();
+
             Application.Run(form);
         }
     }

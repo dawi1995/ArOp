@@ -28,9 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pulpit_UsunPracownika));
             this.button_UsunPracownika = new System.Windows.Forms.Button();
             this.label_ID = new System.Windows.Forms.Label();
             this.textbox_ID = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // button_UsunPracownika
@@ -39,7 +42,7 @@
             this.button_UsunPracownika.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_UsunPracownika.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_UsunPracownika.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_UsunPracownika.Location = new System.Drawing.Point(105, 100);
+            this.button_UsunPracownika.Location = new System.Drawing.Point(192, 104);
             this.button_UsunPracownika.Name = "button_UsunPracownika";
             this.button_UsunPracownika.Size = new System.Drawing.Size(180, 40);
             this.button_UsunPracownika.TabIndex = 14;
@@ -67,18 +70,30 @@
             this.textbox_ID.Size = new System.Drawing.Size(215, 32);
             this.textbox_ID.TabIndex = 16;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(17, 68);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(112, 120);
+            this.pictureBox1.TabIndex = 17;
+            this.pictureBox1.TabStop = false;
+            // 
             // Pulpit_UsunPracownika
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.ClientSize = new System.Drawing.Size(384, 161);
+            this.ClientSize = new System.Drawing.Size(384, 200);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.textbox_ID);
             this.Controls.Add(this.label_ID);
             this.Controls.Add(this.button_UsunPracownika);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Pulpit_UsunPracownika";
             this.Text = "Pulpit_UsunPracownika";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -88,5 +103,6 @@
         private System.Windows.Forms.Button button_UsunPracownika;
         private System.Windows.Forms.Label label_ID;
         private System.Windows.Forms.TextBox textbox_ID;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

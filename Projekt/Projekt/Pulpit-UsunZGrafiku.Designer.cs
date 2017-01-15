@@ -28,12 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pulpit_UsunZGrafiku));
             this.label_DataDoUsunięcia = new System.Windows.Forms.Label();
             this.textBox_idracownika = new System.Windows.Forms.TextBox();
             this.button_UsunZGrafiku = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox_dataDoUsuniecia = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label_DataDoUsunięcia
@@ -62,7 +65,7 @@
             this.button_UsunZGrafiku.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_UsunZGrafiku.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_UsunZGrafiku.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_UsunZGrafiku.Location = new System.Drawing.Point(105, 150);
+            this.button_UsunZGrafiku.Location = new System.Drawing.Point(192, 162);
             this.button_UsunZGrafiku.Name = "button_UsunZGrafiku";
             this.button_UsunZGrafiku.Size = new System.Drawing.Size(180, 40);
             this.button_UsunZGrafiku.TabIndex = 2;
@@ -102,12 +105,23 @@
             this.label2.TabIndex = 9;
             this.label2.Text = "Format: RRRR-MM-DD GG:MM";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(17, 118);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(131, 129);
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
+            // 
             // Pulpit_UsunZGrafiku
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.ClientSize = new System.Drawing.Size(384, 211);
+            this.ClientSize = new System.Drawing.Size(384, 259);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox_dataDoUsuniecia);
             this.Controls.Add(this.label1);
@@ -117,6 +131,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Pulpit_UsunZGrafiku";
             this.Text = "Pulpit_UsunZGrafiku";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -130,5 +145,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox_dataDoUsuniecia;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
