@@ -182,11 +182,24 @@ namespace Projekt
                 p.Visible = true;
         }
 
-        private void ChangePanelState(object sender, EventArgs e)
+        private void button_pokazPracownikow_Click(object sender, EventArgs e)
         {
-            ChangePanel(sender as Panel);
+            ChangePanel(panelPracownicy);
         }
 
-        
+        private void buttonZlecenia_Click(object sender, EventArgs e)
+        {
+            ChangePanel(panelZlecenia);
+        }
+
+        private void buttonGrafik_Click(object sender, EventArgs e)
+        {
+            ChangePanel(panelGrafik);
+        }
+
+        private void buttonTowary_Click(object sender, EventArgs e)
+        {
+            ChangePanel(panelTowary);
+        }
     }
 }
