@@ -121,9 +121,14 @@ namespace Projekt
             panelZlecenia.Visible = false;
             panelTowary.Visible = false;
             panelGrafik.Visible = false;
+            pictureBox1.Visible = true;
 
             if (ifActive == false)
+            {
                 p.Visible = true;
+                pictureBox1.Visible = false;
+            }
+                
         }
 
         private void buttonZleceniaOdswiez_Click(object sender, EventArgs e)

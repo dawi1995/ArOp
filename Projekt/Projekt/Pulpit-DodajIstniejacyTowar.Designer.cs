@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pulpit_DodajIstniejacyTowar));
             this.button_DodajNowyTowar = new System.Windows.Forms.Button();
             this.textBox_polka = new System.Windows.Forms.TextBox();
             this.textBox_rzad = new System.Windows.Forms.TextBox();
@@ -41,6 +42,8 @@
             this.textBox_ilosc = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox_info = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // button_DodajNowyTowar
@@ -49,7 +52,7 @@
             this.button_DodajNowyTowar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_DodajNowyTowar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_DodajNowyTowar.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_DodajNowyTowar.Location = new System.Drawing.Point(105, 300);
+            this.button_DodajNowyTowar.Location = new System.Drawing.Point(192, 295);
             this.button_DodajNowyTowar.Name = "button_DodajNowyTowar";
             this.button_DodajNowyTowar.Size = new System.Drawing.Size(180, 40);
             this.button_DodajNowyTowar.TabIndex = 19;
@@ -177,12 +180,23 @@
             this.textBox_info.Size = new System.Drawing.Size(215, 32);
             this.textBox_info.TabIndex = 23;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(29, 258);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(122, 122);
+            this.pictureBox1.TabIndex = 24;
+            this.pictureBox1.TabStop = false;
+            // 
             // Pulpit_DodajIstniejacyTowar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.ClientSize = new System.Drawing.Size(384, 361);
+            this.ClientSize = new System.Drawing.Size(384, 399);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.textBox_info);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox_ilosc);
@@ -199,6 +213,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Pulpit_DodajIstniejacyTowar";
             this.Text = "Pulpit_DodajIstniejacyTowar";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -219,5 +234,6 @@
         private System.Windows.Forms.TextBox textBox_ilosc;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox_info;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

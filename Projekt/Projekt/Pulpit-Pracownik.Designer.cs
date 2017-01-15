@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pulpit_Pracownik));
             this.button_DodajTowar = new System.Windows.Forms.Button();
             this.button_DodajIstTowar = new System.Windows.Forms.Button();
             this.button_UsuńTowar = new System.Windows.Forms.Button();
@@ -46,6 +47,7 @@
             this.panelTowary = new System.Windows.Forms.Panel();
             this.dataTowary = new System.Windows.Forms.DataGridView();
             this.buttonTowaryOdswiez = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panelZlecenia.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataZlecenia)).BeginInit();
@@ -53,6 +55,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGrafik)).BeginInit();
             this.panelTowary.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataTowary)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // button_DodajTowar
@@ -269,6 +272,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelTowary.Controls.Add(this.dataTowary);
             this.panelTowary.Controls.Add(this.buttonTowaryOdswiez);
+            this.panelTowary.Controls.Add(this.pictureBox1);
             this.panelTowary.Location = new System.Drawing.Point(217, 12);
             this.panelTowary.Name = "panelTowary";
             this.panelTowary.Size = new System.Drawing.Size(642, 455);
@@ -303,6 +307,16 @@
             this.buttonTowaryOdswiez.UseVisualStyleBackColor = false;
             this.buttonTowaryOdswiez.Click += new System.EventHandler(this.buttonTowaryOdswiez_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(125, 29);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(378, 384);
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
+            // 
             // Pulpit_Pracownik
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -324,6 +338,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGrafik)).EndInit();
             this.panelTowary.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataTowary)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -347,5 +362,6 @@
         private System.Windows.Forms.Panel panelTowary;
         private System.Windows.Forms.DataGridView dataTowary;
         private System.Windows.Forms.Button buttonTowaryOdswiez;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

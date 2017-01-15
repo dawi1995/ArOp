@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pulpit_Menadżer));
             this.button_DodajEdytujPracownika = new System.Windows.Forms.Button();
             this.button_UsunPracownika = new System.Windows.Forms.Button();
             this.button_ZmieńGrafik = new System.Windows.Forms.Button();
@@ -51,6 +52,7 @@
             this.panelGrafik = new System.Windows.Forms.Panel();
             this.dataGrafik = new System.Windows.Forms.DataGridView();
             this.buttonGrafikOdswiez = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panelPracownicy.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataPracownicy)).BeginInit();
@@ -60,6 +62,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataTowary)).BeginInit();
             this.panelGrafik.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrafik)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // button_DodajEdytujPracownika
@@ -390,6 +393,16 @@
             this.buttonGrafikOdswiez.UseVisualStyleBackColor = false;
             this.buttonGrafikOdswiez.Click += new System.EventHandler(this.buttonGrafikOdswiez_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(350, 47);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(378, 384);
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
             // Pulpit_Menadżer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -398,6 +411,7 @@
             this.ClientSize = new System.Drawing.Size(871, 478);
             this.Controls.Add(this.panelGrafik);
             this.Controls.Add(this.panelTowary);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelPracownicy);
             this.Controls.Add(this.button_Wyloguj);
@@ -414,6 +428,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataTowary)).EndInit();
             this.panelGrafik.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGrafik)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -442,5 +457,6 @@
         private System.Windows.Forms.Panel panelGrafik;
         private System.Windows.Forms.DataGridView dataGrafik;
         private System.Windows.Forms.Button buttonGrafikOdswiez;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
