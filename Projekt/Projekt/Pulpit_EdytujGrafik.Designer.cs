@@ -42,7 +42,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(58, 24);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 13);
             this.label1.TabIndex = 0;
@@ -51,7 +51,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(58, 54);
+            this.label2.Location = new System.Drawing.Point(12, 39);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(83, 13);
             this.label2.TabIndex = 1;
@@ -60,7 +60,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(58, 85);
+            this.label3.Location = new System.Drawing.Point(12, 70);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(62, 13);
             this.label3.TabIndex = 2;
@@ -69,7 +69,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(58, 117);
+            this.label4.Location = new System.Drawing.Point(12, 102);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(62, 13);
             this.label4.TabIndex = 3;
@@ -77,47 +77,50 @@
             // 
             // textBox_idpracownika
             // 
-            this.textBox_idpracownika.Location = new System.Drawing.Point(297, 17);
+            this.textBox_idpracownika.Location = new System.Drawing.Point(251, 2);
             this.textBox_idpracownika.Name = "textBox_idpracownika";
             this.textBox_idpracownika.Size = new System.Drawing.Size(132, 20);
             this.textBox_idpracownika.TabIndex = 4;
             // 
             // textBox_datadozmiany
             // 
-            this.textBox_datadozmiany.Location = new System.Drawing.Point(297, 50);
+            this.textBox_datadozmiany.Location = new System.Drawing.Point(251, 35);
             this.textBox_datadozmiany.Name = "textBox_datadozmiany";
             this.textBox_datadozmiany.Size = new System.Drawing.Size(132, 20);
             this.textBox_datadozmiany.TabIndex = 5;
             // 
             // textBox_nowadata
             // 
-            this.textBox_nowadata.Location = new System.Drawing.Point(297, 78);
+            this.textBox_nowadata.Location = new System.Drawing.Point(251, 63);
             this.textBox_nowadata.Name = "textBox_nowadata";
             this.textBox_nowadata.Size = new System.Drawing.Size(132, 20);
             this.textBox_nowadata.TabIndex = 6;
             // 
             // textBox_czaspracy
             // 
-            this.textBox_czaspracy.Location = new System.Drawing.Point(297, 110);
+            this.textBox_czaspracy.Location = new System.Drawing.Point(251, 95);
             this.textBox_czaspracy.Name = "textBox_czaspracy";
             this.textBox_czaspracy.Size = new System.Drawing.Size(132, 20);
             this.textBox_czaspracy.TabIndex = 7;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(188, 291);
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(123)))), ((int)(((byte)(57)))));
+            this.button1.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(34, 151);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(118, 23);
             this.button1.TabIndex = 8;
             this.button1.Text = "Edytuj";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Pulpit_EdytujGrafik
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(465, 346);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.ClientSize = new System.Drawing.Size(384, 261);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox_czaspracy);
             this.Controls.Add(this.textBox_nowadata);
@@ -127,6 +130,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Pulpit_EdytujGrafik";
             this.Text = "Pulpit_EdytujGrafik";
             this.ResumeLayout(false);
