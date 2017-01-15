@@ -313,7 +313,6 @@
             this.panelTowary.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelTowary.Controls.Add(this.panelGrafik);
             this.panelTowary.Controls.Add(this.dataTowary);
             this.panelTowary.Controls.Add(this.buttonTowaryOdswiez);
             this.panelTowary.Location = new System.Drawing.Point(220, 12);
@@ -329,7 +328,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelGrafik.Controls.Add(this.dataGrafik);
             this.panelGrafik.Controls.Add(this.buttonGrafikOdswiez);
-            this.panelGrafik.Location = new System.Drawing.Point(0, 0);
+            this.panelGrafik.Location = new System.Drawing.Point(220, 12);
             this.panelGrafik.Name = "panelGrafik";
             this.panelGrafik.Size = new System.Drawing.Size(639, 455);
             this.panelGrafik.TabIndex = 11;
@@ -397,6 +396,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(199)))), ((int)(((byte)(199)))));
             this.ClientSize = new System.Drawing.Size(871, 478);
+            this.Controls.Add(this.panelGrafik);
             this.Controls.Add(this.panelTowary);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelPracownicy);
