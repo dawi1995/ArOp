@@ -90,44 +90,103 @@ namespace Projekt
 
             for (int i = 0; i < zlecenia.Count; i++)
             {
-                dataZlecenia.Rows.Add(zlecenia[i].pracownik.id, zlecenia[i].data.ToString(), zlecenia[i].ilosc, zlecenia[i].czyPrzyjeto, zlecenia[i].informacje);
+                dataZlecenia.Rows.Add(zlecenia[i].pracownik.id, zlecenia[i].data.ToString(), zlecenia[i].towar.id, zlecenia[i].ilosc, zlecenia[i].czyPrzyjeto, zlecenia[i].informacje);
+            }
+        }
+
+        private void WczytajTowary()
+        {
+            dataTowary.DataSource = null;
+            dataTowary.Columns.Clear();
+            dataTowary.Rows.Clear();
+
+            List<Towar> towary = BazaDanych.magazyn.towary;
+
+            dataTowary.Columns.Add("idtowaru", "ID Towaru");
+            dataTowary.Columns.Add("nazwa", "Nazwa");
+            dataTowary.Columns.Add("ilosc", "Ilość towaru w magazynie");
+
+            int ilosc = 0;
+
+            for (int i = 0; i < towary.Count; i++)
+            {
+                dataZlecenia.Rows.Add(towary[i].id, towary[i].nazwa, towary[i].iloscCalegoTowaru());
+            }
+        }
+
+        private void WczytajGrafik()
+        {
+            dataGrafik.DataSource = null;
+            dataGrafik.Columns.Clear();
+            dataGrafik.Rows.Clear();
+
+            List<Pracownik> pracownicy = BazaDanych.magazyn.pracownicy;
+
+            dataGrafik.Columns.Add("idpracownika", "ID pracownika");
+            dataGrafik.Columns.Add("data", "Data");
+            dataGrafik.Columns.Add("godziny", "Liczba godzin");
+
+
+            for (int i = 0; i < pracownicy.Count; i++)
+            {
+                foreach (var item in pracownicy[i].grafik.grafik)
+                {
+                    dataGrafik.Rows.Add(pracownicy[i].id, item.Key, item.Value);
+                }
             }
         }
 
         private void Pulpit_Menadżer_Load(object sender, EventArgs e)
         {
             WczytajPracowników();
+            WczytajZlecenia();
+            WczytajGrafik();
+            WczytajTowary();
         }
 
-        private void button_pokazPracownikow_Click(object sender, EventArgs e)
-        {
-            if (panelPracownicy.Visible == false) { 
-                panelPracownicy.Visible = true;
-                panelZlecenia.Visible = false;
-            }
-            else
-                panelPracownicy.Visible = false;
-        }
+       
 
         private void button_pracownicyOdswiez_Click(object sender, EventArgs e)
         {
             WczytajPracowników();
         }
 
-        private void buttonZlecenia_Click(object sender, EventArgs e)
-        {
-            if (panelZlecenia.Visible == false)
-            {
-                panelZlecenia.Visible = true;
-                panelPracownicy.Visible = false;
-            } 
-            else
-                panelZlecenia.Visible = false;
-        }
-
         private void buttonZleceniaOdswiez_Click(object sender, EventArgs e)
         {
             WczytajZlecenia();
         }
+
+        private void buttonGrafikOdswiez_Click(object sender, EventArgs e)
+        {
+            WczytajGrafik();
+        }
+
+        private void buttonTowaryOdswiez_Click(object sender, EventArgs e)
+        {
+            WczytajTowary();
+        }
+
+        private void ChangePanel(Panel p)
+        {
+            bool ifActive = false;
+
+            if (p.Visible == true)
+                ifActive = true;
+
+            panelPracownicy.Visible = false;
+            panelZlecenia.Visible = false;
+            panelTowary.Visible = false;
+            panelGrafik.Visible = false;
+
+            if (ifActive == false)
+                p.Visible = true;
+        }
+
+        private void ChangePanelState(object sender, EventArgs e)
+        {
+            ChangePanel(sender as Panel);
+        }
+
+        
     }
 }

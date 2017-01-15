@@ -104,5 +104,15 @@ namespace Projekt
             BazaDanych.WykonajWBazie(String.Format("UPDATE lokalizacje2 SET ilosc={4} WHERE (idtowaru={0} AND sektor={1} AND rzad={2} AND polka={3});", id, sektor, rzad, polka, ilosc-iloscDoUsuniecia));
             Komunikaty.WyświetlKomunikat("Operacja zakończona powodzeniem.");
         }
+
+        public int iloscCalegoTowaru()
+        {
+            int iloscCalegoTowaru = 0;
+            foreach (var item in lokalizacje)
+            {
+                iloscCalegoTowaru += item.Value;
+            }
+            return iloscCalegoTowaru;
+        }
     }
 }
