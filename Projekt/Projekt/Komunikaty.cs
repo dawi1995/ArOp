@@ -13,5 +13,9 @@ namespace Projekt
         {
             MessageBox.Show(treść);
         }
+        public static void NieprawidlowaWalidacja()
+        {
+            MessageBox.Show("Zły format wpisanych danych", "Bład walidacji!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
     }
 }

@@ -21,8 +21,13 @@ namespace Projekt
 
         private void button_DodajEdytujGrafik_Click(object sender, EventArgs e)
         {
-            if (!Projekt.Validate.CheckIfPositiveInt(textBox_idpracownika) || !Projekt.Validate.CheckIfDateAndHour(textBox_Data) || !Projekt.Validate.CheckIfPositiveInt(textBox_LiczbaGodzin))
+            if (!Projekt.Validate.CheckIfPositiveInt(textBox_idpracownika) ||
+                !Projekt.Validate.CheckIfDateAndHour(textBox_Data) ||
+                !Projekt.Validate.CheckIfPositiveInt(textBox_LiczbaGodzin))
+            {
+                
                 return;
+            }
 
             menadzer.DodajDoGrafiku(Convert.ToInt32(textBox_idpracownika.Text), Convert.ToDateTime(textBox_Data.Text), Convert.ToInt32(textBox_LiczbaGodzin.Text));
 
