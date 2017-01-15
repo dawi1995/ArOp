@@ -28,6 +28,7 @@ namespace Projekt
             BazaDanych.magazyn.pracownicy.Add(p);
 
             BazaDanych.WykonajWBazie(String.Format("INSERT INTO pracownicy2 (id, imie, nazwisko, pesel, telefon, dataurodzenia, login, haslo) VALUES ({0}, '{1}', '{2}', '{3}', {4}, '{5}', '{6}', '{7}');", id, imie, nazwisko, pesel, telefon, Narzędzia.PrzygotujDateDlaBazy(dataUrodzenia), login, haslo ));
+            Komunikaty.WyświetlKomunikat("Operacja zakończona powodzeniem.");
         }
 
         public void DodajDoGrafiku(int id, DateTime data, int liczbaGodzin) //+ do sprawdzenia
@@ -77,6 +78,13 @@ namespace Projekt
             if (p == null)
             {
                 MessageBox.Show("Nie znaleziono pracownika o wskazanym ID");
+                return;
+            }
+
+            DialogResult odpowiedź = MessageBox.Show("Czy na pewno chcesz usunąć pracownika - " + p.imie + " " + p.nazwisko + "?", "Potwierdzenie", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if(odpowiedź == DialogResult.No)
+            {
                 return;
             }
 

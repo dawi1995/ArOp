@@ -68,7 +68,7 @@ namespace Projekt
 
             for (int i = 0; i < pracownicy.Count; i++)
             {
-                dataGridView1.Rows.Add(pracownicy[i].id, pracownicy[i].imie, pracownicy[i].nazwisko, pracownicy[i].pesel, pracownicy[i].telefon, pracownicy[i].dataUrodzenia.ToString());
+                dataGridView1.Rows.Add(pracownicy[i].id, pracownicy[i].imie, pracownicy[i].nazwisko, pracownicy[i].pesel, pracownicy[i].telefon, pracownicy[i].dataUrodzenia.ToString("dd-MM-yyyy"));
             }
         }
 
