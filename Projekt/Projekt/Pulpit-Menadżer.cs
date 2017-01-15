@@ -54,6 +54,14 @@ namespace Projekt
         {
             List<Pracownik> pracownicy = BazaDanych.magazyn.pracownicy;
 
+            dataGridView1.Columns.Add("id", "ID");
+            dataGridView1.Columns.Add("imie", "Imie");
+            dataGridView1.Columns.Add("nazwisko", "Nazwisko");
+            dataGridView1.Columns.Add("pesel", "PESEL");
+            dataGridView1.Columns.Add("telefon", "Numer telefonu");
+            dataGridView1.Columns.Add("dataurodzenia", "Data urodzenia");
+
+
             for (int i = 0; i < pracownicy.Count; i++)
             {
                 dataGridView1.Rows.Add(pracownicy[i].id, pracownicy[i].imie, pracownicy[i].nazwisko, pracownicy[i].pesel, pracownicy[i].telefon, pracownicy[i].dataUrodzenia.ToString());
