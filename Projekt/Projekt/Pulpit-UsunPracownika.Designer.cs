@@ -37,7 +37,7 @@
             // 
             this.button_UsunPracownika.Location = new System.Drawing.Point(133, 219);
             this.button_UsunPracownika.Name = "button_UsunPracownika";
-            this.button_UsunPracownika.Size = new System.Drawing.Size(244, 23);
+            this.button_UsunPracownika.Size = new System.Drawing.Size(180, 40);
             this.button_UsunPracownika.TabIndex = 14;
             this.button_UsunPracownika.Text = "Usuń pracownika";
             this.button_UsunPracownika.UseVisualStyleBackColor = true;
@@ -46,7 +46,7 @@
             // label_ID
             // 
             this.label_ID.AutoSize = true;
-            this.label_ID.Location = new System.Drawing.Point(91, 75);
+            this.label_ID.Location = new System.Drawing.Point(23, 29);
             this.label_ID.Name = "label_ID";
             this.label_ID.Size = new System.Drawing.Size(24, 13);
             this.label_ID.TabIndex = 15;
@@ -54,7 +54,7 @@
             // 
             // textbox_ID
             // 
-            this.textbox_ID.Location = new System.Drawing.Point(157, 68);
+            this.textbox_ID.Location = new System.Drawing.Point(89, 22);
             this.textbox_ID.Name = "textbox_ID";
             this.textbox_ID.Size = new System.Drawing.Size(261, 20);
             this.textbox_ID.TabIndex = 16;
@@ -63,10 +63,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(492, 269);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.ClientSize = new System.Drawing.Size(384, 261);
             this.Controls.Add(this.textbox_ID);
             this.Controls.Add(this.label_ID);
             this.Controls.Add(this.button_UsunPracownika);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Pulpit_UsunPracownika";
             this.Text = "Pulpit_UsunPracownika";
             this.ResumeLayout(false);
