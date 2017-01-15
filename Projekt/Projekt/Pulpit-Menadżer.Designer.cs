@@ -46,20 +46,20 @@
             this.dataZlecenia = new System.Windows.Forms.DataGridView();
             this.buttonZleceniaOdswiez = new System.Windows.Forms.Button();
             this.panelTowary = new System.Windows.Forms.Panel();
-            this.dataTowary = new System.Windows.Forms.DataGridView();
-            this.buttonTowaryOdswiez = new System.Windows.Forms.Button();
             this.panelGrafik = new System.Windows.Forms.Panel();
             this.dataGrafik = new System.Windows.Forms.DataGridView();
             this.buttonGrafikOdswiez = new System.Windows.Forms.Button();
+            this.dataTowary = new System.Windows.Forms.DataGridView();
+            this.buttonTowaryOdswiez = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panelPracownicy.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataPracownicy)).BeginInit();
             this.panelZlecenia.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataZlecenia)).BeginInit();
             this.panelTowary.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataTowary)).BeginInit();
             this.panelGrafik.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrafik)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTowary)).BeginInit();
             this.SuspendLayout();
             // 
             // button_DodajEdytujPracownika
@@ -178,7 +178,7 @@
             this.buttonTowary.TabIndex = 10;
             this.buttonTowary.Text = "Pokaz towary";
             this.buttonTowary.UseVisualStyleBackColor = false;
-            this.buttonTowary.Click += new System.EventHandler(this.ChangePanelState);
+            this.buttonTowary.Click += new System.EventHandler(this.buttonTowary_Click);
             // 
             // buttonGrafik
             // 
@@ -193,7 +193,7 @@
             this.buttonGrafik.TabIndex = 9;
             this.buttonGrafik.Text = "Pokaz grafik";
             this.buttonGrafik.UseVisualStyleBackColor = false;
-            this.buttonGrafik.Click += new System.EventHandler(this.ChangePanelState);
+            this.buttonGrafik.Click += new System.EventHandler(this.buttonGrafik_Click);
             // 
             // buttonZlecenia
             // 
@@ -208,7 +208,7 @@
             this.buttonZlecenia.TabIndex = 8;
             this.buttonZlecenia.Text = "Pokaz zlecenia";
             this.buttonZlecenia.UseVisualStyleBackColor = false;
-            this.buttonZlecenia.Click += new System.EventHandler(this.ChangePanelState);
+            this.buttonZlecenia.Click += new System.EventHandler(this.buttonZlecenia_Click);
             // 
             // button_pokazPracownikow
             // 
@@ -223,7 +223,7 @@
             this.button_pokazPracownikow.TabIndex = 7;
             this.button_pokazPracownikow.Text = "Pokaz pracowników";
             this.button_pokazPracownikow.UseVisualStyleBackColor = false;
-            this.button_pokazPracownikow.Click += new System.EventHandler(this.ChangePanelState);
+            this.button_pokazPracownikow.Click += new System.EventHandler(this.button_pokazPracownikow_Click);
             // 
             // panelPracownicy
             // 
@@ -317,33 +317,6 @@
             this.panelTowary.TabIndex = 10;
             this.panelTowary.Visible = false;
             // 
-            // dataTowary
-            // 
-            this.dataTowary.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataTowary.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataTowary.Location = new System.Drawing.Point(3, 63);
-            this.dataTowary.Name = "dataTowary";
-            this.dataTowary.Size = new System.Drawing.Size(633, 389);
-            this.dataTowary.TabIndex = 6;
-            // 
-            // buttonTowaryOdswiez
-            // 
-            this.buttonTowaryOdswiez.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonTowaryOdswiez.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(123)))), ((int)(((byte)(57)))));
-            this.buttonTowaryOdswiez.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonTowaryOdswiez.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonTowaryOdswiez.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonTowaryOdswiez.Location = new System.Drawing.Point(456, 7);
-            this.buttonTowaryOdswiez.Margin = new System.Windows.Forms.Padding(10);
-            this.buttonTowaryOdswiez.Name = "buttonTowaryOdswiez";
-            this.buttonTowaryOdswiez.Size = new System.Drawing.Size(180, 40);
-            this.buttonTowaryOdswiez.TabIndex = 5;
-            this.buttonTowaryOdswiez.Text = "Odswiez";
-            this.buttonTowaryOdswiez.UseVisualStyleBackColor = false;
-            this.buttonTowaryOdswiez.Click += new System.EventHandler(this.buttonTowaryOdswiez_Click);
-            // 
             // panelGrafik
             // 
             this.panelGrafik.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -384,6 +357,33 @@
             this.buttonGrafikOdswiez.UseVisualStyleBackColor = false;
             this.buttonGrafikOdswiez.Click += new System.EventHandler(this.buttonGrafikOdswiez_Click);
             // 
+            // dataTowary
+            // 
+            this.dataTowary.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataTowary.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataTowary.Location = new System.Drawing.Point(3, 63);
+            this.dataTowary.Name = "dataTowary";
+            this.dataTowary.Size = new System.Drawing.Size(633, 389);
+            this.dataTowary.TabIndex = 6;
+            // 
+            // buttonTowaryOdswiez
+            // 
+            this.buttonTowaryOdswiez.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonTowaryOdswiez.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(123)))), ((int)(((byte)(57)))));
+            this.buttonTowaryOdswiez.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonTowaryOdswiez.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonTowaryOdswiez.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonTowaryOdswiez.Location = new System.Drawing.Point(456, 7);
+            this.buttonTowaryOdswiez.Margin = new System.Windows.Forms.Padding(10);
+            this.buttonTowaryOdswiez.Name = "buttonTowaryOdswiez";
+            this.buttonTowaryOdswiez.Size = new System.Drawing.Size(180, 40);
+            this.buttonTowaryOdswiez.TabIndex = 5;
+            this.buttonTowaryOdswiez.Text = "Odswiez";
+            this.buttonTowaryOdswiez.UseVisualStyleBackColor = false;
+            this.buttonTowaryOdswiez.Click += new System.EventHandler(this.buttonTowaryOdswiez_Click);
+            // 
             // Pulpit_Menadżer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -404,9 +404,9 @@
             this.panelZlecenia.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataZlecenia)).EndInit();
             this.panelTowary.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataTowary)).EndInit();
             this.panelGrafik.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGrafik)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTowary)).EndInit();
             this.ResumeLayout(false);
 
         }
