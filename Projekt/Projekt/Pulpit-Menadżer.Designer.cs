@@ -397,9 +397,9 @@
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(350, 47);
+            this.pictureBox1.Location = new System.Drawing.Point(312, 107);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(378, 384);
+            this.pictureBox1.Size = new System.Drawing.Size(450, 241);
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
@@ -409,9 +409,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(199)))), ((int)(((byte)(199)))));
             this.ClientSize = new System.Drawing.Size(871, 478);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panelGrafik);
             this.Controls.Add(this.panelTowary);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelPracownicy);
             this.Controls.Add(this.button_Wyloguj);
