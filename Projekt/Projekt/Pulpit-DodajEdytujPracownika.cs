@@ -22,7 +22,16 @@ namespace Projekt
 
         private void button_DodajPracownika_Click(object sender, EventArgs e)
         {
-
+            if (!Projekt.Validate.CheckIfPositiveInt(textBox_ID) ||
+                !Projekt.Validate.CheckIfString(textBox_imie) ||
+                !Projekt.Validate.CheckIfString(textBox_nazwisko) ||
+                !Projekt.Validate.CheckIfPesel(textBox_PESEL) ||
+                !Projekt.Validate.CheckIfDate(textBox_date) ||
+                !Projekt.Validate.CheckIfPhoneNumber(textBox_telefon))
+            {
+                Komunikaty.NieprawidlowaWalidacja();
+                return;
+            }
             menadzer.DodajPracownika(Convert.ToInt32(textBox_ID.Text), textBox_imie.Text, textBox_nazwisko.Text, textBox_PESEL.Text, Convert.ToInt32(textBox_telefon.Text), Convert.ToDateTime(textBox_date.Text));
             //menadzer.DodajPracownika(Convert.ToInt32(textBox_ID.Text),textBox_imie.Text,textBox_nazwisko.Text,textBox_PESEL.Text,Convert.ToInt32(textBox_telefon.Text),Convert.ToDateTime(textBox_date.Text),magazyn,bd,"login","haslo");
           

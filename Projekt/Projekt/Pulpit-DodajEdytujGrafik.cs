@@ -25,7 +25,7 @@ namespace Projekt
                 !Projekt.Validate.CheckIfDateAndHour(textBox_Data) ||
                 !Projekt.Validate.CheckIfPositiveInt(textBox_LiczbaGodzin))
             {
-                
+                Komunikaty.NieprawidlowaWalidacja();
                 return;
             }
 
