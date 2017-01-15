@@ -81,8 +81,8 @@ namespace Projekt
             doDodania.UtwórzTowar(id, nazwa, new Lokalizacja(sektor, rzad, polka), ilosc);
             nowe.UtwórzZlecenie(this, doDodania, ilosc, true, informacja);
 
-            BazaDanych.magazyn.towary.Add(doDodania);
             BazaDanych.magazyn.zlecenia.Add(nowe);
+            BazaDanych.magazyn.towary.Add(doDodania);
         }
     }
 }
