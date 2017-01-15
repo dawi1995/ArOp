@@ -19,17 +19,16 @@ namespace Projekt
         public void UtwórzZlecenie(Pracownik pracownik, Towar towar, int ilosc, bool czyPrzyjeto, string informacje)
         {
             DateTime now = DateTime.Now;
-            string adata = now.ToString("yyyyMMdd ") + now.TimeOfDay;
-            adata = adata.Substring(0, 16);
+            string dataNow = now.ToString("yyyyMMdd") + now.TimeOfDay;
+            dataNow.Substring(0, 16);
 
             this.pracownik = pracownik;
             this.towar = towar;
-            this.data = DateTime.Now;
             this.czyPrzyjeto = czyPrzyjeto;
             this.informacje = informacje;
             this.ilosc = ilosc;
 
-            BazaDanych.WykonajWBazie(String.Format("INSERT INTO test (idpracownika, data, idtowaru, ilosc, przewoznik) VALUES ({0}, '{1}', {2}, {3},'{4}');", pracownik.id, adata, towar.id, ilosc, informacje));
+            BazaDanych.WykonajWBazie(String.Format("INSERT INTO zlecenia2 (idpracownika, data, idtowaru, ilosc, czyPrzyjeto, przewoznik) VALUES ({0}, '{1}', {2}, {3}, '{4}', '{5}');", pracownik.id, dataNow, towar.id, ilosc, czyPrzyjeto, informacje));
         }
     }
 }
