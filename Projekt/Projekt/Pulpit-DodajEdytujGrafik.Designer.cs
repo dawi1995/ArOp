@@ -66,12 +66,14 @@
             // 
             // button_DodajEdytujGrafik
             // 
+            this.button_DodajEdytujGrafik.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(123)))), ((int)(((byte)(57)))));
+            this.button_DodajEdytujGrafik.Font = new System.Drawing.Font("Agency FB", 15.75F);
             this.button_DodajEdytujGrafik.Location = new System.Drawing.Point(156, 212);
             this.button_DodajEdytujGrafik.Name = "button_DodajEdytujGrafik";
             this.button_DodajEdytujGrafik.Size = new System.Drawing.Size(260, 23);
             this.button_DodajEdytujGrafik.TabIndex = 3;
             this.button_DodajEdytujGrafik.Text = "Dodaj do grafiku";
-            this.button_DodajEdytujGrafik.UseVisualStyleBackColor = true;
+            this.button_DodajEdytujGrafik.UseVisualStyleBackColor = false;
             this.button_DodajEdytujGrafik.Click += new System.EventHandler(this.button_DodajEdytujGrafik_Click);
             // 
             // textBox_Data
@@ -99,6 +101,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(199)))), ((int)(((byte)(199)))));
             this.ClientSize = new System.Drawing.Size(534, 308);
             this.Controls.Add(this.textBox_idpracownika);
             this.Controls.Add(this.textBox_LiczbaGodzin);
