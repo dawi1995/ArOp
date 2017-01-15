@@ -86,7 +86,7 @@
             this.button_SprawdzZlecenia.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_SprawdzZlecenia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_SprawdzZlecenia.Font = new System.Drawing.Font("Agency FB", 15.75F);
-            this.button_SprawdzZlecenia.Location = new System.Drawing.Point(11, 348);
+            this.button_SprawdzZlecenia.Location = new System.Drawing.Point(10, 182);
             this.button_SprawdzZlecenia.Name = "button_SprawdzZlecenia";
             this.button_SprawdzZlecenia.Size = new System.Drawing.Size(180, 40);
             this.button_SprawdzZlecenia.TabIndex = 5;
@@ -99,7 +99,7 @@
             this.button_SprawdzGrafik.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_SprawdzGrafik.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_SprawdzGrafik.Font = new System.Drawing.Font("Agency FB", 15.75F);
-            this.button_SprawdzGrafik.Location = new System.Drawing.Point(11, 390);
+            this.button_SprawdzGrafik.Location = new System.Drawing.Point(10, 224);
             this.button_SprawdzGrafik.Name = "button_SprawdzGrafik";
             this.button_SprawdzGrafik.Size = new System.Drawing.Size(180, 40);
             this.button_SprawdzGrafik.TabIndex = 6;
