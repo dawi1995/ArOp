@@ -31,6 +31,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox_idtowaru = new System.Windows.Forms.TextBox();
             this.button_lokalizuj = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -65,19 +67,30 @@
             this.button_lokalizuj.TabIndex = 3;
             this.button_lokalizuj.Text = "Wyszukaj";
             this.button_lokalizuj.UseVisualStyleBackColor = false;
+            this.button_lokalizuj.Click += new System.EventHandler(this.button_lokalizuj_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 176);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(360, 185);
+            this.dataGridView1.TabIndex = 4;
             // 
             // Pulpit_lokalizujTowar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.ClientSize = new System.Drawing.Size(384, 161);
+            this.ClientSize = new System.Drawing.Size(384, 159);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button_lokalizuj);
             this.Controls.Add(this.textBox_idtowaru);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Pulpit_lokalizujTowar";
             this.Text = "Pulpit_lokalizujTowar";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -88,5 +101,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox_idtowaru;
         private System.Windows.Forms.Button button_lokalizuj;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
