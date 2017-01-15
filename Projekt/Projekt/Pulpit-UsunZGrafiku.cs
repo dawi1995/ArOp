@@ -22,10 +22,10 @@ namespace Projekt
         private void button_UsunZGrafiku_Click(object sender, EventArgs e)
         {
             bool czyWaliduje = true;
-            if (Projekt.Validate.CheckIfPositiveInt(textBox_idracownika))
+            if (!Projekt.Validate.CheckIfPositiveInt(textBox_idracownika))
                 czyWaliduje = false;
 
-            if (Projekt.Validate.CheckIfDateAndHour(textBox_dataDoUsuniecia))
+            if (!Projekt.Validate.CheckIfDateAndHour(textBox_dataDoUsuniecia))
                 czyWaliduje = false;
 
             if (czyWaliduje == true)

@@ -23,13 +23,16 @@ namespace Projekt
         {
             bool czyWaliduje = true;
 
-            if (Projekt.Validate.CheckIfPositiveInt(textBox_idpracownika))
+            if (!Projekt.Validate.CheckIfPositiveInt(textBox_idpracownika))
                 czyWaliduje = false;
 
-            if (Projekt.Validate.CheckIfDateAndHour(textBox_datadozmiany))
+            if (!Projekt.Validate.CheckIfDateAndHour(textBox_datadozmiany))
                 czyWaliduje = false;
 
-            if (Projekt.Validate.CheckIfDateAndHour(textBox_datadozmiany))
+            if (!Projekt.Validate.CheckIfDateAndHour(textBox_nowadata))
+                czyWaliduje = false;
+
+            if (!Projekt.Validate.CheckIfPositiveInt(textBox_czaspracy))
                 czyWaliduje = false;
 
             if (czyWaliduje == true)

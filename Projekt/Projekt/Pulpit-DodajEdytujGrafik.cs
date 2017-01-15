@@ -26,10 +26,10 @@ namespace Projekt
             if (!Projekt.Validate.CheckIfPositiveInt(textBox_idpracownika))
                 czyWaliduje = false;
 
-            if (Projekt.Validate.CheckIfDateAndHour(textBox_Data))
+            if (!Projekt.Validate.CheckIfDateAndHour(textBox_Data))
                 czyWaliduje = false;
 
-            if (Projekt.Validate.CheckIfPositiveInt(textBox_LiczbaGodzin))
+            if (!Projekt.Validate.CheckIfPositiveInt(textBox_LiczbaGodzin))
                 czyWaliduje = false;
 
             if (czyWaliduje == true)

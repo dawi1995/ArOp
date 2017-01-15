@@ -100,7 +100,7 @@ namespace Projekt
                 return;
             }
 
-            lokalizacje[lokalizacja] -= ilosc;
+            lokalizacje[lokalizacja] -= iloscDoUsuniecia;
             BazaDanych.WykonajWBazie(String.Format("UPDATE lokalizacje2 SET ilosc={4} WHERE (idtowaru={0} AND sektor={1} AND rzad={2} AND polka={3});", id, sektor, rzad, polka, ilosc-iloscDoUsuniecia));
             Komunikaty.WyświetlKomunikat("Operacja zakończona powodzeniem.");
         }

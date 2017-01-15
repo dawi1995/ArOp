@@ -20,6 +20,7 @@ namespace Projekt
             else
                 textBox.BackColor = Color.FromArgb(199, 199, 199);
 
+
             return czySpelnia;
         }
 
@@ -41,6 +42,7 @@ namespace Projekt
         {
             if (textBox.Text.Length != 11)
             {
+                textBox.BackColor = System.Drawing.Color.Crimson;
                 return false;
             }
 
@@ -109,7 +111,7 @@ namespace Projekt
             bool czyLiczby = false;
             foreach (var c in textBox.Text)
             {
-                if (c > '0' || c < '9')
+                if (c > '0' && c < '9')
                 {
                     czyLiczby = true;
                 }

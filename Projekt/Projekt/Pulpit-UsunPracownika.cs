@@ -23,7 +23,7 @@ namespace Projekt
         {
             bool czyWaliduje = true;
 
-            if (Projekt.Validate.CheckIfPositiveInt(textbox_ID))
+            if (!Projekt.Validate.CheckIfPositiveInt(textbox_ID))
                 czyWaliduje = false;
 
             if (czyWaliduje == true)
