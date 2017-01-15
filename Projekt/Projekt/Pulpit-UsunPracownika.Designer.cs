@@ -57,9 +57,9 @@
             this.label_ID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(123)))), ((int)(((byte)(57)))));
             this.label_ID.Location = new System.Drawing.Point(12, 15);
             this.label_ID.Name = "label_ID";
-            this.label_ID.Size = new System.Drawing.Size(32, 25);
+            this.label_ID.Size = new System.Drawing.Size(98, 25);
             this.label_ID.TabIndex = 15;
-            this.label_ID.Text = "ID :";
+            this.label_ID.Text = "ID pracownika:";
             // 
             // textbox_ID
             // 
