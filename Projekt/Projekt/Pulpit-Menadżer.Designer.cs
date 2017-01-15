@@ -186,25 +186,22 @@
             this.panelPracownicy.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelPracownicy.Controls.Add(this.panelZlecenia);
             this.panelPracownicy.Controls.Add(this.dataPracownicy);
             this.panelPracownicy.Controls.Add(this.button_pracownicyOdswiez);
-            this.panelPracownicy.Location = new System.Drawing.Point(219, 12);
+            this.panelPracownicy.Location = new System.Drawing.Point(220, 11);
             this.panelPracownicy.Name = "panelPracownicy";
-            this.panelPracownicy.Size = new System.Drawing.Size(640, 454);
+            this.panelPracownicy.Size = new System.Drawing.Size(639, 455);
             this.panelPracownicy.TabIndex = 8;
             this.panelPracownicy.Visible = false;
             // 
             // panelZlecenia
             // 
-            this.panelZlecenia.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelZlecenia.Controls.Add(this.dataZlecenia);
             this.panelZlecenia.Controls.Add(this.buttonZleceniaOdswiez);
-            this.panelZlecenia.Location = new System.Drawing.Point(0, 0);
+            this.panelZlecenia.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.panelZlecenia.Location = new System.Drawing.Point(220, 12);
             this.panelZlecenia.Name = "panelZlecenia";
-            this.panelZlecenia.Size = new System.Drawing.Size(640, 454);
+            this.panelZlecenia.Size = new System.Drawing.Size(639, 454);
             this.panelZlecenia.TabIndex = 9;
             this.panelZlecenia.Visible = false;
             // 
@@ -216,7 +213,7 @@
             this.dataZlecenia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataZlecenia.Location = new System.Drawing.Point(3, 63);
             this.dataZlecenia.Name = "dataZlecenia";
-            this.dataZlecenia.Size = new System.Drawing.Size(634, 388);
+            this.dataZlecenia.Size = new System.Drawing.Size(633, 388);
             this.dataZlecenia.TabIndex = 6;
             // 
             // buttonZleceniaOdswiez
@@ -226,7 +223,7 @@
             this.buttonZleceniaOdswiez.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonZleceniaOdswiez.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonZleceniaOdswiez.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonZleceniaOdswiez.Location = new System.Drawing.Point(457, 7);
+            this.buttonZleceniaOdswiez.Location = new System.Drawing.Point(456, 7);
             this.buttonZleceniaOdswiez.Margin = new System.Windows.Forms.Padding(10);
             this.buttonZleceniaOdswiez.Name = "buttonZleceniaOdswiez";
             this.buttonZleceniaOdswiez.Size = new System.Drawing.Size(180, 40);
@@ -243,7 +240,7 @@
             this.dataPracownicy.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataPracownicy.Location = new System.Drawing.Point(3, 63);
             this.dataPracownicy.Name = "dataPracownicy";
-            this.dataPracownicy.Size = new System.Drawing.Size(634, 388);
+            this.dataPracownicy.Size = new System.Drawing.Size(633, 389);
             this.dataPracownicy.TabIndex = 6;
             // 
             // button_pracownicyOdswiez
@@ -253,7 +250,7 @@
             this.button_pracownicyOdswiez.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_pracownicyOdswiez.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_pracownicyOdswiez.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_pracownicyOdswiez.Location = new System.Drawing.Point(457, 7);
+            this.button_pracownicyOdswiez.Location = new System.Drawing.Point(456, 7);
             this.button_pracownicyOdswiez.Margin = new System.Windows.Forms.Padding(10);
             this.button_pracownicyOdswiez.Name = "button_pracownicyOdswiez";
             this.button_pracownicyOdswiez.Size = new System.Drawing.Size(180, 40);
@@ -269,8 +266,9 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(199)))), ((int)(((byte)(199)))));
             this.ClientSize = new System.Drawing.Size(871, 478);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button_Wyloguj);
             this.Controls.Add(this.panelPracownicy);
+            this.Controls.Add(this.button_Wyloguj);
+            this.Controls.Add(this.panelZlecenia);
             this.Name = "Pulpit_Menadżer";
             this.Text = "Pulpit_Menadżer";
             this.Load += new System.EventHandler(this.Pulpit_Menadżer_Load);
@@ -295,9 +293,9 @@
         private System.Windows.Forms.Panel panelPracownicy;
         private System.Windows.Forms.DataGridView dataPracownicy;
         private System.Windows.Forms.Button button_pracownicyOdswiez;
-        private System.Windows.Forms.Panel panelZlecenia;
         private System.Windows.Forms.DataGridView dataZlecenia;
         private System.Windows.Forms.Button buttonZleceniaOdswiez;
         private System.Windows.Forms.Button buttonZlecenia;
+        private System.Windows.Forms.Panel panelZlecenia;
     }
 }
