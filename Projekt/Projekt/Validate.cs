@@ -40,6 +40,25 @@ namespace Projekt
 
             return czyLiczby;
         }
+        public static bool CheckIfDateAndHour(TextBox textBox)
+        {
+            if (!CheckIfDate(textBox))
+            {
+                return false;
+            }
+            if (textBox.Text.Length < 16)
+            {
+                return false;
+            }
+            return true;
+        }
+        public static bool CheckIfPositiveInt(TextBox textBox)
+        {
+            if (!CheckIfInt(textBox))
+                return false;
+
+            return true;
+        }
 
     }
 }
