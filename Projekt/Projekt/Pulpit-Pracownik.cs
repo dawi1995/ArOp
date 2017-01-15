@@ -162,5 +162,11 @@ namespace Projekt
             WczytajTowary();
             WczytajGrafik();
         }
+
+        private void buttonZlokalizuj_Click(object sender, EventArgs e)
+        {
+            Pulpit_lokalizujTowar pulpitLT = new Pulpit_lokalizujTowar();
+            pulpitLT.ShowDialog();
+        }
     }
 }

@@ -35,14 +35,14 @@
             this.button_SprawdzGrafik = new System.Windows.Forms.Button();
             this.button_Wyloguj = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonZlokalizuj = new System.Windows.Forms.Button();
+            this.buttonTowary = new System.Windows.Forms.Button();
             this.panelZlecenia = new System.Windows.Forms.Panel();
             this.dataZlecenia = new System.Windows.Forms.DataGridView();
             this.buttonZleceniaOdswiez = new System.Windows.Forms.Button();
             this.panelGrafik = new System.Windows.Forms.Panel();
             this.dataGrafik = new System.Windows.Forms.DataGridView();
             this.buttonGrafikOdswiez = new System.Windows.Forms.Button();
-            this.buttonTowary = new System.Windows.Forms.Button();
-            this.buttonZlokalizuj = new System.Windows.Forms.Button();
             this.panelTowary = new System.Windows.Forms.Panel();
             this.dataTowary = new System.Windows.Forms.DataGridView();
             this.buttonTowaryOdswiez = new System.Windows.Forms.Button();
@@ -152,6 +152,34 @@
             this.panel1.Size = new System.Drawing.Size(200, 478);
             this.panel1.TabIndex = 8;
             // 
+            // buttonZlokalizuj
+            // 
+            this.buttonZlokalizuj.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(123)))), ((int)(((byte)(57)))));
+            this.buttonZlokalizuj.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonZlokalizuj.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonZlokalizuj.Font = new System.Drawing.Font("Agency FB", 15.75F);
+            this.buttonZlokalizuj.Location = new System.Drawing.Point(10, 308);
+            this.buttonZlokalizuj.Name = "buttonZlokalizuj";
+            this.buttonZlokalizuj.Size = new System.Drawing.Size(180, 40);
+            this.buttonZlokalizuj.TabIndex = 8;
+            this.buttonZlokalizuj.Text = "Zlokalizuj towar";
+            this.buttonZlokalizuj.UseVisualStyleBackColor = false;
+            this.buttonZlokalizuj.Click += new System.EventHandler(this.buttonZlokalizuj_Click);
+            // 
+            // buttonTowary
+            // 
+            this.buttonTowary.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(123)))), ((int)(((byte)(57)))));
+            this.buttonTowary.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonTowary.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonTowary.Font = new System.Drawing.Font("Agency FB", 15.75F);
+            this.buttonTowary.Location = new System.Drawing.Point(10, 266);
+            this.buttonTowary.Name = "buttonTowary";
+            this.buttonTowary.Size = new System.Drawing.Size(180, 40);
+            this.buttonTowary.TabIndex = 7;
+            this.buttonTowary.Text = "Wyswietl towary";
+            this.buttonTowary.UseVisualStyleBackColor = false;
+            this.buttonTowary.Click += new System.EventHandler(this.buttonTowary_Click);
+            // 
             // panelZlecenia
             // 
             this.panelZlecenia.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -233,33 +261,6 @@
             this.buttonGrafikOdswiez.Text = "Odswiez";
             this.buttonGrafikOdswiez.UseVisualStyleBackColor = false;
             this.buttonGrafikOdswiez.Click += new System.EventHandler(this.buttonGrafikOdswiez_Click);
-            // 
-            // buttonTowary
-            // 
-            this.buttonTowary.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(123)))), ((int)(((byte)(57)))));
-            this.buttonTowary.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonTowary.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonTowary.Font = new System.Drawing.Font("Agency FB", 15.75F);
-            this.buttonTowary.Location = new System.Drawing.Point(10, 266);
-            this.buttonTowary.Name = "buttonTowary";
-            this.buttonTowary.Size = new System.Drawing.Size(180, 40);
-            this.buttonTowary.TabIndex = 7;
-            this.buttonTowary.Text = "Wyswietl towary";
-            this.buttonTowary.UseVisualStyleBackColor = false;
-            this.buttonTowary.Click += new System.EventHandler(this.buttonTowary_Click);
-            // 
-            // buttonZlokalizuj
-            // 
-            this.buttonZlokalizuj.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(123)))), ((int)(((byte)(57)))));
-            this.buttonZlokalizuj.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonZlokalizuj.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonZlokalizuj.Font = new System.Drawing.Font("Agency FB", 15.75F);
-            this.buttonZlokalizuj.Location = new System.Drawing.Point(10, 308);
-            this.buttonZlokalizuj.Name = "buttonZlokalizuj";
-            this.buttonZlokalizuj.Size = new System.Drawing.Size(180, 40);
-            this.buttonZlokalizuj.TabIndex = 8;
-            this.buttonZlokalizuj.Text = "Zlokalizuj towar";
-            this.buttonZlokalizuj.UseVisualStyleBackColor = false;
             // 
             // panelTowary
             // 

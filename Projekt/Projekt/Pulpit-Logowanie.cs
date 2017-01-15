@@ -35,9 +35,10 @@ namespace Projekt
                     {
                         Pulpit_Menadżer pulpitM = new Pulpit_Menadżer(BazaDanych.ZwrocMenadzera(BazaDanych.magazyn.menadzerowie[i].id));
                         pulpitM.menadzer = BazaDanych.magazyn.menadzerowie[i];
-                        pulpitM.ShowDialog();
                         this.Hide();
-                        this.Close();
+                        pulpitM.ShowDialog();
+                        this.Visible = true;
+                        //this.Close();
                         return;
                     }
 
@@ -53,9 +54,10 @@ namespace Projekt
                     {
                         Pulpit_Pracownik pulpitP = new Pulpit_Pracownik(BazaDanych.ZwrocPracownika(BazaDanych.magazyn.pracownicy[i].id));
                         pulpitP.pracownik = BazaDanych.magazyn.pracownicy[i];
-                        pulpitP.ShowDialog();
                         this.Hide();
-                        this.Close();
+                        pulpitP.ShowDialog();
+                        //this.Close();
+                        this.Visible = true;
                         return;
                         
                     }
@@ -69,9 +71,6 @@ namespace Projekt
          
         }
 
-        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Application.Exit();
-        }
+
     }
 }
