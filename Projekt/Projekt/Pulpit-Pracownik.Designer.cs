@@ -35,13 +35,14 @@
             this.button_SprawdzZlecenia = new System.Windows.Forms.Button();
             this.button_SprawdzGrafik = new System.Windows.Forms.Button();
             this.button_Wyloguj = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_PodglądPracownik)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView_PodglądPracownik
             // 
             this.dataGridView_PodglądPracownik.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_PodglądPracownik.Location = new System.Drawing.Point(33, 27);
+            this.dataGridView_PodglądPracownik.Location = new System.Drawing.Point(118, 12);
             this.dataGridView_PodglądPracownik.Name = "dataGridView_PodglądPracownik";
             this.dataGridView_PodglądPracownik.Size = new System.Drawing.Size(720, 527);
             this.dataGridView_PodglądPracownik.TabIndex = 0;
@@ -104,11 +105,20 @@
             this.button_Wyloguj.UseVisualStyleBackColor = true;
             this.button_Wyloguj.Click += new System.EventHandler(this.button_Wyloguj_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.panel1.Location = new System.Drawing.Point(350, 77);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 100);
+            this.panel1.TabIndex = 8;
+            // 
             // Pulpit_Pracownik
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1281, 582);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.button_Wyloguj);
             this.Controls.Add(this.button_SprawdzGrafik);
             this.Controls.Add(this.button_SprawdzZlecenia);
@@ -132,5 +142,6 @@
         private System.Windows.Forms.Button button_SprawdzZlecenia;
         private System.Windows.Forms.Button button_SprawdzGrafik;
         private System.Windows.Forms.Button button_Wyloguj;
+        private System.Windows.Forms.Panel panel1;
     }
 }

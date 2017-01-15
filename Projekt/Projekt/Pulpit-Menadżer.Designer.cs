@@ -35,10 +35,10 @@
             this.button_Wyloguj = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.button_pracownicyOdswiez = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button_pokazPracownikow = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button_pracownicyOdswiez = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -55,7 +55,7 @@
             this.button_DodajEdytujPracownika.Name = "button_DodajEdytujPracownika";
             this.button_DodajEdytujPracownika.Size = new System.Drawing.Size(180, 40);
             this.button_DodajEdytujPracownika.TabIndex = 1;
-            this.button_DodajEdytujPracownika.Text = "Dodaj/edytuj pracownika";
+            this.button_DodajEdytujPracownika.Text = "Dodaj pracownika";
             this.button_DodajEdytujPracownika.UseVisualStyleBackColor = false;
             this.button_DodajEdytujPracownika.Click += new System.EventHandler(this.button_DodajEdytujPracownika_Click);
             // 
@@ -144,6 +144,21 @@
             this.panel1.Size = new System.Drawing.Size(200, 478);
             this.panel1.TabIndex = 7;
             // 
+            // button_pokazPracownikow
+            // 
+            this.button_pokazPracownikow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(123)))), ((int)(((byte)(57)))));
+            this.button_pokazPracownikow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_pokazPracownikow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_pokazPracownikow.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_pokazPracownikow.Location = new System.Drawing.Point(10, 270);
+            this.button_pokazPracownikow.Margin = new System.Windows.Forms.Padding(10);
+            this.button_pokazPracownikow.Name = "button_pokazPracownikow";
+            this.button_pokazPracownikow.Size = new System.Drawing.Size(180, 40);
+            this.button_pokazPracownikow.TabIndex = 7;
+            this.button_pokazPracownikow.Text = "Pokaz pracowników";
+            this.button_pokazPracownikow.UseVisualStyleBackColor = false;
+            this.button_pokazPracownikow.Click += new System.EventHandler(this.button_pokazPracownikow_Click);
+            // 
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -156,6 +171,17 @@
             this.panel2.Size = new System.Drawing.Size(640, 454);
             this.panel2.TabIndex = 8;
             this.panel2.Visible = false;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 63);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(634, 388);
+            this.dataGridView1.TabIndex = 6;
             // 
             // button_pracownicyOdswiez
             // 
@@ -172,32 +198,6 @@
             this.button_pracownicyOdswiez.Text = "Odswiez";
             this.button_pracownicyOdswiez.UseVisualStyleBackColor = false;
             this.button_pracownicyOdswiez.Click += new System.EventHandler(this.button_pracownicyOdswiez_Click);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 63);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(634, 388);
-            this.dataGridView1.TabIndex = 6;
-            // 
-            // button_pokazPracownikow
-            // 
-            this.button_pokazPracownikow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(123)))), ((int)(((byte)(57)))));
-            this.button_pokazPracownikow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_pokazPracownikow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_pokazPracownikow.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_pokazPracownikow.Location = new System.Drawing.Point(10, 270);
-            this.button_pokazPracownikow.Margin = new System.Windows.Forms.Padding(10);
-            this.button_pokazPracownikow.Name = "button_pokazPracownikow";
-            this.button_pokazPracownikow.Size = new System.Drawing.Size(180, 40);
-            this.button_pokazPracownikow.TabIndex = 7;
-            this.button_pokazPracownikow.Text = "Pokaz pracowników";
-            this.button_pokazPracownikow.UseVisualStyleBackColor = false;
-            this.button_pokazPracownikow.Click += new System.EventHandler(this.button_pokazPracownikow_Click);
             // 
             // Pulpit_Menadżer
             // 

@@ -43,16 +43,16 @@
             this.button_UsunPracownika.UseVisualStyleBackColor = true;
             this.button_UsunPracownika.Click += new System.EventHandler(this.button_UsunPracownika_Click);
             // 
-            // textbox_ID
+            // label_ID
             // 
             this.label_ID.AutoSize = true;
             this.label_ID.Location = new System.Drawing.Point(91, 75);
-            this.label_ID.Name = "textbox_ID";
+            this.label_ID.Name = "label_ID";
             this.label_ID.Size = new System.Drawing.Size(24, 13);
             this.label_ID.TabIndex = 15;
             this.label_ID.Text = "ID :";
             // 
-            // textBox4
+            // textbox_ID
             // 
             this.textbox_ID.Location = new System.Drawing.Point(157, 68);
             this.textbox_ID.Name = "textbox_ID";

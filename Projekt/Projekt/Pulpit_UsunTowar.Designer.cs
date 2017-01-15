@@ -39,6 +39,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox_idtowaru = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox_info = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -131,11 +133,29 @@
             this.textBox_idtowaru.Size = new System.Drawing.Size(197, 20);
             this.textBox_idtowaru.TabIndex = 10;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(49, 180);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(59, 13);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Informacje:";
+            // 
+            // textBox_info
+            // 
+            this.textBox_info.Location = new System.Drawing.Point(225, 177);
+            this.textBox_info.Name = "textBox_info";
+            this.textBox_info.Size = new System.Drawing.Size(197, 20);
+            this.textBox_info.TabIndex = 12;
+            // 
             // Pulpit_UsunTowar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(449, 331);
+            this.Controls.Add(this.textBox_info);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.textBox_idtowaru);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button1);
@@ -167,5 +187,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox_idtowaru;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBox_info;
     }
 }

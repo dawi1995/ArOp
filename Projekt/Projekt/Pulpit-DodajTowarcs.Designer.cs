@@ -41,6 +41,8 @@
             this.button_DodajNowyTowar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox_ilosc = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox_info = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label_NazwaTowaru
@@ -125,7 +127,7 @@
             // 
             // button_DodajNowyTowar
             // 
-            this.button_DodajNowyTowar.Location = new System.Drawing.Point(183, 350);
+            this.button_DodajNowyTowar.Location = new System.Drawing.Point(187, 381);
             this.button_DodajNowyTowar.Name = "button_DodajNowyTowar";
             this.button_DodajNowyTowar.Size = new System.Drawing.Size(201, 23);
             this.button_DodajNowyTowar.TabIndex = 10;
@@ -149,11 +151,29 @@
             this.textBox_ilosc.Size = new System.Drawing.Size(221, 20);
             this.textBox_ilosc.TabIndex = 12;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(90, 340);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(59, 13);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Informacje:";
+            // 
+            // textBox_info
+            // 
+            this.textBox_info.Location = new System.Drawing.Point(249, 333);
+            this.textBox_info.Name = "textBox_info";
+            this.textBox_info.Size = new System.Drawing.Size(221, 20);
+            this.textBox_info.TabIndex = 14;
+            // 
             // Pulpit_DodajTowarcs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(555, 434);
+            this.Controls.Add(this.textBox_info);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox_ilosc);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button_DodajNowyTowar);
@@ -189,5 +209,7 @@
         private System.Windows.Forms.Button button_DodajNowyTowar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox_ilosc;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox_info;
     }
 }
