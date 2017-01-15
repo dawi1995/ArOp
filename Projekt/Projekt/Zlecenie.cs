@@ -27,7 +27,7 @@ namespace Projekt
             this.informacje = informacje;
             this.ilosc = ilosc;
 
-            BazaDanych.WykonajWBazie(String.Format("INSERT INTO test (idpracownika, data, idtowaru, ilosc, przewoznik) VALUES ({0}, '{1}', {2}, {3},'{4}');", pracownik.id, data.Date.ToString("yyyyMMdd")+data.TimeOfDay, towar.id, ilosc, informacje));
+            BazaDanych.WykonajWBazie(String.Format("INSERT INTO test (idpracownika, data, idtowaru, ilosc, przewoznik) VALUES ({0}, '{1}', {2}, {3},'{4}');", pracownik.id, data.Date.ToString("yyyyMMdd HH:mm:ss"), towar.id, ilosc, informacje));
         }
     }
 }
