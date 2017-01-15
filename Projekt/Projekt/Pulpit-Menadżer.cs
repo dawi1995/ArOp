@@ -74,23 +74,23 @@ namespace Projekt
 
         private void WczytajZlecenia()
         {
-            dataPracownicy.DataSource = null;
-            dataPracownicy.Columns.Clear();
-            dataPracownicy.Rows.Clear();
+            dataZlecenia.DataSource = null;
+            dataZlecenia.Columns.Clear();
+            dataZlecenia.Rows.Clear();
 
             List<Zlecenie> zlecenia = BazaDanych.magazyn.zlecenia;
 
-            dataPracownicy.Columns.Add("idpracownika", "ID pracownika");
-            dataPracownicy.Columns.Add("data", "Data");
-            dataPracownicy.Columns.Add("idtowaru", "ID towaru");
-            dataPracownicy.Columns.Add("ilsoc", "Ilość towaru");
-            dataPracownicy.Columns.Add("czyPrzyjeto", "Czy przyjęto");
-            dataPracownicy.Columns.Add("informacja", "Informacja");
+            dataZlecenia.Columns.Add("idpracownika", "ID pracownika");
+            dataZlecenia.Columns.Add("data", "Data");
+            dataZlecenia.Columns.Add("idtowaru", "ID towaru");
+            dataZlecenia.Columns.Add("ilsoc", "Ilość towaru");
+            dataZlecenia.Columns.Add("czyPrzyjeto", "Czy przyjęto");
+            dataZlecenia.Columns.Add("informacja", "Informacja");
 
 
             for (int i = 0; i < zlecenia.Count; i++)
             {
-                dataPracownicy.Rows.Add(zlecenia[i].pracownik.id, zlecenia[i].data.ToString(), zlecenia[i].ilosc, zlecenia[i].czyPrzyjeto, zlecenia[i].informacje);
+                dataZlecenia.Rows.Add(zlecenia[i].pracownik.id, zlecenia[i].data.ToString(), zlecenia[i].ilosc, zlecenia[i].czyPrzyjeto, zlecenia[i].informacje);
             }
         }
 
@@ -101,8 +101,10 @@ namespace Projekt
 
         private void button_pokazPracownikow_Click(object sender, EventArgs e)
         {
-            if (panelPracownicy.Visible == false)
+            if (panelPracownicy.Visible == false) { 
                 panelPracownicy.Visible = true;
+                panelZlecenia.Visible = false;
+            }
             else
                 panelPracownicy.Visible = false;
         }
@@ -115,7 +117,10 @@ namespace Projekt
         private void buttonZlecenia_Click(object sender, EventArgs e)
         {
             if (panelZlecenia.Visible == false)
+            {
                 panelZlecenia.Visible = true;
+                panelPracownicy.Visible = false;
+            } 
             else
                 panelZlecenia.Visible = false;
         }
