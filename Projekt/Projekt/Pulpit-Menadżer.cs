@@ -53,6 +53,7 @@ namespace Projekt
         private void WczytajPracowników()
         {
             dataGridView1.DataSource = null;
+            dataGridView1.Columns.Clear();
             dataGridView1.Rows.Clear();
 
             List<Pracownik> pracownicy = BazaDanych.magazyn.pracownicy;
