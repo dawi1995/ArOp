@@ -35,11 +35,12 @@
             // 
             // button_UsunPracownika
             // 
-            this.button_UsunPracownika.Location = new System.Drawing.Point(133, 219);
+            this.button_UsunPracownika.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_UsunPracownika.Location = new System.Drawing.Point(105, 100);
             this.button_UsunPracownika.Name = "button_UsunPracownika";
             this.button_UsunPracownika.Size = new System.Drawing.Size(180, 40);
             this.button_UsunPracownika.TabIndex = 14;
-            this.button_UsunPracownika.Text = "Usuń pracownika";
+            this.button_UsunPracownika.Text = "Usun pracownika";
             this.button_UsunPracownika.UseVisualStyleBackColor = true;
             this.button_UsunPracownika.Click += new System.EventHandler(this.button_UsunPracownika_Click);
             // 
@@ -64,7 +65,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.ClientSize = new System.Drawing.Size(384, 261);
+            this.ClientSize = new System.Drawing.Size(384, 161);
             this.Controls.Add(this.textbox_ID);
             this.Controls.Add(this.label_ID);
             this.Controls.Add(this.button_UsunPracownika);
