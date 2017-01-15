@@ -18,8 +18,10 @@ namespace Projekt
         public Zlecenie() { }
         public void UtwórzZlecenie(Pracownik pracownik, Towar towar, int ilosc, bool czyPrzyjeto, string informacje)
         {
+            DateTime now = DateTime.Now;
+            this.data = Convert.ToDateTime(String.Format("{0}-{1}-{2} {3}", now.Year, now.Month, now.Day, now.TimeOfDay.ToString("HH:mm:ss")));
+
             this.pracownik = pracownik;
-            this.data = DateTime.Now;
             this.towar = towar;
             this.czyPrzyjeto = czyPrzyjeto;
             this.informacje = informacje;
