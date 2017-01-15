@@ -272,7 +272,6 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelTowary.Controls.Add(this.dataTowary);
             this.panelTowary.Controls.Add(this.buttonTowaryOdswiez);
-            this.panelTowary.Controls.Add(this.pictureBox1);
             this.panelTowary.Location = new System.Drawing.Point(217, 12);
             this.panelTowary.Name = "panelTowary";
             this.panelTowary.Size = new System.Drawing.Size(642, 455);
@@ -311,9 +310,9 @@
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(125, 29);
+            this.pictureBox1.Location = new System.Drawing.Point(338, 53);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(378, 384);
+            this.pictureBox1.Size = new System.Drawing.Size(387, 381);
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
             // 
@@ -323,6 +322,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(199)))), ((int)(((byte)(199)))));
             this.ClientSize = new System.Drawing.Size(871, 478);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panelTowary);
             this.Controls.Add(this.panelGrafik);
             this.Controls.Add(this.panelZlecenia);
