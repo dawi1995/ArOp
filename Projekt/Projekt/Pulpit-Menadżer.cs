@@ -184,7 +184,8 @@ namespace Projekt
 
         private void ChangePanelState(object sender, EventArgs e)
         {
-            ChangePanel(sender as Panel);
+            Panel p = sender as Panel;
+            ChangePanel(p);
         }
 
         
