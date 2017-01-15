@@ -60,9 +60,20 @@ namespace Projekt
 
             return true;
         }
-        public static bool CheckIfNameOrSurname(TextBox textBox) ///-----napisac
+        public static bool CheckIfNameOrSurname(TextBox textBox)
         {
-            return false;
+            if (textBox.Text.Length > 50)
+                return false;
+
+            bool czyLiczby = false;
+            foreach (var c in textBox.Text)
+            {
+                if (c > '0' || c < '9')
+                {
+                    czyLiczby = true;
+                }
+            }
+            return !czyLiczby;
         }
 
     }
