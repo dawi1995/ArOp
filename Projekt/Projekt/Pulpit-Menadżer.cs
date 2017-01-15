@@ -52,7 +52,20 @@ namespace Projekt
 
         private void Pulpit_Menadżer_Load(object sender, EventArgs e)
         {
+            List<Pracownik> pracownicy = BazaDanych.magazyn.pracownicy;
 
+            for (int i = 0; i < pracownicy.Count; i++)
+            {
+                dataGridView1.Rows.Add(pracownicy[i].id, pracownicy[i].imie, pracownicy[i].nazwisko, pracownicy[i].pesel, pracownicy[i].telefon, pracownicy[i].dataUrodzenia.ToString());
+            }
+        }
+
+        private void button_pokazPracownikow_Click(object sender, EventArgs e)
+        {
+            if (panel2.Visible == false)
+                panel2.Visible = true;
+            else
+                panel2.Visible = false;
         }
     }
 }
