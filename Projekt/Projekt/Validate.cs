@@ -53,11 +53,12 @@ namespace Projekt
         public static bool CheckIfPositiveInt(TextBox textBox)
         {
             if (!CheckIfInt(textBox))
+                textBox.BackColor = System.Drawing.Color.Red;
                 return false;
 
-             if (Convert.ToInt32(textBox.Text) <= 0)
+            if (Convert.ToInt32(textBox.Text) <= 0)
+                textBox.BackColor = System.Drawing.Color.Red;
                 return false;
-
 
             return true;
         }
