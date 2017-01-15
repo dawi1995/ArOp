@@ -36,6 +36,7 @@
             this.textBox_LiczbaGodzin = new System.Windows.Forms.TextBox();
             this.textBox_idpracownika = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label_Data
@@ -124,12 +125,25 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "Format: RRRR-MM-DD GG:MM";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.label7.Font = new System.Drawing.Font("Agency FB", 10F);
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(199)))), ((int)(((byte)(199)))));
+            this.label7.Location = new System.Drawing.Point(154, 152);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(87, 18);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Podaj liczbe godzin";
+            // 
             // Pulpit_DodajEdytujGrafik
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.ClientSize = new System.Drawing.Size(384, 311);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox_idpracownika);
             this.Controls.Add(this.textBox_LiczbaGodzin);
@@ -156,5 +170,6 @@
         private System.Windows.Forms.TextBox textBox_LiczbaGodzin;
         private System.Windows.Forms.TextBox textBox_idpracownika;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label7;
     }
 }

@@ -60,37 +60,37 @@
             // textBox_polka
             // 
             this.textBox_polka.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(199)))), ((int)(((byte)(199)))));
-            this.textBox_polka.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBox_polka.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_polka.Location = new System.Drawing.Point(157, 123);
             this.textBox_polka.Name = "textBox_polka";
-            this.textBox_polka.Size = new System.Drawing.Size(215, 31);
+            this.textBox_polka.Size = new System.Drawing.Size(215, 32);
             this.textBox_polka.TabIndex = 18;
             // 
             // textBox_rzad
             // 
             this.textBox_rzad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(199)))), ((int)(((byte)(199)))));
-            this.textBox_rzad.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBox_rzad.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_rzad.Location = new System.Drawing.Point(157, 86);
             this.textBox_rzad.Name = "textBox_rzad";
-            this.textBox_rzad.Size = new System.Drawing.Size(215, 31);
+            this.textBox_rzad.Size = new System.Drawing.Size(215, 32);
             this.textBox_rzad.TabIndex = 17;
             // 
             // textBox_sektor
             // 
             this.textBox_sektor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(199)))), ((int)(((byte)(199)))));
-            this.textBox_sektor.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBox_sektor.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_sektor.Location = new System.Drawing.Point(157, 49);
             this.textBox_sektor.Name = "textBox_sektor";
-            this.textBox_sektor.Size = new System.Drawing.Size(215, 31);
+            this.textBox_sektor.Size = new System.Drawing.Size(215, 32);
             this.textBox_sektor.TabIndex = 16;
             // 
             // textBox_idtowaru
             // 
             this.textBox_idtowaru.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(199)))), ((int)(((byte)(199)))));
-            this.textBox_idtowaru.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBox_idtowaru.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_idtowaru.Location = new System.Drawing.Point(157, 12);
             this.textBox_idtowaru.Name = "textBox_idtowaru";
-            this.textBox_idtowaru.Size = new System.Drawing.Size(215, 31);
+            this.textBox_idtowaru.Size = new System.Drawing.Size(215, 32);
             this.textBox_idtowaru.TabIndex = 15;
             // 
             // label_Polka
@@ -151,10 +151,10 @@
             // textBox_ilosc
             // 
             this.textBox_ilosc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(199)))), ((int)(((byte)(199)))));
-            this.textBox_ilosc.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBox_ilosc.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_ilosc.Location = new System.Drawing.Point(157, 160);
             this.textBox_ilosc.Name = "textBox_ilosc";
-            this.textBox_ilosc.Size = new System.Drawing.Size(215, 31);
+            this.textBox_ilosc.Size = new System.Drawing.Size(215, 32);
             this.textBox_ilosc.TabIndex = 21;
             // 
             // label2
@@ -162,7 +162,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(123)))), ((int)(((byte)(57)))));
-            this.label2.Location = new System.Drawing.Point(12, 256);
+            this.label2.Location = new System.Drawing.Point(11, 199);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(77, 25);
             this.label2.TabIndex = 22;
@@ -171,10 +171,10 @@
             // textBox_info
             // 
             this.textBox_info.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(199)))), ((int)(((byte)(199)))));
-            this.textBox_info.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBox_info.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_info.Location = new System.Drawing.Point(157, 197);
             this.textBox_info.Name = "textBox_info";
-            this.textBox_info.Size = new System.Drawing.Size(215, 31);
+            this.textBox_info.Size = new System.Drawing.Size(215, 32);
             this.textBox_info.TabIndex = 23;
             // 
             // Pulpit_DodajIstniejacyTowar
