@@ -153,23 +153,25 @@
             this.panel2.Controls.Add(this.button_pracownicyOdswiez);
             this.panel2.Location = new System.Drawing.Point(219, 12);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(486, 454);
+            this.panel2.Size = new System.Drawing.Size(640, 454);
             this.panel2.TabIndex = 8;
             this.panel2.Visible = false;
             // 
             // button_pracownicyOdswiez
             // 
+            this.button_pracownicyOdswiez.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button_pracownicyOdswiez.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(123)))), ((int)(((byte)(57)))));
             this.button_pracownicyOdswiez.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_pracownicyOdswiez.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_pracownicyOdswiez.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_pracownicyOdswiez.Location = new System.Drawing.Point(303, 7);
+            this.button_pracownicyOdswiez.Location = new System.Drawing.Point(457, 7);
             this.button_pracownicyOdswiez.Margin = new System.Windows.Forms.Padding(10);
             this.button_pracownicyOdswiez.Name = "button_pracownicyOdswiez";
             this.button_pracownicyOdswiez.Size = new System.Drawing.Size(180, 40);
             this.button_pracownicyOdswiez.TabIndex = 5;
             this.button_pracownicyOdswiez.Text = "Odswiez";
             this.button_pracownicyOdswiez.UseVisualStyleBackColor = false;
+            this.button_pracownicyOdswiez.Click += new System.EventHandler(this.button_pracownicyOdswiez_Click);
             // 
             // dataGridView1
             // 
@@ -179,7 +181,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(3, 63);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(480, 388);
+            this.dataGridView1.Size = new System.Drawing.Size(634, 388);
             this.dataGridView1.TabIndex = 6;
             // 
             // button_pokazPracownikow
@@ -202,7 +204,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(199)))), ((int)(((byte)(199)))));
-            this.ClientSize = new System.Drawing.Size(717, 478);
+            this.ClientSize = new System.Drawing.Size(871, 478);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button_Wyloguj);

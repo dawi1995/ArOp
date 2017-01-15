@@ -50,8 +50,11 @@ namespace Projekt
             pulpitUZG.ShowDialog();
         }
 
-        private void Pulpit_Menadżer_Load(object sender, EventArgs e)
+        private void WczytajPracowników()
         {
+            dataGridView1.DataSource = null;
+            dataGridView1.Rows.Clear();
+
             List<Pracownik> pracownicy = BazaDanych.magazyn.pracownicy;
 
             dataGridView1.Columns.Add("id", "ID");
@@ -68,12 +71,22 @@ namespace Projekt
             }
         }
 
+        private void Pulpit_Menadżer_Load(object sender, EventArgs e)
+        {
+            WczytajPracowników();
+        }
+
         private void button_pokazPracownikow_Click(object sender, EventArgs e)
         {
             if (panel2.Visible == false)
                 panel2.Visible = true;
             else
                 panel2.Visible = false;
+        }
+
+        private void button_pracownicyOdswiez_Click(object sender, EventArgs e)
+        {
+            WczytajPracowników();
         }
     }
 }
