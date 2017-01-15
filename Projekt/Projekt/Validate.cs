@@ -43,13 +43,11 @@ namespace Projekt
         public static bool CheckIfDateAndHour(TextBox textBox)
         {
             if (!CheckIfDate(textBox))
-            {
                 return false;
-            }
+            
             if (textBox.Text.Length < 16)
-            {
                 return false;
-            }
+            
             return true;
         }
         public static bool CheckIfPositiveInt(TextBox textBox)
@@ -57,7 +55,14 @@ namespace Projekt
             if (!CheckIfInt(textBox))
                 return false;
 
+            if (Convert.ToInt32(textBox.Text)<=0)
+                return false;
+
             return true;
+        }
+        public static bool CheckIfNameOrSurname(TextBox textBox) ///-----napisac
+        {
+            return false;
         }
 
     }
