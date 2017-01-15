@@ -19,7 +19,8 @@ namespace Projekt
         public void UtwórzZlecenie(Pracownik pracownik, Towar towar, int ilosc, bool czyPrzyjeto, string informacje)
         {
             DateTime now = DateTime.Now;
-            string data = now.ToString("yyyyMMdd") + now.TimeOfDay;
+            string adata = now.ToString("yyyyMMdd ") + now.TimeOfDay;
+            adata = adata.Substring(0, 16);
 
             this.pracownik = pracownik;
             this.towar = towar;
@@ -28,7 +29,7 @@ namespace Projekt
             this.informacje = informacje;
             this.ilosc = ilosc;
 
-            BazaDanych.WykonajWBazie(String.Format("INSERT INTO test (idpracownika, data, idtowaru, ilosc, przewoznik) VALUES ({0}, '{1}', {2}, {3},'{4}');", pracownik.id, data.Date.ToString("yyyyMMdd HH:mm:ss"), towar.id, ilosc, informacje));
+            BazaDanych.WykonajWBazie(String.Format("INSERT INTO test (idpracownika, data, idtowaru, ilosc, przewoznik) VALUES ({0}, '{1}', {2}, {3},'{4}');", pracownik.id, adata, towar.id, ilosc, informacje));
         }
     }
 }

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView_PodglądPracownik = new System.Windows.Forms.DataGridView();
             this.button_DodajTowar = new System.Windows.Forms.Button();
             this.button_DodajIstTowar = new System.Windows.Forms.Button();
             this.button_UsuńTowar = new System.Windows.Forms.Button();
@@ -36,16 +35,7 @@
             this.button_SprawdzGrafik = new System.Windows.Forms.Button();
             this.button_Wyloguj = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_PodglądPracownik)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dataGridView_PodglądPracownik
-            // 
-            this.dataGridView_PodglądPracownik.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_PodglądPracownik.Location = new System.Drawing.Point(118, 12);
-            this.dataGridView_PodglądPracownik.Name = "dataGridView_PodglądPracownik";
-            this.dataGridView_PodglądPracownik.Size = new System.Drawing.Size(720, 527);
-            this.dataGridView_PodglądPracownik.TabIndex = 0;
             // 
             // button_DodajTowar
             // 
@@ -108,9 +98,10 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.panel1.Location = new System.Drawing.Point(350, 77);
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 100);
+            this.panel1.Size = new System.Drawing.Size(200, 478);
             this.panel1.TabIndex = 8;
             // 
             // Pulpit_Pracownik
@@ -125,17 +116,13 @@
             this.Controls.Add(this.button_UsuńTowar);
             this.Controls.Add(this.button_DodajIstTowar);
             this.Controls.Add(this.button_DodajTowar);
-            this.Controls.Add(this.dataGridView_PodglądPracownik);
             this.Name = "Pulpit_Pracownik";
             this.Text = "Pulpit_Pracownik";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_PodglądPracownik)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridView_PodglądPracownik;
         private System.Windows.Forms.Button button_DodajTowar;
         private System.Windows.Forms.Button button_DodajIstTowar;
         private System.Windows.Forms.Button button_UsuńTowar;
