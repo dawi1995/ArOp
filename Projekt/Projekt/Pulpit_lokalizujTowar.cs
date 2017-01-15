@@ -19,41 +19,53 @@ namespace Projekt
 
         private void button_lokalizuj_Click(object sender, EventArgs e)
         {
-            int id;
-            bool czyInt = Int32.TryParse(textBox_idtowaru.Text, out id);
+            bool czyWaliduje = true;
 
-            if (czyInt == false)
+            if (Projekt.Validate.CheckIfPositiveInt(textBox_idtowaru))
+                czyWaliduje = false;
+
+            if (czyWaliduje == true)
             {
-                Komunikaty.WyświetlKomunikat("Podaj id we właściwym formacie");
+                int id;
+                bool czyInt = Int32.TryParse(textBox_idtowaru.Text, out id);
+
+                if (czyInt == false)
+                {
+                    Komunikaty.WyświetlKomunikat("Podaj id we właściwym formacie");
+                    return;
+                }
+
+                Towar szukany = BazaDanych.magazyn.towary.Find(Towar => Towar.id == id);
+                dataGridView1.DataSource = null;
+                dataGridView1.Columns.Clear();
+                dataGridView1.Rows.Clear();
+
+                if (szukany == null)
+                {
+                    Komunikaty.WyświetlKomunikat("Szukanego towaru nie ma w magazynie.");
+                    return;
+                }
+
+                dataGridView1.Columns.Add("sektor", "Sektor");
+                dataGridView1.Columns.Add("rzad", "Rząd");
+                dataGridView1.Columns.Add("polka", "Półka");
+                dataGridView1.Columns.Add("ilosc", "Ilość");
+
+
+                foreach (var item in szukany.lokalizacje)
+                {
+                    dataGridView1.Rows.Add(item.Key.sektor, item.Key.rzad, item.Key.polka, item.Value);
+                }
+
+                if (Height < 400)
+                {
+                    Height = 410;
+                }
                 return;
             }
-
-            Towar szukany = BazaDanych.magazyn.towary.Find(Towar => Towar.id == id);
-            dataGridView1.DataSource = null;
-            dataGridView1.Columns.Clear();
-            dataGridView1.Rows.Clear();
-
-            if (szukany == null)
-            {
-                Komunikaty.WyświetlKomunikat("Szukanego towaru nie ma w magazynie.");
-                return;
-            }
-
-            dataGridView1.Columns.Add("sektor", "Sektor");
-            dataGridView1.Columns.Add("rzad", "Rząd");
-            dataGridView1.Columns.Add("polka", "Półka");
-            dataGridView1.Columns.Add("ilosc", "Ilość");
+            Komunikaty.NieprawidlowaWalidacja();
 
 
-            foreach (var item in szukany.lokalizacje)
-            {
-                dataGridView1.Rows.Add(item.Key.sektor, item.Key.rzad, item.Key.polka, item.Value);
-            }
-
-            if (Height < 400)
-            {
-                Height = 410;
-            }
 
         }
     }

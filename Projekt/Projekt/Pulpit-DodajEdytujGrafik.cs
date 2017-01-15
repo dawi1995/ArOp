@@ -21,16 +21,23 @@ namespace Projekt
 
         private void button_DodajEdytujGrafik_Click(object sender, EventArgs e)
         {
-            if (!Projekt.Validate.CheckIfPositiveInt(textBox_idpracownika) ||
-                !Projekt.Validate.CheckIfDateAndHour(textBox_Data) ||
-                !Projekt.Validate.CheckIfPositiveInt(textBox_LiczbaGodzin))
+            bool czyWaliduje = true;
+
+            if (!Projekt.Validate.CheckIfPositiveInt(textBox_idpracownika))
+                czyWaliduje = false;
+
+            if (Projekt.Validate.CheckIfDateAndHour(textBox_Data))
+                czyWaliduje = false;
+
+            if (Projekt.Validate.CheckIfPositiveInt(textBox_LiczbaGodzin))
+                czyWaliduje = false;
+
+            if (czyWaliduje == true)
             {
-                Komunikaty.NieprawidlowaWalidacja();
+                menadzer.DodajDoGrafiku(Convert.ToInt32(textBox_idpracownika.Text), Convert.ToDateTime(textBox_Data.Text), Convert.ToInt32(textBox_LiczbaGodzin.Text));
                 return;
             }
-
-            menadzer.DodajDoGrafiku(Convert.ToInt32(textBox_idpracownika.Text), Convert.ToDateTime(textBox_Data.Text), Convert.ToInt32(textBox_LiczbaGodzin.Text));
-
+            Komunikaty.NieprawidlowaWalidacja();
         }
     }
 }

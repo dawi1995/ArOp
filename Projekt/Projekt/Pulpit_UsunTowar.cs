@@ -21,7 +21,33 @@ namespace Projekt
 
         private void button1_Click(object sender, EventArgs e)
         {
-           pracownik.UsunTowar(Convert.ToInt32(textBox_idtowaru.Text), Convert.ToInt32(textBox_sektor.Text), Convert.ToInt32(textBox_rzad.Text), Convert.ToInt32(textBox_polka.Text), Convert.ToInt32(textBox_ilosc.Text), textBox_info.Text);
+            bool czyWaliduje = true;
+
+            if (Projekt.Validate.CheckIfPositiveInt(textBox_idtowaru))
+                czyWaliduje = false;
+
+            if (!Projekt.Validate.CheckIfLocalization(textBox_sektor))
+                czyWaliduje = false;
+
+            if (!Projekt.Validate.CheckIfLocalization(textBox_rzad))
+                czyWaliduje = false;
+
+            if (!Projekt.Validate.CheckIfLocalization(textBox_polka))
+                czyWaliduje = false;
+
+            if (!Projekt.Validate.CheckIfPositiveInt(textBox_ilosc))
+                czyWaliduje = false;
+
+            if (!Projekt.Validate.CheckIfString(textBox_info))
+                czyWaliduje = false;
+
+            if (czyWaliduje == true)
+            {
+                pracownik.UsunTowar(Convert.ToInt32(textBox_idtowaru.Text), Convert.ToInt32(textBox_sektor.Text), Convert.ToInt32(textBox_rzad.Text), Convert.ToInt32(textBox_polka.Text), Convert.ToInt32(textBox_ilosc.Text), textBox_info.Text);
+                return;
+            }
+            Komunikaty.NieprawidlowaWalidacja();
+           
         }
     }
 }

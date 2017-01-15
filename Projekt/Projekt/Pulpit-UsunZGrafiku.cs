@@ -21,7 +21,20 @@ namespace Projekt
 
         private void button_UsunZGrafiku_Click(object sender, EventArgs e)
         {
-            menadzer.UsunZGrafiku(Convert.ToInt32(textBox_idracownika.Text), Convert.ToDateTime(textBox_dataDoUsuniecia.Text));
+            bool czyWaliduje = true;
+            if (Projekt.Validate.CheckIfPositiveInt(textBox_idracownika))
+                czyWaliduje = false;
+
+            if (Projekt.Validate.CheckIfDateAndHour(textBox_dataDoUsuniecia))
+                czyWaliduje = false;
+
+            if (czyWaliduje == true)
+            {
+                menadzer.UsunZGrafiku(Convert.ToInt32(textBox_idracownika.Text), Convert.ToDateTime(textBox_dataDoUsuniecia.Text));
+                return;
+            }
+            Komunikaty.NieprawidlowaWalidacja();
+
         }
     }
 }
