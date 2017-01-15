@@ -17,8 +17,8 @@ namespace Projekt
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Form1 form = new Projekt.Form1();
-            form.Show();
-            Application.Run();
+            //form.Show();
+            Application.Run(form);
         }
     }
 }

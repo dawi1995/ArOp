@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using Projekt.Properties;
+using System.Drawing.Text;
+using System.IO;
 
 namespace Projekt
 {
@@ -16,7 +19,6 @@ namespace Projekt
         public Form1()
         {
             InitializeComponent();
-
             BazaDanych.UtworzBaze();
         }
 
@@ -66,7 +68,5 @@ namespace Projekt
 
          
         }
-
-        
     }
 }

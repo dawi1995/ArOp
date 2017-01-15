@@ -49,5 +49,10 @@ namespace Projekt
             Pulpit_UsunZGrafiku pulpitUZG = new Pulpit_UsunZGrafiku(menadzer);
             pulpitUZG.ShowDialog();
         }
+
+        private void Pulpit_Menadżer_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
