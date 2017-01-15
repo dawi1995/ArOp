@@ -55,12 +55,13 @@ namespace Projekt
             if (!CheckIfInt(textBox))
                 return false;
 
-            if (Convert.ToInt32(textBox.Text)<=0)
+             if (Convert.ToInt32(textBox.Text) <= 0)
                 return false;
+
 
             return true;
         }
-        public static bool CheckIfNameOrSurname(TextBox textBox)
+        public static bool CheckIfString(TextBox textBox)
         {
             if (textBox.Text.Length > 50)
                 return false;
@@ -74,6 +75,32 @@ namespace Projekt
                 }
             }
             return !czyLiczby;
+        }
+        public static bool CheckIfPhoneNumber(TextBox textBox)
+        {
+            if (textBox.Text.Length != 9) //tylko Polskie numery
+                return false;
+
+            bool czyLiczby = true;
+            foreach (var c in textBox.Text)
+            {
+                if (c < '0' || c > '9')
+                {
+                    czyLiczby = false;
+                }
+            }
+
+            return czyLiczby;
+        }
+        public static bool CheckIfLocalization(TextBox textBox)
+        {
+            if (!CheckIfInt(textBox))
+                return false;
+
+            if (Convert.ToInt32(textBox.Text) > 1000)
+                return false;
+
+            return true;
         }
 
     }
