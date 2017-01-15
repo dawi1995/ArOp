@@ -232,7 +232,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelPracownicy.Controls.Add(this.dataPracownicy);
             this.panelPracownicy.Controls.Add(this.button_pracownicyOdswiez);
-            this.panelPracownicy.Location = new System.Drawing.Point(220, 11);
+            this.panelPracownicy.Location = new System.Drawing.Point(220, 12);
             this.panelPracownicy.Name = "panelPracownicy";
             this.panelPracownicy.Size = new System.Drawing.Size(639, 455);
             this.panelPracownicy.TabIndex = 8;
@@ -246,7 +246,8 @@
             this.dataPracownicy.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataPracownicy.Location = new System.Drawing.Point(3, 63);
             this.dataPracownicy.Name = "dataPracownicy";
-            this.dataPracownicy.Size = new System.Drawing.Size(682, 389);
+            this.dataPracownicy.ReadOnly = true;
+            this.dataPracownicy.Size = new System.Drawing.Size(633, 389);
             this.dataPracownicy.TabIndex = 6;
             // 
             // button_pracownicyOdswiez
@@ -267,6 +268,9 @@
             // 
             // panelZlecenia
             // 
+            this.panelZlecenia.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelZlecenia.Controls.Add(this.dataZlecenia);
             this.panelZlecenia.Controls.Add(this.buttonZleceniaOdswiez);
             this.panelZlecenia.ImeMode = System.Windows.Forms.ImeMode.NoControl;
@@ -284,6 +288,7 @@
             this.dataZlecenia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataZlecenia.Location = new System.Drawing.Point(3, 63);
             this.dataZlecenia.Name = "dataZlecenia";
+            this.dataZlecenia.ReadOnly = true;
             this.dataZlecenia.Size = new System.Drawing.Size(633, 388);
             this.dataZlecenia.TabIndex = 6;
             // 
@@ -308,9 +313,10 @@
             this.panelTowary.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelTowary.Controls.Add(this.panelGrafik);
             this.panelTowary.Controls.Add(this.dataTowary);
             this.panelTowary.Controls.Add(this.buttonTowaryOdswiez);
-            this.panelTowary.Location = new System.Drawing.Point(220, 11);
+            this.panelTowary.Location = new System.Drawing.Point(220, 12);
             this.panelTowary.Name = "panelTowary";
             this.panelTowary.Size = new System.Drawing.Size(639, 455);
             this.panelTowary.TabIndex = 10;
@@ -323,7 +329,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelGrafik.Controls.Add(this.dataGrafik);
             this.panelGrafik.Controls.Add(this.buttonGrafikOdswiez);
-            this.panelGrafik.Location = new System.Drawing.Point(220, 11);
+            this.panelGrafik.Location = new System.Drawing.Point(0, 0);
             this.panelGrafik.Name = "panelGrafik";
             this.panelGrafik.Size = new System.Drawing.Size(639, 455);
             this.panelGrafik.TabIndex = 11;
@@ -337,6 +343,7 @@
             this.dataGrafik.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGrafik.Location = new System.Drawing.Point(3, 63);
             this.dataGrafik.Name = "dataGrafik";
+            this.dataGrafik.ReadOnly = true;
             this.dataGrafik.Size = new System.Drawing.Size(633, 389);
             this.dataGrafik.TabIndex = 6;
             // 
@@ -364,6 +371,7 @@
             this.dataTowary.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataTowary.Location = new System.Drawing.Point(3, 63);
             this.dataTowary.Name = "dataTowary";
+            this.dataTowary.ReadOnly = true;
             this.dataTowary.Size = new System.Drawing.Size(633, 389);
             this.dataTowary.TabIndex = 6;
             // 
@@ -389,7 +397,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(199)))), ((int)(((byte)(199)))));
             this.ClientSize = new System.Drawing.Size(871, 478);
-            this.Controls.Add(this.panelGrafik);
             this.Controls.Add(this.panelTowary);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelPracownicy);
