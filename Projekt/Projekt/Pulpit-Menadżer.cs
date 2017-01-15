@@ -106,11 +106,9 @@ namespace Projekt
             dataTowary.Columns.Add("nazwa", "Nazwa");
             dataTowary.Columns.Add("ilosc", "Ilość towaru w magazynie");
 
-            int ilosc = 0;
-
             for (int i = 0; i < towary.Count; i++)
             {
-                dataZlecenia.Rows.Add(towary[i].id, towary[i].nazwa, towary[i].iloscCalegoTowaru());
+                dataTowary.Rows.Add(towary[i].id, towary[i].nazwa, towary[i].iloscCalegoTowaru());
             }
         }
 
@@ -143,8 +141,6 @@ namespace Projekt
             WczytajGrafik();
             WczytajTowary();
         }
-
-       
 
         private void button_pracownicyOdswiez_Click(object sender, EventArgs e)
         {
