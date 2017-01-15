@@ -12,16 +12,20 @@ namespace Projekt
         public DateTime data;
         public Towar towar;
         public bool czyPrzyjeto;
-        public string przewoznik;
+        public string informacje;
+        public int ilosc;
 
         public Zlecenie() { }
-        public Zlecenie(Pracownik pracownik, DateTime data, Towar towar, bool czyPrzyjeto, string przewoznik)
+        public void UtwórzZlecenie(Pracownik pracownik, Towar towar, int ilosc, bool czyPrzyjeto, string informacje)
         {
             this.pracownik = pracownik;
-            this.data = data;
+            this.data = DateTime.Now;
             this.towar = towar;
             this.czyPrzyjeto = czyPrzyjeto;
-            this.przewoznik = przewoznik;
+            this.informacje = informacje;
+            this.ilosc = ilosc;
+
+            BazaDanych.WykonajWBazie(String.Format("INSERT INTO zlecenia2 (idpracownika, data, idtowaru, ilosc, czyPrzyjeto, przewoznik) VALUES ({0}, '{1}', {2}, {3}, {4}, '{5}');", pracownik.id, Narzędzia.PrzygotujDateDlaBazy(data), towar.id, ilosc, czyPrzyjeto, informacje));
         }
     }
 }

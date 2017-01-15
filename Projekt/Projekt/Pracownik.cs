@@ -21,7 +21,7 @@ namespace Projekt
             grafik = new Grafik();
         }
         
-        public void UsunTowar(int id, int sektor, int rzad, int polka, int iloscDoUsuniecia)
+        public void UsunTowar(int id, int sektor, int rzad, int polka, int iloscDoUsuniecia, string informacja)
         {
             Towar doUsuniecia = BazaDanych.magazyn.towary.Find(Towar => Towar.id == id);
 
@@ -31,10 +31,14 @@ namespace Projekt
                 return;
             }
 
+            Zlecenie nowe = new Zlecenie();
             doUsuniecia.UsuńTowar(sektor, rzad, polka, iloscDoUsuniecia);
+            nowe.UtwórzZlecenie(this, doUsuniecia, iloscDoUsuniecia, false, informacja);
+
+            BazaDanych.magazyn.zlecenia.Add(nowe);
         }
 
-        public void DodajIstniejacyTowar(int id, int sektor, int rzad, int polka, int iloscDoDodania)
+        public void DodajIstniejacyTowar(int id, int sektor, int rzad, int polka, int iloscDoDodania, string informacja)
         {
             Towar doDodania = BazaDanych.magazyn.towary.Find(Towar => Towar.id == id);
 
@@ -52,10 +56,15 @@ namespace Projekt
                 return;
             }
 
+            Zlecenie nowe = new Zlecenie();
+
+            nowe.UtwórzZlecenie(this, doDodania, iloscDoDodania, true, informacja);
             doDodania.DodajTowar(sektor, rzad, polka, iloscDoDodania);
+
+            BazaDanych.magazyn.zlecenia.Add(nowe);
         }
 
-        public void DodajNowyTowar(string nazwa, int id, int sektor, int rzad, int polka, int ilosc)
+        public void DodajNowyTowar(string nazwa, int id, int sektor, int rzad, int polka, int ilosc, string informacja)
         {
 
             Towar doDodania = BazaDanych.magazyn.towary.Find(Towar => Towar.id == id);
@@ -66,9 +75,14 @@ namespace Projekt
                 return;
             }
 
+            Zlecenie nowe = new Zlecenie();
             doDodania = new Towar();
+            
             doDodania.UtwórzTowar(id, nazwa, new Lokalizacja(sektor, rzad, polka), ilosc);
+            nowe.UtwórzZlecenie(this, doDodania, ilosc, true, informacja);
+
             BazaDanych.magazyn.towary.Add(doDodania);
+            BazaDanych.magazyn.zlecenia.Add(nowe);
         }
     }
 }

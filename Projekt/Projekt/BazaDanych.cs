@@ -110,7 +110,7 @@ namespace Projekt
                         }
 
                     }
-            WykonajWBazie("SELECT * FROM zlecenia");
+            WykonajWBazie("SELECT * FROM zlecenia2");
             
 
                     Zlecenie zlecenie;
@@ -123,8 +123,9 @@ namespace Projekt
                             zlecenie.pracownik = magazyn.pracownicy.Find(Pracownik => Pracownik.id == Convert.ToInt32(row.ItemArray[0]));
                             zlecenie.data = (DateTime)row.ItemArray[1];
                             zlecenie.towar = magazyn.towary.Find(Towar => Towar.id == (int)row.ItemArray[2]);
-                            zlecenie.czyPrzyjeto = (bool)row.ItemArray[3]; //nie wiadomo czy zrzutuje
-                            zlecenie.przewoznik = (string)row.ItemArray[4];
+                            zlecenie.ilosc = (int)row.ItemArray[3];
+                            zlecenie.czyPrzyjeto = (bool)row.ItemArray[4]; //nie wiadomo czy zrzutuje
+                            zlecenie.informacje = (string)row.ItemArray[5];
                             magazyn.zlecenia.Add(zlecenie);
                         }
 

@@ -24,12 +24,6 @@ namespace Projekt
             
         }
 
-        public void DodajZlecenie(Pracownik pracownik, DateTime dataWykonaniaZlecenia, Towar towar, bool czyPrzyjeto, string przewoznik)
-        {
-            zlecenia.Add(new Projekt.Zlecenie(pracownik, dataWykonaniaZlecenia, towar, czyPrzyjeto, przewoznik));
-            MessageBox.Show("Pomyślnie dodano zlecenie.");
-        }
-
         public bool czyTowarIstnieje(int id)
         {
             Towar towar = towary.Find(Towar => Towar.id == id);

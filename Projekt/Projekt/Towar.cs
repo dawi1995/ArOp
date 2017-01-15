@@ -35,6 +35,7 @@ namespace Projekt
 
             BazaDanych.WykonajWBazie(String.Format("INSERT INTO towary3 (id, nazwa) VALUES ({0}, '{1}');", id, nazwa));
             BazaDanych.WykonajWBazie(String.Format("INSERT INTO lokalizacje2 (idtowaru, sektor, rzad, polka, ilosc) VALUES ({0}, {1}, {2}, {3}, {4});", id, lokalizacja.sektor, lokalizacja.rzad, lokalizacja.polka, ilosc));
+            
             Komunikaty.WyświetlKomunikat("Operacja zakończona powodzeniem.");
         }
 
