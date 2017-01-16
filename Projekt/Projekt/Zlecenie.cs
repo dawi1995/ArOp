@@ -24,6 +24,7 @@ namespace Projekt
 
             this.pracownik = pracownik;
             this.towar = towar;
+            this.data = now;
             this.czyPrzyjeto = czyPrzyjeto;
             this.informacje = informacje;
             this.ilosc = ilosc;
